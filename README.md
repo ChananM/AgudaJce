@@ -2,7 +2,7 @@
 
 A repository for the AgudaJce application for SE course class of 2018b
 
-![project logo](https://imgur.com/a/QcFzH)
+![project logo](https://imgur.com/OvyrngY)
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
