@@ -4,8 +4,6 @@ A repository for the AgudaJce application for SE course class of 2018b
 
 <img src="./img/logo.jpg" width="300" height="300"/>
 
-![project logo](./img/logo.jpg)
-
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
 
