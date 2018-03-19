@@ -1,4 +1,4 @@
-# <div><img align="left" src="./img/logo.jpg" width="36" height="36"/></div> AgudaJce 
+<h1 align="center">AgudaJce</h1> 
 
 ## Summary
 
@@ -9,7 +9,7 @@ The application to unify all the needed information for the student, in one plac
 
 With this marvelous piece of software, the students will no longer strive for bits of information, and instead find all they ever desired in one convenient place.
 
-Welcome student, to the application that will create yesterday tommorow, today.
+Welcome students, to the application that will create yesterday tommorow, today.
 
 </br>
 
@@ -19,23 +19,20 @@ Alright, nothing yet...
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
 
-|Category|Status|
-|---|---|
-| Version Control System| git & github |
-| Recommended IDE | [Android Studio](https://developer.android.com/studio/index.html) |
-| Group Chat | [![Join the chat at https://gitter.im/ChananM/AgudaJce](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/jce-il/project-template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) |
-| License | [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) |
-| Current Release | [![Current Version](https://img.shields.io/github/release/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/releases) |
-| Issues | [![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/issues) |
-| Project Management Board| [here](https://github.com/ChananM/AgudaJce/projects/1) |
-| Contributors | [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/ChananM/AgudaJce/graphs/contributors)|
-| Security | [![Known Vulnerabilities](https://snyk.io/test/github/jce-il/project-template/badge.svg)](https://snyk.io/test/github/jce-il/project-template) |
-| Documnetation | [Wiki](https://github.com/ChananM/AgudaJce/wiki)|
-| Project Course Status | Inception |
+|Version Control System|Recommended IDE|Group Chat|Project Management Board|Issues|Documnetation|Project Course Status|License|
+|--|--|--|--|--|--|--|--|
+|git & github|[Android Studio](https://developer.android.com/studio/index.html)|[![Join the chat at https://gitter.im/ChananM/AgudaJce](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/jce-il/project-template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)|[here](https://github.com/ChananM/AgudaJce/projects)|[![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/issues)|[Wiki](https://github.com/ChananM/AgudaJce/wiki)|Inception|[![License](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ChananM/AgudaJce/blob/master/LICENSE)|
+
+<!-- More badges and links for future development
+| Current Release         | [![Current Version](https://img.shields.io/github/release/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/releases) |
+|  
+| Contributors            | [![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/ChananM/AgudaJce/graphs/contributors)|
+| Security                | [![Known Vulnerabilities](https://snyk.io/test/github/jce-il/project-template/badge.svg)](https://snyk.io/test/github/jce-il/project-template) |
+-->
 
 ## Helpful Links
 
-### [User Manual](../../wiki/user-manual) (empty for now)
+### [User Manual](../../wiki/user-manual)
 
 ### [Team Page](../../wiki/team)
 
