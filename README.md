@@ -1,4 +1,4 @@
-# AgudaJce <div><img src="./img/logo.jpg" width="36" height="36"/></div>
+# AgudaJce <div><img align="left" src="./img/logo.jpg" width="36" height="36"/></div>
 
 ## Summary
 
