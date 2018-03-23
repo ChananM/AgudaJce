@@ -37,7 +37,6 @@ We're trying to use the best tools and practices in order to produce a quality e
 ### [Team Page](../../wiki/team)
 
 ### Project Documents
-- [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))
 - [Project Inception](../../wiki/inception)
 
 ## Disclaimer
