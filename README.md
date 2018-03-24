@@ -14,7 +14,7 @@ Welcome students, to the application that will create yesterday tommorow, today.
 </br>
 
 ## Please visit our [live application](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-Alright, nothing yet...
+You may also review our [product page](../../wiki/Product) for further information.
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
@@ -37,7 +37,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 ### [Team Page](../../wiki/team)
 
 ### Project Documents
-- [Project Inception](../../wiki/inception)
+- [Project Inception](../../wiki/Inception)
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
