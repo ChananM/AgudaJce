@@ -70,6 +70,7 @@ modules/views/
 /public/build/
 /packages/contrib/
 /packages/**/**/public/assets/lib
+AgudaApp/cordova/
 
 # --------------------
 # vim Files
