@@ -27,6 +27,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Navigate to AgudaApp folder in CMD and run:<br>
 `ng build --target=production --environment=prod --output-path cordova/www/ --base-href .`<br>
+(`--base-href .` with the space+dot ` .`)
 The build artifacts will be stored in the `cordova/www/` directory.
 
 <!-- Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build. -->
