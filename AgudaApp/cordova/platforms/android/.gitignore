@@ -1,9 +1,9 @@
 # Non-project-specific build files:
-build.xml
+#build.xml
 local.properties
-/gradlew
-/gradlew.bat
-/gradle
+#/gradlew
+#/gradlew.bat
+#/gradle
 # Ant builds
 ant-build
 ant-gen
@@ -11,4 +11,4 @@ ant-gen
 gen
 out
 # Gradle builds
-/build
+#/build
