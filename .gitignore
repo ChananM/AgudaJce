@@ -70,10 +70,9 @@ modules/views/
 /public/build/
 /packages/contrib/
 /packages/**/**/public/assets/lib
-/AgudaApp/node_modules/
-/AgudaApp/cordova/
 
 # --------------------
 # vim Files
 # --------------------
 *.swp
+AgudaApp
