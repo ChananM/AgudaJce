@@ -9,8 +9,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - Go to Settings icon (bottom-left) and click 'Command-Pallete...'
     - Write 'Git: Clone' and press enter
     - Insert the URL: https://github.com/ChananM/AgudaJce.git and press enter
-    - Import 'node_modules' folder from another Angular project (copy-paste)
     - Choose the location that you want to save the local project
+    - Import 'node_modules' folder from another Angular project (copy-paste to AgudaApp folder)
     - For further info, send msg in whatsup/gitter
 
 ## Development server
