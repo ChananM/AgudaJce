@@ -13,7 +13,10 @@ Welcome students, to the application that will create yesterday tommorow, today.
 
 </br>
 
-## Please visit our [live application](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+## Please visit our live application
+
+Live application is not ready yet, please try again later.
+
 You may also review our [product page](../../wiki/Product) for further information.
 
 ## Tools & Practices
