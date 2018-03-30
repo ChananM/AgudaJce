@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
+## Cordova installation
+Open CMD (global scope) and run the command: `npm install -g cordova@latest`
+
 ## Sync with VS Code
 
 - Open VS Code
