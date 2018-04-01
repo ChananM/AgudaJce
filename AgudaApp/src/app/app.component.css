@@ -1,0 +1,8 @@
+nav {
+    background-color: #333;
+    display: inline-block;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -26,8 +26,7 @@ import { appRoutes } from './app.router';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
-
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [
     NavService
