@@ -3,7 +3,7 @@
 ## Summary
 
 This repository will include the source code for AgudaJce.
-<img align="right" src="./img/logo.jpg" width="250" height="250"/>
+<img align="right" src="./AgudaApp/src/assets/img/logo.jpg" width="250" height="250"/>
 
 The application to unify all the needed information for the student, in one place. Featuring Facebook and Instagram feed, controlled push notifications and customed menus for the student.
 
