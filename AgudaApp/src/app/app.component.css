@@ -2,7 +2,8 @@ nav {
     background-color: #333;
     display: inline-block;
     overflow: hidden;
-    position: fixed;
+    position: sticky;
     bottom: 0;
+    margin-bottom: -7px;
     width: 100%;
 }
