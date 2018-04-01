@@ -1,6 +1,6 @@
 <h1 align="center">AgudaJce</h1> 
 
-## Summary gdgdgdgdgd
+## Summary
 
 This repository will include the source code for AgudaJce.
 <img align="right" src="./img/logo.jpg" width="250" height="250"/>
