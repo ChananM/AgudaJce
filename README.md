@@ -13,9 +13,7 @@ Welcome students, to the application that will create yesterday tommorow, today.
 
 </br>
 
-## Please visit our live application
-
-Live application is not ready yet, please try again later.
+## Please visit our [live application](https://agudajce-2018.firebaseapp.com)
 
 You may also review our [product page](../../wiki/Product) for further information.
 
