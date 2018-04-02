@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AgudaJCE';
+  class = 'fix';
+
+  @HostListener("window:scroll", []) onScroll(): void {
+    if (document.body.scrollHeight > document.body.clientHeight) {
+      this.class = 'stick';
+    }
+    else{
+      this.class = 'fix';
+    }
+  }
 }

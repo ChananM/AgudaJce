@@ -2,8 +2,15 @@ nav {
     background-color: #333;
     display: inline-block;
     overflow: hidden;
-    position: sticky;
     bottom: 0;
-    margin-bottom: -7px;
     width: 100%;
+}
+
+.fix {
+    position: fixed;
+}
+
+.stick {
+    position: sticky;
+    margin-bottom: -7px;
 }
