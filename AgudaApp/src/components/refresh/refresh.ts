@@ -11,7 +11,6 @@ import { InfoPage } from '../../pages/info/info';
   templateUrl: 'refresh.html'
 })
 export class RefreshComponent {
-
   tab: string;
   
   constructor(private events: Events, private h: HomePage, private c: CalendarPage, private g: GalleryPage, private i: InfoPage) {
@@ -20,7 +19,11 @@ export class RefreshComponent {
     });   
   }
 
+  
   doRefresh(){
+
+    document.getElementsByClassName('spinner').item(0).classList.add('fa-spin');
+
     if(this.tab == this.h.tabName)
       this.h.doRefresh();
 
@@ -34,5 +37,9 @@ export class RefreshComponent {
       this.i.doRefresh();
 
     console.log('clicked');
+
+    setTimeout(function(){
+      document.getElementsByClassName('spinner').item(0).classList.remove('fa-spin');
+    },1000);
   }
 }

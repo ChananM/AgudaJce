@@ -10,10 +10,10 @@ import { CalendarPage } from '../calendar/calendar';
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = CalendarPage;
-  tab3Root = GalleryPage;
-  tab4Root = InfoPage;
+  homeTab = HomePage;
+  calendarTab = CalendarPage;
+  galleryTab = GalleryPage;
+  infoTab = InfoPage;
 
   constructor() {
 

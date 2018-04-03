@@ -12,6 +12,8 @@ import { GalleryPage } from '../pages/gallery/gallery';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RefreshComponent } from '../components/refresh/refresh';
+import { HomeDataComponent } from '../components/home-data/home-data';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { RefreshComponent } from '../components/refresh/refresh';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
