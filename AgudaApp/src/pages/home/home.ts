@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, Events } from 'ionic-angular';
-import { HomeDataComponent } from '../../components/home-data/home-data';
 
 @Component({
   selector: 'page-home',

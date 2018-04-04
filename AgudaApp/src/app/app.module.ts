@@ -13,7 +13,6 @@ import { CalendarPage } from '../pages/calendar/calendar';
 import { GalleryPage } from '../pages/gallery/gallery';
 
 import { RefreshComponent } from '../components/refresh/refresh';
-import { HomeDataComponent } from '../components/home-data/home-data';
 
 import { ComponentsModule } from '../components/components.module';
 import { EntryScreenPageModule } from './../pages/entry-screen/entry-screen.module';
