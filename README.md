@@ -22,7 +22,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 
 |Version Control System|Recommended IDE|Group Chat|Project Management Board|Issues|Documnetation|Project Course Status|License|
 |--|--|--|--|--|--|--|--|
-|Git & GitHub|[VS Code](https://code.visualstudio.com/)|[![Join the chat at https://gitter.im/ChananM/AgudaJce](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/jce-il/AgudaJce)|[here](https://github.com/ChananM/AgudaJce/projects)|[![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/issues)|[Wiki](https://github.com/ChananM/AgudaJce/wiki)|Inception|[![License](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ChananM/AgudaJce/blob/master/LICENSE)|
+|Git & GitHub|[VS Code](https://code.visualstudio.com/)|[![Join the chat at https://gitter.im/ChananM/AgudaJce](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/jce-il/AgudaJce)|[here](https://github.com/ChananM/AgudaJce/projects)|[![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/issues)|[Wiki](https://github.com/ChananM/AgudaJce/wiki)|Inception|[![License](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ChananM/AgudaJce/blob/master/Documents/LICENSE)|
 
 <!-- More badges and links for future development
 | Current Release         | [![Current Version](https://img.shields.io/github/release/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/releases) |
