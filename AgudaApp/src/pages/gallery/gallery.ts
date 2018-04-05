@@ -8,12 +8,13 @@ import { NavController, NavParams, Events } from 'ionic-angular';
 export class GalleryPage {
 
   tabName = 'גלריה';
+  refresh_id = 'gallRef';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private events: Events) {
   }
 
   ionViewDidEnter(){
-    this.events.publish('tab', this.tabName);
+    this.events.publish('tab', this.tabName, this.refresh_id);
     this.doRefresh();
   }
 

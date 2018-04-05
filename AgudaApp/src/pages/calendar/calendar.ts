@@ -8,12 +8,13 @@ import { NavController, NavParams, Events } from 'ionic-angular';
 export class CalendarPage {
 
   tabName = 'יומן אירועים';
+  refresh_id = 'calendarRef';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
   }
 
   ionViewDidEnter(){
-    this.events.publish('tab', this.tabName);
+    this.events.publish('tab', this.tabName, this.refresh_id);
     this.doRefresh();
   }
 

@@ -11,18 +11,21 @@ import { InfoPage } from '../../pages/info/info';
   templateUrl: 'refresh.html'
 })
 export class RefreshComponent {
+
   tab: string;
+  ref_id: string;
   
   constructor(private events: Events, private h: HomePage, private c: CalendarPage, private g: GalleryPage, private i: InfoPage) {
-    this.events.subscribe('tab', (tab) => {
+    this.events.subscribe('tab', (tab, refresh) => {
       this.tab = tab;
+      this.ref_id = refresh;
     });   
   }
 
   
   doRefresh(){
 
-    document.getElementsByClassName('spinner').item(0).classList.add('fa-spin');
+    document.getElementById(this.ref_id).getElementsByClassName('fa-sync').item(0).classList.add('fa-spin');
 
     if(this.tab == this.h.tabName)
       this.h.doRefresh();
@@ -39,7 +42,7 @@ export class RefreshComponent {
     console.log('clicked');
 
     setTimeout(function(){
-      document.getElementsByClassName('spinner').item(0).classList.remove('fa-spin');
+      document.getElementsByClassName('fa-spin').item(0).classList.remove('fa-spin');
     },1000);
   }
 }

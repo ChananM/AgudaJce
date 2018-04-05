@@ -12,3 +12,11 @@ page-entry-screen {
     right: 0;
     bottom: 0;
 }
+
+#overlay {
+    position: fixed;
+    top: 85%;
+    font-size: 3em;
+    font-weight: bold;
+    color: red;
+}
