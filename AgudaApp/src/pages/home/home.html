@@ -10,13 +10,14 @@
 <ion-content padding>
     <main>
         <h1>
-            Welcome to {{ title }}!
+            {{ title }}
         </h1>
-        <img src="./../../assets/imgs/logo.jpg" width="200" height="200">
-        <home-data [headline]="'headline test'" [content]="'content test'"></home-data>
-        <home-data [headline]="'headline test'" [content]="'content test'"></home-data>
-        <home-data [headline]="'headline test'" [content]="'content test'"></home-data>
-        <home-data [headline]="'headline test'" [content]="'content test'"></home-data>
-        <home-data [headline]="'headline test'" [content]="'content test'"></home-data>
+        <img src="./../../assets/imgs/logo.png" width="200" height="200">
+        <hr>
+        <ion-list no-lines inset>
+            <ion-item class="item-trns" *ngFor="let post of postsService.posts">
+                <home-data [headline]="post.headline" [content]="post.content"></home-data>
+            </ion-item>
+        </ion-list>
     </main>
 </ion-content>

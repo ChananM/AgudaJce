@@ -1,7 +1,10 @@
 page-entry-screen {
     padding: 0;
     margin: 0;
-    background: black;
+}
+
+.entryLoader{
+    text-align: center;
 }
 
 #enter {
@@ -11,6 +14,8 @@ page-entry-screen {
     left: 0;
     right: 0;
     bottom: 0;
+    width: 200px;
+    height: 220px;
 }
 
 #overlay {

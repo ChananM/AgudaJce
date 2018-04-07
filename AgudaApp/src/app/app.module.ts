@@ -16,6 +16,7 @@ import { RefreshComponent } from '../components/refresh/refresh';
 
 import { ComponentsModule } from '../components/components.module';
 import { EntryScreenPageModule } from './../pages/entry-screen/entry-screen.module';
+import { HomeDataProvider } from '../providers/home-data/home-data';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { EntryScreenPageModule } from './../pages/entry-screen/entry-screen.modu
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HomeDataProvider
   ]
 })
 export class AppModule {}

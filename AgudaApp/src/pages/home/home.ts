@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController, Events } from 'ionic-angular';
+import { HomeDataProvider } from './../../providers/home-data/home-data';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Events, List, Item } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -9,10 +10,13 @@ export class HomePage {
 
   tabName = 'ראשי';
   refresh_id = 'homeRef';
-  title = 'AgudaJCE';
+  title = 'ברוכים הבאים לאגודת הסטודנטים עזריאלי!';
 
-  constructor(public navCtrl: NavController, public events: Events) {
+  constructor(public navCtrl: NavController, public events: Events, public postsService: HomeDataProvider) {
+  }
 
+  ionViewDidLoad(){
+    this.postsService.load();
   }
 
   ionViewDidEnter(){
