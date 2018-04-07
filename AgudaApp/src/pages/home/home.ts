@@ -1,6 +1,6 @@
 import { HomeDataProvider } from './../../providers/home-data/home-data';
-import { Component, ViewChild } from '@angular/core';
-import { NavController, Events, List, Item } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, Events } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
