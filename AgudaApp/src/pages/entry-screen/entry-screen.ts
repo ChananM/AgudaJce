@@ -19,7 +19,7 @@ export class EntryScreenPage {
     if(this.platform.is('core')){ 
       //if it's from computer web browser, not a mobile web/native.
       document.getElementById('enter').setAttribute('width', '25%');
-      document.getElementById('overlay').style.left = "50%";
+      document.getElementById('overlay').style.left = "48%";
     }
     else{
       document.getElementById('enter').setAttribute('width', '100%');
