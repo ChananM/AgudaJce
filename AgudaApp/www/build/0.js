@@ -5,10 +5,10 @@ webpackJsonp([0],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminPanelPageModule", function() { return AdminPanelPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminLoginPageModule", function() { return AdminLoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_panel__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_login__ = __webpack_require__(281);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AdminPanelPageModule = /** @class */ (function () {
-    function AdminPanelPageModule() {
+var AdminLoginPageModule = /** @class */ (function () {
+    function AdminLoginPageModule() {
     }
-    AdminPanelPageModule = __decorate([
+    AdminLoginPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__admin_panel__["a" /* AdminPanelPage */],
+                __WEBPACK_IMPORTED_MODULE_2__admin_login__["a" /* AdminLoginPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__admin_panel__["a" /* AdminPanelPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__admin_login__["a" /* AdminLoginPage */]),
             ],
         })
-    ], AdminPanelPageModule);
-    return AdminPanelPageModule;
+    ], AdminLoginPageModule);
+    return AdminLoginPageModule;
 }());
 
-//# sourceMappingURL=admin-panel.module.js.map
+//# sourceMappingURL=admin-login.module.js.map
 
 /***/ }),
 
-/***/ 282:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminPanelPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminLoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_panel_admin_panel__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,36 +57,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var AdminPanelPage = /** @class */ (function () {
-    function AdminPanelPage(navCtrl, navParams) {
+
+var AdminLoginPage = /** @class */ (function () {
+    function AdminLoginPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.isConnected = false;
     }
-    AdminPanelPage.prototype.ionViewDidEnter = function () {
-        console.log(this.isConnected);
+    AdminLoginPage.prototype.login = function () {
+        console.log('verify name and password....');
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__admin_panel_admin_panel__["a" /* AdminPanelPage */], { isConnected: true });
     };
-    AdminPanelPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AdminPanelPage');
-        if (!this.navParams.get('isConnected')) {
-            console.log('not connected properly');
-            this.navCtrl.setRoot('aguda-admin');
-        }
-        else {
-            this.isConnected = true;
-        }
+    AdminLoginPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AdminLoginPage');
     };
-    AdminPanelPage = __decorate([
+    AdminLoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-admin-panel',template:/*ion-inline-start:"D:\webDev\AgudaJce\AgudaApp\src\pages\admin-panel\admin-panel.html"*/'<ion-header>\n\n    <ion-navbar>\n        <ion-title>adminPanel</ion-title>\n    </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"D:\webDev\AgudaJce\AgudaApp\src\pages\admin-panel\admin-panel.html"*/,
+            selector: 'page-admin-login',template:/*ion-inline-start:"D:\webDev\AgudaJce\AgudaApp\src\pages\admin-login\admin-login.html"*/'<ion-header>\n\n    <ion-navbar>\n        <ion-title>adminLogin</ion-title>\n    </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <ion-list>\n\n        <ion-item>\n            <ion-label floating>Username</ion-label>\n            <ion-input [(ngModel)]="username" type="text" value=""></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-label floating>Password</ion-label>\n            <ion-input [(ngModel)]="password" type="password" value=""></ion-input>\n        </ion-item>\n\n    </ion-list>\n\n    <div padding>\n        <button primary block (click)="login()">Sign In</button>\n    </div>\n</ion-content>'/*ion-inline-end:"D:\webDev\AgudaJce\AgudaApp\src\pages\admin-login\admin-login.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
-    ], AdminPanelPage);
-    return AdminPanelPage;
+    ], AdminLoginPage);
+    return AdminLoginPage;
     var _a, _b;
 }());
 
-//# sourceMappingURL=admin-panel.js.map
+//# sourceMappingURL=admin-login.js.map
 
 /***/ })
 

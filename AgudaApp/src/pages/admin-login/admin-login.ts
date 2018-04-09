@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AdminPanelPage } from '../admin-panel/admin-panel';
 
 @IonicPage({
   name: 'aguda-admin',
@@ -15,11 +16,12 @@ export class AdminLoginPage {
   password:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
 
   login() {
     console.log('verify name and password....');
-    this.navCtrl.setRoot('panel', {isConnected: true} );
+    this.navCtrl.setRoot(AdminPanelPage, {isConnected: true} );
   }
 
   ionViewDidLoad() {

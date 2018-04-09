@@ -1,3 +1,4 @@
+import { AdminPanelPage } from './../pages/admin-panel/admin-panel';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -26,6 +27,7 @@ import { HomeDataProvider } from '../providers/home-data/home-data';
     CalendarPage,
     GalleryPage,
     RefreshComponent,
+    AdminPanelPage,
     TabsPage
   ],
   imports: [
@@ -42,6 +44,7 @@ import { HomeDataProvider } from '../providers/home-data/home-data';
     CalendarPage,
     GalleryPage,
     RefreshComponent,
+    AdminPanelPage,
     TabsPage
   ],
   providers: [
