@@ -1,4 +1,0 @@
-#Thu Apr 12 21:41:04 IDT 2018
-base.0=D\:\\webDev\\AgudaJce\\AgudaApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
-renamed.0=classes.dex
-file.0=D\:\\webDev\\AgudaJce\\AgudaApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0\\classes.dex
