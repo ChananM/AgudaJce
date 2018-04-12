@@ -24,6 +24,9 @@
     },
     "cordova-plugin-fcm": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
     }
   },
   "dependent_plugins": {}

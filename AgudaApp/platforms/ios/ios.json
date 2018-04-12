@@ -35,6 +35,10 @@
             {
               "xml": "<feature name=\"FCMPlugin\"><param name=\"ios-package\" value=\"FCMPlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"FirebasePlugin\"><param name=\"ios-package\" value=\"FirebasePlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -44,7 +48,7 @@
           "aps-environment": [
             {
               "xml": "<string>development</string>",
-              "count": 1
+              "count": 2
             }
           ]
         }
@@ -54,7 +58,7 @@
           "aps-environment": [
             {
               "xml": "<string>production</string>",
-              "count": 1
+              "count": 2
             }
           ]
         }
@@ -79,6 +83,9 @@
     },
     "cordova-plugin-fcm": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
     }
   },
   "dependent_plugins": {},
@@ -122,6 +129,14 @@
       "clobbers": [
         "FCMPlugin"
       ]
+    },
+    {
+      "id": "cordova-plugin-firebase.FirebasePlugin",
+      "file": "plugins/cordova-plugin-firebase/www/firebase.js",
+      "pluginId": "cordova-plugin-firebase",
+      "clobbers": [
+        "FirebasePlugin"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -130,6 +145,7 @@
     "cordova-plugin-ionic-webview": "1.1.19",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-fcm": "2.1.2"
+    "cordova-plugin-fcm": "2.1.2",
+    "cordova-plugin-firebase": "0.1.25"
   }
 }

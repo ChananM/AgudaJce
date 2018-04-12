@@ -92,6 +92,7 @@ ext {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../cordova-plugin-fcm/teamcal-FCMPlugin.gradle"
+apply from: "../cordova-plugin-firebase/teamcal-build.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -262,6 +263,10 @@ dependencies {
     implementation(project(path: ":CordovaLib"))
     compile "com.google.firebase:firebase-core:+"
     compile "com.google.firebase:firebase-messaging:+"
+    compile "com.google.gms:google-services:+"
+    compile "com.google.android.gms:play-services-tagmanager:+"
+    compile "com.google.firebase:firebase-crash:+"
+    compile "com.google.firebase:firebase-config:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
