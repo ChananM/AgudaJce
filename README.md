@@ -13,9 +13,7 @@ Welcome students, to the application that will create yesterday tommorow, today.
 
 </br>
 
-## Please visit our [live application](https://agudajce-2018.firebaseapp.com)
-
-You may also review our [product page](../../wiki/Product) for further information.
+### Please visit our [live application](https://agudajce-2018.firebaseapp.com)
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
