@@ -42,8 +42,8 @@ We're trying to use the best tools and practices in order to produce a quality e
 
 ### Iteration Pages
 
-- [Iteration 0 - ZFR](../../AgudaJce/wiki/Iter0-ZFR)
-- [Iteration 1 - MVP](../../AgudaJce/wiki/Iter1-MVP)
+- [Iteration 0 - ZFR](../../wiki/Iter0-ZFR)
+- [Iteration 1 - MVP](../../wiki/Iter1-MVP)
 
 
 ## Disclaimer
