@@ -45,6 +45,13 @@ We're trying to use the best tools and practices in order to produce a quality e
 - [Iteration 0 - ZFR](../../wiki/Iter0-ZFR)
 - [Iteration 1 - MVP](../../wiki/Iter1-MVP)
 
+## Structure and build
+
+The project structure is divided to components, pages and providers. each is a framework tool of ionic providing a simple interface with the multi-platform methodology required for the project. All of the related tools can be found inside the [src directory](https://github.com/ChananM/AgudaJce/tree/master/AgudaApp/src)
+
+For information regarding building the code and the tools usage please refer to [this README file](https://github.com/ChananM/AgudaJce/blob/master/AgudaApp/README.md)
+
+For information regarding ionic framework visit the [official documentation](https://ionicframework.com/docs/)
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
