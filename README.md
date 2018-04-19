@@ -51,6 +51,8 @@ The project structure is divided to components, pages and providers. each is a f
 
 For information regarding building the code and the tools usage please refer to [this README file](https://github.com/ChananM/AgudaJce/blob/master/AgudaApp/README.md)
 
+For the list of known bugs [see here](https://github.com/ChananM/AgudaJce/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+
 For information regarding ionic framework visit the [official documentation](https://ionicframework.com/docs/)
 
 ## Disclaimer
