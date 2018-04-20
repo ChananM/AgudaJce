@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 'use strict';
 
 /**
@@ -9,9 +10,9 @@
 var fs = require('fs');
 var path = require('path');
 
-fs.ensureDirSync = function (dir) {
+fs.ensureDirSync = function(dir) {
     if (!fs.existsSync(dir)) {
-        dir.split(path.sep).reduce(function (currentPath, folder) {
+        dir.split(path.sep).reduce(function(currentPath, folder) {
             currentPath += folder + path.sep;
             if (!fs.existsSync(currentPath)) {
                 fs.mkdirSync(currentPath);
@@ -48,7 +49,7 @@ var PLATFORM = {
             ANDROID_DIR + '/assets/www/google-services.json',
             'www/google-services.json'
         ],
-        stringsXml: ANDROID_DIR + '/res/values/strings.xml'
+        stringsXml: ANDROID_DIR + '/app/src/main/res/values/strings.xml'
     }
 };
 
@@ -82,7 +83,7 @@ function copyKey(platform, callback) {
                 var contents = fs.readFileSync(file).toString();
 
                 try {
-                    platform.dest.forEach(function (destinationPath) {
+                    platform.dest.forEach(function(destinationPath) {
                         var folder = destinationPath.substring(0, destinationPath.lastIndexOf('/'));
                         fs.ensureDirSync(folder);
                         fs.writeFileSync(destinationPath, contents);
@@ -127,15 +128,15 @@ function directoryExists(path) {
 }
 
 module.exports = function(context) {
-  //get platform from the context supplied by cordova
-  var platforms = context.opts.platforms;
-  // Copy key files to their platform specific folders
-  if (platforms.indexOf('ios') !== -1 && directoryExists(IOS_DIR)) {
-    console.log('Preparing Firebase on iOS');
-    copyKey(PLATFORM.IOS);
-  }
-  if (platforms.indexOf('android') !== -1 && directoryExists(ANDROID_DIR)) {
-    console.log('Preparing Firebase on Android');
-    copyKey(PLATFORM.ANDROID, updateStringsXml)
-  }
+    //get platform from the context supplied by cordova
+    var platforms = context.opts.platforms;
+    // Copy key files to their platform specific folders
+    if (platforms.indexOf('ios') !== -1 && directoryExists(IOS_DIR)) {
+        console.log('Preparing Firebase on iOS');
+        copyKey(PLATFORM.IOS);
+    }
+    if (platforms.indexOf('android') !== -1 && directoryExists(ANDROID_DIR)) {
+        console.log('Preparing Firebase on Android');
+        copyKey(PLATFORM.ANDROID, updateStringsXml)
+    }
 };

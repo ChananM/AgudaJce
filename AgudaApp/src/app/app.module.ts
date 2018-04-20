@@ -7,6 +7,10 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AngularFireModule } from 'angularfire2';
+import { FIREBASE_CONFIC } from './app.firebase.config';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import { HomePage } from '../pages/home/home';
 import { InfoPage } from '../pages/info/info';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -19,6 +23,7 @@ import { ComponentsModule } from '../components/components.module';
 import { EntryScreenPageModule } from './../pages/entry-screen/entry-screen.module';
 import { HomeDataProvider } from '../providers/home-data/home-data';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,13 +35,18 @@ import { HomeDataProvider } from '../providers/home-data/home-data';
     AdminPanelPage,
     TabsPage
   ],
+
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIC),
+    AngularFireAuthModule,
     ComponentsModule,
     EntryScreenPageModule
   ],
+
   bootstrap: [IonicApp],
+
   entryComponents: [
     MyApp,
     InfoPage,
@@ -47,6 +57,7 @@ import { HomeDataProvider } from '../providers/home-data/home-data';
     AdminPanelPage,
     TabsPage
   ],
+
   providers: [
     StatusBar,
     SplashScreen,
@@ -54,4 +65,5 @@ import { HomeDataProvider } from '../providers/home-data/home-data';
     HomeDataProvider
   ]
 })
+
 export class AppModule {}

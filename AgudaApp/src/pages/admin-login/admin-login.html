@@ -1,28 +1,33 @@
 <ion-header>
-
-    <ion-navbar>
-        <ion-title>adminLogin</ion-title>
+    <ion-navbar color="primary">
+        <ion-title text-center>Login</ion-title>
     </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding dir='ltr'>
     <ion-list>
 
         <ion-item>
-            <ion-label floating>Username</ion-label>
-            <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
+            <ion-label floating>Email</ion-label>
+            <ion-input [(ngModel)]="email" type="email" name="email" required="required"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Password</ion-label>
-            <ion-input [(ngModel)]="password" type="password" value=""></ion-input>
+            <ion-input [(ngModel)]="password" type="password" name="password" required="required"></ion-input>
         </ion-item>
+
+        <div padding text-center>
+            <button *ngIf="email && password " ion-button color="dark" round (click)="login()">Login</button>
+            <!-- Show dead button if form is not filled -->
+            <button *ngIf="!email || !password" ion-button color="darkGray" round>Login</button>
+        </div>
 
     </ion-list>
 
-    <div padding>
-        <button primary block (click)="login()">Sign In</button>
+    <br/>
+    <div padding text-center>
+        <button ion-button color="gray" block clear (click)="forgotPassword()">Forgot Password</button>
     </div>
 </ion-content>
