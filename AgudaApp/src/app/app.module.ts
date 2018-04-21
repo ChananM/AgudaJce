@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AngularFireModule } from 'angularfire2';
-import { FIREBASE_CONFIC } from './app.firebase.config';
+import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { HomePage } from '../pages/home/home';
@@ -39,7 +39,7 @@ import { HomeDataProvider } from '../providers/home-data/home-data';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(FIREBASE_CONFIC),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
     ComponentsModule,
     EntryScreenPageModule

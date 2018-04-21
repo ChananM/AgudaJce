@@ -1,4 +1,4 @@
-export const FIREBASE_CONFIC = {
+export const FIREBASE_CONFIG = {
     apiKey: "AIzaSyC-GQk9UIhaQnGv_NXLq4iazMmfLK5WL-M",
     authDomain: "agudajce-2018.firebaseapp.com",
     databaseURL: "https://agudajce-2018.firebaseio.com",
