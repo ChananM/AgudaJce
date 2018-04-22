@@ -13,16 +13,14 @@ Welcome students, to the application that will create yesterday tommorow, today.
 
 </br>
 
-## Please visit our [live application](https://agudajce-2018.firebaseapp.com)
-
-You may also review our [product page](../../wiki/Product) for further information.
+### Please visit our [live application](https://agudajce-2018.firebaseapp.com)
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
 
 |Version Control System|Recommended IDE|Group Chat|Project Management Board|Issues|Documnetation|Project Course Status|License|
 |--|--|--|--|--|--|--|--|
-|Git & GitHub|[VS Code](https://code.visualstudio.com/)|[![Join the chat at https://gitter.im/ChananM/AgudaJce](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/jce-il/AgudaJce)|[here](https://github.com/ChananM/AgudaJce/projects)|[![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/issues)|[Wiki](https://github.com/ChananM/AgudaJce/wiki)|Inception|[![License](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ChananM/AgudaJce/blob/master/LICENSE)|
+|Git & GitHub|[VS Code](https://code.visualstudio.com/)|[![Join the chat at https://gitter.im/ChananM/AgudaJce](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/jce-il/AgudaJce)|[here](https://github.com/ChananM/AgudaJce/projects/1)|[![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/issues)|[Wiki](https://github.com/ChananM/AgudaJce/wiki)|ZFR|[![License](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ChananM/AgudaJce/blob/master/LICENSE)|
 
 <!-- More badges and links for future development
 | Current Release         | [![Current Version](https://img.shields.io/github/release/jce-il/project-template.svg?style=flat)](https://github.com/ChananM/AgudaJce/releases) |
@@ -40,6 +38,22 @@ We're trying to use the best tools and practices in order to produce a quality e
 ### Project Documents
 - [Project Inception](../../wiki/Inception)
 - [Software Requirements Specification](../../wiki/SRS)
+- [Software Design Specification](../../wiki/SDS)
+
+### Iteration Pages
+
+- [Iteration 0 - ZFR](../../wiki/Iter0-ZFR)
+- [Iteration 1 - MVP](../../wiki/Iter1-MVP)
+
+## Structure and build
+
+The project structure is divided to components, pages and providers. each is a framework tool of ionic providing a simple interface with the multi-platform methodology required for the project. All of the related tools can be found inside the [src directory](https://github.com/ChananM/AgudaJce/tree/master/AgudaApp/src)
+
+For information regarding building the code and the tools usage please refer to [this README file](https://github.com/ChananM/AgudaJce/blob/master/AgudaApp/README.md)
+
+For the list of known bugs [see here](https://github.com/ChananM/AgudaJce/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+
+For information regarding ionic framework visit the [official documentation](https://ionicframework.com/docs/)
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
