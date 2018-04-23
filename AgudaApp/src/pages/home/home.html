@@ -15,8 +15,23 @@
         <img src="assets/imgs/logo.png" width="200" height="200">
         <hr>
         <ion-list no-lines inset>
-            <ion-item class="item-trns" *ngFor="let post of postsService.posts">
-                <home-data [headline]="post.headline" [content]="post.content"></home-data>
+            <ion-item class="item-trns" *ngFor="let post of postsService.posts; let last = last">
+                <ion-grid style="height: 100%">
+                    <ion-row justify-content-center align-items-center style="height: 100%">
+                        <ion-card>
+                            <img src={{post.imageURL}}/>
+                            <ion-card-content text-wrap>
+                                <ion-card-title text-wrap>
+                                    {{post.headline}}
+                                </ion-card-title>
+                                <p>
+                                    {{post.content}}
+                                </p>
+                                <span *ngIf="last">{{adjustSizes()}}</span>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-row>
+                </ion-grid>
             </ion-item>
         </ion-list>
     </main>
