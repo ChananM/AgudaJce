@@ -28,4 +28,13 @@ export class CalendarPage {
     console.log("calendar refresh");
     this.calendarProvider.load();
   }
+
+  toggleSection(i) {
+    this.calendarProvider.posts[i].open = !this.calendarProvider.posts[i].open;
+  }
+
+  addToPlatformCalendar(i){
+    console.log("this event will be added to the platform calendar");
+    console.log(this.calendarProvider.posts[i]);
+  }
 }

@@ -12,9 +12,9 @@ export class CalendarEventProvider {
   }
   load(){
     this.posts = [
-      new CalendarEvent("",this.isoToDate("2018-04-24"),"Test","Let's test our calendar event"),
-      new CalendarEvent("https://s-i.huffpost.com/gen/1842880/images/n-NIGHTCLUB-628x314.jpg",this.isoToDate("2018-03-10"),"Test2","Let's test our calendar event"),
-      new CalendarEvent("https://c.wallhere.com/photos/90/73/disco_club_dance_hands-723564.jpg!d",this.isoToDate("2018-04-24"),"Test3","Let's test our calendar event")
+      new CalendarEvent("",this.isoToDate("2018-04-24"),"Test","האירוע המטריף של הקיץ - בדיקת אפליקציות", false),
+      new CalendarEvent("https://s-i.huffpost.com/gen/1842880/images/n-NIGHTCLUB-628x314.jpg",this.isoToDate("2018-03-10"),"מסיבה","בלה-בלה-בלה,לה-לה-לה", false),
+      new CalendarEvent("https://c.wallhere.com/photos/90/73/disco_club_dance_hands-723564.jpg!d",this.isoToDate("2018-04-24"),"Test3","Let's test our calendar event", false)
     ];
   }
 

@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-list *ngFor="let post of calendarProvider.posts">
+    <ion-list *ngFor="let post of calendarProvider.posts; let i = index">
         <ion-item-sliding>
             <ion-item>
                 <ion-thumbnail item-start>
@@ -19,17 +19,20 @@
                 </ion-thumbnail>
                 <h2>{{post.date.toLocaleString('he-IL',dateOptions)}}</h2>
                 <p>{{post.headline}}</p>
+                <button ion-button clear item-end (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': post.open, 'section': !post.open}">
+                    <ion-icon item-left name="arrow-dropdown-circle" *ngIf="!post.open"></ion-icon>
+                    <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>
+                </button>
             </ion-item>
             <ion-item-options side="left" dir="ltr">
-                <button ion-button color="primary" >
+                <button ion-button color="primary" (click)="addToPlatformCalendar(i)">
                     <ion-icon name="add"></ion-icon>
                     ללוח שנה
                 </button>
-                <button ion-button color="secondary" >
-                    <ion-icon name="information-circle"></ion-icon>
-                     פירוט 
-                </button>
             </ion-item-options>
+            <ion-item *ngIf="post.open">
+                <p>{{post.content}}</p>
+            </ion-item>
             
         </ion-item-sliding>
      </ion-list>

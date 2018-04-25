@@ -250,9 +250,9 @@ var CalendarEventProvider = /** @class */ (function () {
     }
     CalendarEventProvider.prototype.load = function () {
         this.posts = [
-            new __WEBPACK_IMPORTED_MODULE_0__models_calendarEvent_model__["a" /* CalendarEvent */]("", this.isoToDate("2018-04-24"), "Test", "Let's test our calendar event"),
-            new __WEBPACK_IMPORTED_MODULE_0__models_calendarEvent_model__["a" /* CalendarEvent */]("https://s-i.huffpost.com/gen/1842880/images/n-NIGHTCLUB-628x314.jpg", this.isoToDate("2018-03-10"), "Test2", "Let's test our calendar event"),
-            new __WEBPACK_IMPORTED_MODULE_0__models_calendarEvent_model__["a" /* CalendarEvent */]("https://c.wallhere.com/photos/90/73/disco_club_dance_hands-723564.jpg!d", this.isoToDate("2018-04-24"), "Test3", "Let's test our calendar event")
+            new __WEBPACK_IMPORTED_MODULE_0__models_calendarEvent_model__["a" /* CalendarEvent */]("", this.isoToDate("2018-04-24"), "Test", "האירוע המטריף של הקיץ - בדיקת אפליקציות", false),
+            new __WEBPACK_IMPORTED_MODULE_0__models_calendarEvent_model__["a" /* CalendarEvent */]("https://s-i.huffpost.com/gen/1842880/images/n-NIGHTCLUB-628x314.jpg", this.isoToDate("2018-03-10"), "מסיבה", "בלה-בלה-בלה,לה-לה-לה", false),
+            new __WEBPACK_IMPORTED_MODULE_0__models_calendarEvent_model__["a" /* CalendarEvent */]("https://c.wallhere.com/photos/90/73/disco_club_dance_hands-723564.jpg!d", this.isoToDate("2018-04-24"), "Test3", "Let's test our calendar event", false)
         ];
     };
     CalendarEventProvider.prototype.isoToDate = function (dateStr) {
@@ -820,13 +820,21 @@ var CalendarPage = /** @class */ (function () {
         console.log("calendar refresh");
         this.calendarProvider.load();
     };
+    CalendarPage.prototype.toggleSection = function (i) {
+        this.calendarProvider.posts[i].open = !this.calendarProvider.posts[i].open;
+    };
+    CalendarPage.prototype.addToPlatformCalendar = function (i) {
+        console.log("this event will be added to the platform calendar");
+        console.log(this.calendarProvider.posts[i]);
+    };
     CalendarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-calendar',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/calendar/calendar.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            {{tabName}}\n            <refresh id={{refresh_id}}></refresh>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list *ngFor="let post of calendarProvider.posts">\n        <ion-item-sliding>\n            <ion-item>\n                <ion-thumbnail item-start>\n                    <img *ngIf="post.imageURL != \'\'; else elsetag" src={{post.imageURL}}>\n                    <ng-template #elsetag>\n                        <img src="assets/imgs/logo.png">\n                    </ng-template>\n                </ion-thumbnail>\n                <h2>{{post.date.toLocaleString(\'he-IL\',dateOptions)}}</h2>\n                <p>{{post.headline}}</p>\n            </ion-item>\n            <ion-item-options side="left" dir="ltr">\n                <button ion-button color="primary" >\n                    <ion-icon name="add"></ion-icon>\n                    ללוח שנה\n                </button>\n                <button ion-button color="secondary" >\n                    <ion-icon name="information-circle"></ion-icon>\n                     פירוט \n                </button>\n            </ion-item-options>\n            \n        </ion-item-sliding>\n     </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/calendar/calendar.html"*/,
+            selector: 'page-calendar',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/calendar/calendar.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            {{tabName}}\n            <refresh id={{refresh_id}}></refresh>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list *ngFor="let post of calendarProvider.posts; let i = index">\n        <ion-item-sliding>\n            <ion-item>\n                <ion-thumbnail item-start>\n                    <img *ngIf="post.imageURL != \'\'; else elsetag" src={{post.imageURL}}>\n                    <ng-template #elsetag>\n                        <img src="assets/imgs/logo.png">\n                    </ng-template>\n                </ion-thumbnail>\n                <h2>{{post.date.toLocaleString(\'he-IL\',dateOptions)}}</h2>\n                <p>{{post.headline}}</p>\n                <button ion-button clear item-end (click)="toggleSection(i)" detail-none [ngClass]="{\'section-active\': post.open, \'section\': !post.open}">\n                    <ion-icon item-left name="arrow-dropdown-circle" *ngIf="!post.open"></ion-icon>\n                    <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>\n                </button>\n            </ion-item>\n            <ion-item-options side="left" dir="ltr">\n                <button ion-button color="primary" (click)="addToPlatformCalendar(i)">\n                    <ion-icon name="add"></ion-icon>\n                    ללוח שנה\n                </button>\n            </ion-item-options>\n            <ion-item *ngIf="post.open">\n                <p>{{post.content}}</p>\n            </ion-item>\n            \n        </ion-item-sliding>\n     </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/calendar/calendar.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* Events */], __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__["a" /* CalendarEventProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* Platform */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__["a" /* CalendarEventProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__["a" /* CalendarEventProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* Platform */]) === "function" && _d || Object])
     ], CalendarPage);
     return CalendarPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=calendar.js.map
