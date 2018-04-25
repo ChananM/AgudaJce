@@ -22,6 +22,7 @@ import { RefreshComponent } from '../components/refresh/refresh';
 import { ComponentsModule } from '../components/components.module';
 import { EntryScreenPageModule } from './../pages/entry-screen/entry-screen.module';
 import { HomeDataProvider } from '../providers/home-data/home-data';
+import { CalendarEventProvider } from '../providers/calendar-event/calendar-event';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { HomeDataProvider } from '../providers/home-data/home-data';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HomeDataProvider
+    HomeDataProvider,
+    CalendarEventProvider
   ]
 })
 

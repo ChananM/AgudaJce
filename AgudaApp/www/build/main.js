@@ -559,6 +559,13 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 327:
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\chana\\Desktop\\SE\\AgudaJce\\AgudaApp\\src\\providers\\calendar-event\\calendar-event.js'");
+
+/***/ }),
+
 /***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -721,8 +728,10 @@ var HomePage = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(15);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -734,28 +743,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var CalendarPage = /** @class */ (function () {
-    function CalendarPage(navCtrl, navParams, events) {
+    function CalendarPage(navCtrl, events, calendarProvider, platform) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
         this.events = events;
+        this.calendarProvider = calendarProvider;
+        this.platform = platform;
         this.tabName = 'יומן אירועים';
         this.refresh_id = 'calendarRef';
+        this.dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     }
+    CalendarPage.prototype.ionViewDidLoad = function () {
+    };
     CalendarPage.prototype.ionViewDidEnter = function () {
         this.events.publish('tab', this.tabName, this.refresh_id);
         this.doRefresh();
     };
     CalendarPage.prototype.doRefresh = function () {
         console.log("calendar refresh");
+        this.calendarProvider.load();
     };
     CalendarPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-calendar',template:/*ion-inline-start:"C:\Users\chana\Desktop\SE\AgudaJce\AgudaApp\src\pages\calendar\calendar.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>\n\n            {{tabName}}\n\n            <refresh id={{refresh_id}}></refresh>\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\chana\Desktop\SE\AgudaJce\AgudaApp\src\pages\calendar\calendar.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
+            selector: 'page-calendar',template:/*ion-inline-start:"C:\Users\chana\Desktop\SE\AgudaJce\AgudaApp\src\pages\calendar\calendar.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>\n\n            {{tabName}}\n\n            <refresh id={{refresh_id}}></refresh>\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <ion-list *ngFor="let post of calendarProvider.posts">\n\n        <ion-item-sliding>\n\n            <ion-item>\n\n                <ion-thumbnail item-start>\n\n                    <img *ngIf="post.imageURL != \'\'; else elsetag" src={{post.imageURL}}>\n\n                    <ng-template #elsetag>\n\n                        <img src="assets/imgs/logo.png">\n\n                    </ng-template>\n\n                </ion-thumbnail>\n\n                <h2>{{post.date.toLocaleString(\'he-IL\',dateOptions)}}</h2>\n\n                <p>{{post.headline}}</p>\n\n            </ion-item>\n\n            <ion-item-options side="left" dir="ltr">\n\n                <button ion-button color="light" >\n\n                    <ion-icon name="more"></ion-icon>\n\n                    More\n\n                </button>\n\n                <button ion-button color="primary" >\n\n                    <ion-icon name="text"></ion-icon>\n\n                    הוסף ליומן\n\n                </button>\n\n            </ion-item-options>\n\n            \n\n        </ion-item-sliding>\n\n     </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\chana\Desktop\SE\AgudaJce\AgudaApp\src\pages\calendar\calendar.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Events */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__["CalendarEventProvider"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__["CalendarEventProvider"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* Platform */]) === "function" && _d || Object])
     ], CalendarPage);
     return CalendarPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=calendar.js.map
