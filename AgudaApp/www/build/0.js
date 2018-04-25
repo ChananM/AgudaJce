@@ -1,10 +1,6 @@
 webpackJsonp([0],{
 
-<<<<<<< HEAD
-/***/ 325:
-=======
 /***/ 327:
->>>>>>> 8264e0a3fc264ec3635538181a1d6c144d1508a2
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,11 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminLoginPageModule", function() { return AdminLoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_login__ = __webpack_require__(326);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_login__ = __webpack_require__(328);
->>>>>>> 8264e0a3fc264ec3635538181a1d6c144d1508a2
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -46,24 +38,15 @@ var AdminLoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 326:
-=======
 /***/ 328:
->>>>>>> 8264e0a3fc264ec3635538181a1d6c144d1508a2
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminLoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_panel_admin_panel__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(212);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_panel_admin_panel__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(214);
->>>>>>> 8264e0a3fc264ec3635538181a1d6c144d1508a2
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -164,11 +147,7 @@ var AdminLoginPage = /** @class */ (function () {
     };
     AdminLoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-admin-login',template:/*ion-inline-start:"C:\Users\chana\Desktop\SE\AgudaJce\AgudaApp\src\pages\admin-login\admin-login.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n        <ion-title text-center>Login</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding dir=\'ltr\'>\n\n    <ion-list>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Email</ion-label>\n\n            <ion-input [(ngModel)]="email" type="email" name="email" required="required"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Password</ion-label>\n\n            <ion-input [(ngModel)]="password" type="password" name="password" required="required"></ion-input>\n\n        </ion-item>\n\n\n\n        <div padding text-center>\n\n            <button *ngIf="email && password " ion-button color="dark" round (click)="login()">Login</button>\n\n            <!-- Show dead button if form is not filled -->\n\n            <button *ngIf="!email || !password" ion-button color="darkGray" round>Login</button>\n\n        </div>\n\n\n\n    </ion-list>\n\n\n\n    <br/>\n\n    <div padding text-center>\n\n        <button ion-button color="gray" block clear (click)="forgotPassword()">Forgot Password</button>\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\chana\Desktop\SE\AgudaJce\AgudaApp\src\pages\admin-login\admin-login.html"*/,
-=======
             selector: 'page-admin-login',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/admin-login/admin-login.html"*/'<ion-header>\n    <ion-navbar color="primary">\n        <ion-title text-center>Login</ion-title>\n    </ion-navbar>\n</ion-header>\n\n\n<ion-content padding dir=\'ltr\'>\n    <ion-list>\n\n        <ion-item>\n            <ion-label floating>Email</ion-label>\n            <ion-input [(ngModel)]="email" type="email" name="email" required="required"></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-label floating>Password</ion-label>\n            <ion-input [(ngModel)]="password" type="password" name="password" required="required"></ion-input>\n        </ion-item>\n\n        <div padding text-center>\n            <button *ngIf="email && password " ion-button color="dark" round (click)="login()">Login</button>\n            <!-- Show dead button if form is not filled -->\n            <button *ngIf="!email || !password" ion-button color="darkGray" round>Login</button>\n        </div>\n\n    </ion-list>\n\n    <br/>\n    <div padding text-center>\n        <button ion-button color="gray" block clear (click)="forgotPassword()">Forgot Password</button>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/admin-login/admin-login.html"*/,
->>>>>>> 8264e0a3fc264ec3635538181a1d6c144d1508a2
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],

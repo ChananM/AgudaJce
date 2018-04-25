@@ -19,7 +19,8 @@ export class CalendarEventProvider {
   load(){
     this.posts = [
       new CalendarEvent("",this.isoTodate("2018-04-24"),"Test1","Let's test our calendar event"),
-      new CalendarEvent("https://s-i.huffpost.com/gen/1842880/images/n-NIGHTCLUB-628x314.jpg",this.isoTodate("2018-03-20"),"Test1","Let's test our calendar event")
+      new CalendarEvent("https://s-i.huffpost.com/gen/1842880/images/n-NIGHTCLUB-628x314.jpg",this.isoTodate("2018-03-10"),"Test2","Let's test our calendar event"),
+      new CalendarEvent("https://c.wallhere.com/photos/90/73/disco_club_dance_hands-723564.jpg!d",this.isoTodate("2018-04-24"),"Test3","Let's test our calendar event")
     ];
   }
 
