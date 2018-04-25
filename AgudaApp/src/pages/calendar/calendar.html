@@ -17,8 +17,8 @@
                         <img src="assets/imgs/logo.png">
                     </ng-template>
                 </ion-thumbnail>
-                <h2>{{post.date.toLocaleString('he-IL',dateOptions)}}</h2>
-                <p>{{post.headline}}</p>
+                <h2>{{post.headline}}</h2>
+                <p>{{post.date.toLocaleString('he-IL',dateOptions)}}</p>
                 <button ion-button clear item-end (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': post.open, 'section': !post.open}">
                     <ion-icon item-left name="arrow-dropdown-circle" *ngIf="!post.open"></ion-icon>
                     <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>
