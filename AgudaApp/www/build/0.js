@@ -1,1 +1,208 @@
-webpackJsonp([0],{282:function(l,n,u){"use strict";function e(l){return d._19(0,[(l()(),d.Z(0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var e=!0,t=l.component;if("input"===n){e=!1!==t.onInput(u)&&e}if("blur"===n){e=!1!==t.onBlur(u)&&e}if("focus"===n){e=!1!==t.onFocus(u)&&e}if("keydown"===n){e=!1!==t.onKeydown(u)&&e}return e},null,null)),d.Y(1,278528,null,0,Q.g,[d.p,d.q,d.j,d.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._type,u._labelId,u.min,u.max,u.step,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function t(l){return d._19(0,[(l()(),d.Z(0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var e=!0,t=l.component;if("input"===n){e=!1!==t.onInput(u)&&e}if("blur"===n){e=!1!==t.onBlur(u)&&e}if("focus"===n){e=!1!==t.onFocus(u)&&e}if("keydown"===n){e=!1!==t.onKeydown(u)&&e}return e},null,null)),d.Y(1,278528,null,0,Q.g,[d.p,d.q,d.j,d.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._labelId,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function a(l){return d._19(0,[(l()(),d.Z(0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,u){var e=!0,t=l.component;if("click"===n){e=!1!==t.clearTextInput(u)&&e}if("mousedown"===n){e=!1!==t.clearTextInput(u)&&e}return e},Z.b,Z.a)),d.Y(1,1097728,null,0,j.a,[[8,""],P.a,d.j,d.z],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function o(l){return d._19(0,[(l()(),d.Z(0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,u){var e=!0,t=l.component;if("touchstart"===n){e=!1!==t._pointerStart(u)&&e}if("touchend"===n){e=!1!==t._pointerEnd(u)&&e}if("mousedown"===n){e=!1!==t._pointerStart(u)&&e}if("mouseup"===n){e=!1!==t._pointerEnd(u)&&e}return e},null,null))],null,null)}function r(l){return d._19(2,[d._16(671088640,1,{_native:0}),(l()(),d.U(16777216,null,null,1,null,e)),d.Y(2,16384,null,0,Q.i,[d.I,d.F],{ngIf:[0,"ngIf"]},null),(l()(),d.U(16777216,null,null,1,null,t)),d.Y(4,16384,null,0,Q.i,[d.I,d.F],{ngIf:[0,"ngIf"]},null),(l()(),d.U(16777216,null,null,1,null,a)),d.Y(6,16384,null,0,Q.i,[d.I,d.F],{ngIf:[0,"ngIf"]},null),(l()(),d.U(16777216,null,null,1,null,o)),d.Y(8,16384,null,0,Q.i,[d.I,d.F],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,!u._isTextarea);l(n,4,0,u._isTextarea);l(n,6,0,u._clearInput);l(n,8,0,u._useAssist)},null)}function i(l){return d._19(0,[(l()(),d.Z(0,0,null,null,2,"button",[["color","dark"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.login()&&e}return e},Z.b,Z.a)),d.Y(1,1097728,null,0,j.a,[[8,""],P.a,d.j,d.z],{color:[0,"color"],round:[1,"round"]},null),(l()(),d._18(-1,0,["Login"]))],function(l,n){l(n,1,0,"dark","")},null)}function s(l){return d._19(0,[(l()(),d.Z(0,0,null,null,2,"button",[["color","darkGray"],["ion-button",""],["round",""]],null,null,null,Z.b,Z.a)),d.Y(1,1097728,null,0,j.a,[[8,""],P.a,d.j,d.z],{color:[0,"color"],round:[1,"round"]},null),(l()(),d._18(-1,0,["Login"]))],function(l,n){l(n,1,0,"darkGray","")},null)}function c(l){return d._19(0,[(l()(),d.Z(0,0,null,null,10,"ion-header",[],null,null,null,null,null)),d.Y(1,16384,null,0,q.a,[P.a,d.j,d.z,[2,z.a]],null,null),(l()(),d._18(-1,null,["\n    "])),(l()(),d.Z(3,0,null,null,6,"ion-navbar",[["class","toolbar"],["color","primary"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,A.b,A.a)),d.Y(4,49152,null,0,F.a,[L.a,[2,z.a],[2,E.a],P.a,d.j,d.z],{color:[0,"color"]},null),(l()(),d._18(-1,3,["\n        "])),(l()(),d.Z(6,0,null,3,2,"ion-title",[["text-center",""]],null,null,null,M.b,M.a)),d.Y(7,49152,null,0,T.a,[P.a,d.j,d.z,[2,U.a],[2,F.a]],null,null),(l()(),d._18(-1,0,["Login"])),(l()(),d._18(-1,3,["\n    "])),(l()(),d._18(-1,null,["\n"])),(l()(),d._18(-1,null,["\n\n\n"])),(l()(),d.Z(12,0,null,null,65,"ion-content",[["dir","ltr"],["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,S.b,S.a)),d.Y(13,4374528,null,0,V.a,[P.a,D.a,O.a,d.j,d.z,L.a,R.a,d.u,[2,z.a],[2,E.a]],null,null),(l()(),d._18(-1,1,["\n    "])),(l()(),d.Z(15,0,null,1,52,"ion-list",[],null,null,null,null,null)),d.Y(16,16384,null,0,G.a,[P.a,d.j,d.z,D.a,K.l,O.a],null,null),(l()(),d._18(-1,null,["\n\n        "])),(l()(),d.Z(18,0,null,null,18,"ion-item",[["class","item item-block"]],null,null,null,B.b,B.a)),d.Y(19,1097728,null,3,W.a,[X.a,P.a,d.j,d.z,[2,J.a]],null,null),d._16(335544320,1,{contentLabel:0}),d._16(603979776,2,{_buttons:1}),d._16(603979776,3,{_icons:1}),d.Y(23,16384,null,0,N.a,[],null,null),(l()(),d._18(-1,2,["\n            "])),(l()(),d.Z(25,0,null,1,2,"ion-label",[["floating",""]],null,null,null,null,null)),d.Y(26,16384,[[1,4]],0,H.a,[P.a,d.j,d.z,[8,""],[8,null],[8,null],[8,null]],null,null),(l()(),d._18(-1,null,["Email"])),(l()(),d._18(-1,2,["\n            "])),(l()(),d.Z(29,0,null,3,6,"ion-input",[["name","email"],["required","required"],["type","email"]],[[1,"required",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var e=!0;if("ngModelChange"===n){e=!1!==(l.component.email=u)&&e}return e},r,nl)),d.Y(30,16384,null,0,ll.k,[],{required:[0,"required"]},null),d._14(1024,null,ll.e,function(l){return[l]},[ll.k]),d.Y(32,671744,null,0,ll.i,[[8,null],[2,ll.e],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),d._14(2048,null,ll.g,null,[ll.i]),d.Y(34,16384,null,0,ll.h,[ll.g],null,null),d.Y(35,5423104,null,0,$.a,[P.a,D.a,X.a,L.a,d.j,d.z,[2,V.a],[2,W.a],[2,ll.g],O.a],{type:[0,"type"]},null),(l()(),d._18(-1,2,["\n        "])),(l()(),d._18(-1,null,["\n\n        "])),(l()(),d.Z(38,0,null,null,18,"ion-item",[["class","item item-block"]],null,null,null,B.b,B.a)),d.Y(39,1097728,null,3,W.a,[X.a,P.a,d.j,d.z,[2,J.a]],null,null),d._16(335544320,4,{contentLabel:0}),d._16(603979776,5,{_buttons:1}),d._16(603979776,6,{_icons:1}),d.Y(43,16384,null,0,N.a,[],null,null),(l()(),d._18(-1,2,["\n            "])),(l()(),d.Z(45,0,null,1,2,"ion-label",[["floating",""]],null,null,null,null,null)),d.Y(46,16384,[[4,4]],0,H.a,[P.a,d.j,d.z,[8,""],[8,null],[8,null],[8,null]],null,null),(l()(),d._18(-1,null,["Password"])),(l()(),d._18(-1,2,["\n            "])),(l()(),d.Z(49,0,null,3,6,"ion-input",[["name","password"],["required","required"],["type","password"]],[[1,"required",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var e=!0;if("ngModelChange"===n){e=!1!==(l.component.password=u)&&e}return e},r,nl)),d.Y(50,16384,null,0,ll.k,[],{required:[0,"required"]},null),d._14(1024,null,ll.e,function(l){return[l]},[ll.k]),d.Y(52,671744,null,0,ll.i,[[8,null],[2,ll.e],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),d._14(2048,null,ll.g,null,[ll.i]),d.Y(54,16384,null,0,ll.h,[ll.g],null,null),d.Y(55,5423104,null,0,$.a,[P.a,D.a,X.a,L.a,d.j,d.z,[2,V.a],[2,W.a],[2,ll.g],O.a],{type:[0,"type"]},null),(l()(),d._18(-1,2,["\n        "])),(l()(),d._18(-1,null,["\n\n        "])),(l()(),d.Z(58,0,null,null,8,"div",[["padding",""],["text-center",""]],null,null,null,null,null)),(l()(),d._18(-1,null,["\n            "])),(l()(),d.U(16777216,null,null,1,null,i)),d.Y(61,16384,null,0,Q.i,[d.I,d.F],{ngIf:[0,"ngIf"]},null),(l()(),d._18(-1,null,["\n            "])),(l()(),d._18(-1,null,["\n            "])),(l()(),d.U(16777216,null,null,1,null,s)),d.Y(65,16384,null,0,Q.i,[d.I,d.F],{ngIf:[0,"ngIf"]},null),(l()(),d._18(-1,null,["\n        "])),(l()(),d._18(-1,null,["\n\n    "])),(l()(),d._18(-1,1,["\n\n    "])),(l()(),d.Z(69,0,null,1,0,"br",[],null,null,null,null,null)),(l()(),d._18(-1,1,["\n    "])),(l()(),d.Z(71,0,null,1,5,"div",[["padding",""],["text-center",""]],null,null,null,null,null)),(l()(),d._18(-1,null,["\n        "])),(l()(),d.Z(73,0,null,null,2,"button",[["block",""],["clear",""],["color","gray"],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.forgotPassword()&&e}return e},Z.b,Z.a)),d.Y(74,1097728,null,0,j.a,[[8,""],P.a,d.j,d.z],{color:[0,"color"],clear:[1,"clear"],block:[2,"block"]},null),(l()(),d._18(-1,0,["Forgot Password"])),(l()(),d._18(-1,null,["\n    "])),(l()(),d._18(-1,1,["\n"]))],function(l,n){var u=n.component;l(n,4,0,"primary");l(n,30,0,"required");l(n,32,0,"email",u.email);l(n,35,0,"email");l(n,50,0,"required");l(n,52,0,"password",u.password);l(n,55,0,"password");l(n,61,0,u.email&&u.password);l(n,65,0,!u.email||!u.password);l(n,74,0,"gray","","")},function(l,n){l(n,3,0,d._11(n,4)._hidden,d._11(n,4)._sbPadding);l(n,12,0,d._11(n,13).statusbarPadding,d._11(n,13)._hasRefresher);l(n,29,0,d._11(n,30).required?"":null,d._11(n,34).ngClassUntouched,d._11(n,34).ngClassTouched,d._11(n,34).ngClassPristine,d._11(n,34).ngClassDirty,d._11(n,34).ngClassValid,d._11(n,34).ngClassInvalid,d._11(n,34).ngClassPending);l(n,49,0,d._11(n,50).required?"":null,d._11(n,54).ngClassUntouched,d._11(n,54).ngClassTouched,d._11(n,54).ngClassPristine,d._11(n,54).ngClassDirty,d._11(n,54).ngClassValid,d._11(n,54).ngClassInvalid,d._11(n,54).ngClassPending)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),p=(u(3),u(24),u(138)),f=u(136),g=this&&this.__awaiter||function(l,n,u,e){return new(u||(u=Promise))(function(t,a){function o(l){try{i(e.next(l))}catch(l){a(l)}}function r(l){try{i(e.throw(l))}catch(l){a(l)}}function i(l){l.done?t(l.value):new u(function(n){n(l.value)}).then(o,r)}i((e=e.apply(l,n||[])).next())})},_=this&&this.__generator||function(l,n){function u(u){return function(o){return function(u){if(e)throw new TypeError("Generator is already executing.");for(;r;)try{if(e=1,t&&(a=t[2&u[0]?"return":u[0]?"throw":"next"])&&!(a=a.call(t,u[1])).done)return a;switch(t=0,a&&(u=[0,a.value]),u[0]){case 0:case 1:a=u;break;case 4:return r.label++,{value:u[1],done:!1};case 5:r.label++,t=u[1],u=[0];continue;case 7:u=r.ops.pop(),r.trys.pop();continue;default:if(a=r.trys,!(a=a.length>0&&a[a.length-1])&&(6===u[0]||2===u[0])){r=0;continue}if(3===u[0]&&(!a||u[1]>a[0]&&u[1]<a[3])){r.label=u[1];break}if(6===u[0]&&r.label<a[1]){r.label=a[1],a=u;break}if(a&&r.label<a[2]){r.label=a[2],r.ops.push(u);break}a[2]&&r.ops.pop(),r.trys.pop();continue}u=n.call(l,r)}catch(l){u=[6,l],t=0}finally{e=a=0}if(5&u[0])throw u[1];return{value:u[0]?u[1]:void 0,done:!0}}([u,o])}}var e,t,a,o,r={label:0,sent:function(){if(1&a[0])throw a[1];return a[1]},trys:[],ops:[]};return o={next:u(0),throw:u(1),return:u(2)},"function"==typeof Symbol&&(o[Symbol.iterator]=function(){return this}),o},m=function(){function l(l,n,u,e,t,a){this.navCtrl=l,this.navParams=n,this.afAuth=u,this.loadingCtrl=e,this.alertCtrl=t,this.toastCtrl=a}return l.prototype.login=function(){return g(this,void 0,void 0,function(){var l,n,u,e=this;return _(this,function(t){switch(t.label){case 0:return t.trys.push([0,2,,3]),console.log("verify name and password...."),(l=this.loadingCtrl.create()).present(),[4,this.afAuth.auth.signInWithEmailAndPassword(this.email,this.password)];case 1:return n=t.sent(),console.log(n),l.dismiss().then(function(){console.log("uid: "+n.uid),e.navCtrl.setRoot(p.a)}),[3,3];case 2:return u=t.sent(),console.error(u),l.dismiss().then(function(){e.alertCtrl.create({title:"Login Failed",message:u.message,buttons:["OK"]}).present()}),[3,3];case 3:return[2]}})})},l.prototype.forgotPassword=function(){var l=this;this.alertCtrl.create({cssClass:"alertClass",title:"Password Recovery",subTitle:"Enter your Email address",inputs:[{name:"emailAddress",type:"email",placeholder:"Email"}],buttons:[{text:"Cancel",role:"cancel"},{text:"Confirm",handler:function(n){console.log(n.emailAddress);var u={message:"",duration:3e3,cssClass:"toastClass",position:"middle"};l.afAuth.auth.sendPasswordResetEmail(n.emailAddress).then(function(){u.message="Mail with steps about password recovery was sent to you"}).catch(function(l){u.message=l.message}),l.toastCtrl.create(u).present()}}]}).present()},l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AdminLoginPage")},l}(),h=function(){return function(){}}(),b=u(207),y=u(208),v=u(209),w=u(210),C=u(211),k=u(212),Y=u(213),I=u(214),x=u(215),Z=u(45),j=u(22),P=u(1),q=u(46),z=u(5),A=u(57),F=u(23),L=u(6),E=u(11),M=u(58),T=u(30),U=u(25),S=u(59),V=u(17),D=u(4),O=u(7),R=u(19),G=u(53),K=u(8),B=u(139),W=u(18),X=u(16),J=u(52),N=u(67),H=u(56),Q=u(13),$=u(135),ll=u(21),nl=d.X({encapsulation:2,styles:[],data:{}}),ul=u(10),el=u(97),tl=u(96),al=u(98),ol=d.X({encapsulation:2,styles:[],data:{}}),rl=d.V("page-admin-login",m,function(l){return d._19(0,[(l()(),d.Z(0,0,null,null,1,"page-admin-login",[],null,null,null,c,ol)),d.Y(1,49152,null,0,m,[E.a,ul.a,f.a,el.a,tl.a,al.a],null,null)],null,null)},{},{},[]),il=u(137),sl=u(51);u.d(n,"AdminLoginPageModuleNgFactory",function(){return cl});var cl=d.W(h,[],function(l){return d._7([d._8(512,d.i,d.S,[[8,[b.a,y.a,v.a,w.a,C.a,k.a,Y.a,I.a,x.a,rl]],[3,d.i],d.s]),d._8(4608,Q.k,Q.j,[d.r,[2,Q.s]]),d._8(4608,ll.m,ll.m,[]),d._8(4608,ll.c,ll.c,[]),d._8(512,Q.b,Q.b,[]),d._8(512,ll.l,ll.l,[]),d._8(512,ll.d,ll.d,[]),d._8(512,ll.j,ll.j,[]),d._8(512,il.a,il.a,[]),d._8(512,il.b,il.b,[]),d._8(512,h,h,[]),d._8(256,sl.a,m,[])])})}});
+webpackJsonp([0],{
+
+/***/ 327:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminLoginPageModule", function() { return AdminLoginPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_login__ = __webpack_require__(328);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AdminLoginPageModule = /** @class */ (function () {
+    function AdminLoginPageModule() {
+    }
+    AdminLoginPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__admin_login__["a" /* AdminLoginPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__admin_login__["a" /* AdminLoginPage */]),
+            ],
+        })
+    ], AdminLoginPageModule);
+    return AdminLoginPageModule;
+}());
+
+//# sourceMappingURL=admin-login.module.js.map
+
+/***/ }),
+
+/***/ 328:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminLoginPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_panel_admin_panel__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(214);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+var AdminLoginPage = /** @class */ (function () {
+    function AdminLoginPage(navCtrl, navParams, afAuth, loadingCtrl, alertCtrl, toastCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.afAuth = afAuth;
+        this.loadingCtrl = loadingCtrl;
+        this.alertCtrl = alertCtrl;
+        this.toastCtrl = toastCtrl;
+    }
+    AdminLoginPage.prototype.login = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var loader, res_1, e_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        console.log('verify name and password....');
+                        loader = this.loadingCtrl.create();
+                        loader.present();
+                        return [4 /*yield*/, this.afAuth.auth.signInWithEmailAndPassword(this.email, this.password)];
+                    case 1:
+                        res_1 = _a.sent();
+                        console.log(res_1);
+                        loader.dismiss().then(function () {
+                            console.log('uid: ' + res_1.uid);
+                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__admin_panel_admin_panel__["a" /* AdminPanelPage */]);
+                        });
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_1 = _a.sent();
+                        console.error(e_1);
+                        loader.dismiss().then(function () {
+                            var alert = _this.alertCtrl.create({
+                                title: 'Login Failed',
+                                message: e_1.message,
+                                buttons: ['OK']
+                            });
+                            alert.present();
+                        });
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AdminLoginPage.prototype.forgotPassword = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            cssClass: 'alertClass',
+            title: 'Password Recovery',
+            subTitle: 'Enter your Email address',
+            inputs: [
+                {
+                    name: 'emailAddress',
+                    type: 'email',
+                    placeholder: 'Email',
+                }
+            ],
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                },
+                {
+                    text: 'Confirm',
+                    handler: function (data) {
+                        console.log(data.emailAddress);
+                        var toastOpt = {
+                            message: '',
+                            duration: 3000,
+                            cssClass: 'toastClass',
+                            position: 'middle'
+                        };
+                        _this.afAuth.auth.sendPasswordResetEmail(data.emailAddress)
+                            .then(function () {
+                            toastOpt.message = 'Mail with steps about password recovery was sent to you';
+                        })
+                            .catch(function (err) {
+                            toastOpt.message = err.message;
+                        });
+                        _this.toastCtrl.create(toastOpt).present();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    AdminLoginPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AdminLoginPage');
+    };
+    AdminLoginPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-admin-login',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/admin-login/admin-login.html"*/'<ion-header>\n    <ion-navbar color="primary">\n        <ion-title text-center>Login</ion-title>\n    </ion-navbar>\n</ion-header>\n\n\n<ion-content padding dir=\'ltr\'>\n    <ion-list>\n\n        <ion-item>\n            <ion-label floating>Email</ion-label>\n            <ion-input [(ngModel)]="email" type="email" name="email" required="required"></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-label floating>Password</ion-label>\n            <ion-input [(ngModel)]="password" type="password" name="password" required="required"></ion-input>\n        </ion-item>\n\n        <div padding text-center>\n            <button *ngIf="email && password " ion-button color="dark" round (click)="login()">Login</button>\n            <!-- Show dead button if form is not filled -->\n            <button *ngIf="!email || !password" ion-button color="darkGray" round>Login</button>\n        </div>\n\n    </ion-list>\n\n    <br/>\n    <div padding text-center>\n        <button ion-button color="gray" block clear (click)="forgotPassword()">Forgot Password</button>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/admin-login/admin-login.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+    ], AdminLoginPage);
+    return AdminLoginPage;
+}());
+
+//# sourceMappingURL=admin-login.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=0.js.map
