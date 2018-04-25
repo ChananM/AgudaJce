@@ -13,12 +13,18 @@ import { Injectable } from '@angular/core';
 export class CalendarEventProvider {
 
   posts: any = [];
-
+  
   constructor() {
   }
   load(){
     this.posts = [
-      new CalendarEventModel("2018-04-24","Test","Let's test our calendar event")
+      new CalendarEventModel("",this.isoTodate("2018-04-24"),"Test1","Let's test our calendar event"),
+      new CalendarEventModel("https://s-i.huffpost.com/gen/1842880/images/n-NIGHTCLUB-628x314.jpg",this.isoTodate("2018-03-20"),"Test1","Let's test our calendar event")
     ];
   }
+
+  private isoTodate(dateStr:string){
+    return new Date(dateStr);
+  }
 }
+

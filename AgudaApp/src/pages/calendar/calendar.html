@@ -8,5 +8,29 @@
 </ion-header>
 
 <ion-content padding>
-
+    <ion-list *ngFor="let post of calendarProvider.posts">
+        <ion-item-sliding>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img *ngIf="post.imageURL != ''; else elsetag" src={{post.imageURL}}>
+                    <ng-template #elsetag>
+                        <img src="assets/imgs/logo.png">
+                    </ng-template>
+                </ion-thumbnail>
+                <h2>{{post.date.toLocaleString('he-IL',dateOptions)}}</h2>
+                <p>{{post.headline}}</p>
+            </ion-item>
+            <ion-item-options side="left" dir="ltr">
+                <button ion-button color="light" >
+                    <ion-icon name="more"></ion-icon>
+                    More
+                </button>
+                <button ion-button color="primary" >
+                    <ion-icon name="text"></ion-icon>
+                    הוסף ליומן
+                </button>
+            </ion-item-options>
+            
+        </ion-item-sliding>
+     </ion-list>
 </ion-content>

@@ -1,4 +1,4 @@
 export class CalendarEventModel {
-    constructor (public date:string, public headline: string, public content: string){
+    constructor (public imageURL: string, public date:Date, public headline: string, public content: string){
     }
 }

@@ -10,6 +10,7 @@ export class CalendarPage {
 
   tabName = 'יומן אירועים';
   refresh_id = 'calendarRef';
+  dateOptions = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
 
   constructor(public navCtrl: NavController, public events: Events, public calendarProvider: CalendarEventProvider, public platform: Platform) {
   }
@@ -25,5 +26,6 @@ export class CalendarPage {
 
   doRefresh(){
     console.log("calendar refresh");
+    this.calendarProvider.load();
   }
 }
