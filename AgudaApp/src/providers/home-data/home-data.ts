@@ -1,4 +1,4 @@
-import { HomeDataModel } from './../../models/homeData.model';
+import { HomeData } from './../../models/homeData.model';
 import { Injectable } from '@angular/core';
 
 /*
@@ -17,9 +17,9 @@ export class HomeDataProvider {
 
   load(){
     this.posts = [
-      new HomeDataModel("http://www.nuclearblast.de/static/articles/260/260672.jpg/1000x1000.jpg", "On Her Journey To The Sun", "A music album by Rikard Sjöblom's Gungfly"),
-      new HomeDataModel("http://evilinkrecords.com/wp-content/uploads/2016/07/StrangersCover.jpg", "Stranger Heads Prevail", "A music album by Thank You Scientist"),
-      new HomeDataModel("https://static.wixstatic.com/media/d6751f_4abd982a7f374044a8c7c249d146427c~mv2.jpg", "Blackbox", "A music album by Major Parkinson")
+      new HomeData("http://www.nuclearblast.de/static/articles/260/260672.jpg/1000x1000.jpg", "On Her Journey To The Sun", "A music album by Rikard Sjöblom's Gungfly"),
+      new HomeData("http://evilinkrecords.com/wp-content/uploads/2016/07/StrangersCover.jpg", "Stranger Heads Prevail", "A music album by Thank You Scientist"),
+      new HomeData("https://static.wixstatic.com/media/d6751f_4abd982a7f374044a8c7c249d146427c~mv2.jpg", "Blackbox", "A music album by Major Parkinson")
     ];
   }
 

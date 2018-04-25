@@ -15,7 +15,7 @@
         <img src="assets/imgs/logo.png" width="200" height="200">
         <hr>
         <ion-row justify-content-center *ngFor="let post of postsService.posts; let i = index;">
-            <ion-card id="postCard_{{i}}" [ngClass]=browserSize>
+            <ion-card id="postCard_{{i}}" [ngClass]="browserSize">
                 <img src={{post.imageURL}}/>
                 <ion-card-content text-wrap>
                     <ion-card-title text-wrap>

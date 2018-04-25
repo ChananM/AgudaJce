@@ -10,6 +10,12 @@ export class GalleryPage {
   tabName = 'גלריה';
   refresh_id = 'gallRef';
 
+  albumArray = [
+    {headline: "USA", content: "51 states", imageUrl: "blablabla"},
+    {headline: "Canada", content: "3 states"},
+    {headline: "Israel", content: "1 states"}
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private events: Events) {
   }
 
@@ -20,5 +26,9 @@ export class GalleryPage {
 
   doRefresh(){
     console.log("galery refresh");
+  }
+
+  callAlbum(text){
+    alert(text);
   }
 }
