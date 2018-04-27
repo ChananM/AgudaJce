@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Events } from 'ionic-angular';
+import { NavController, NavParams, Events, Platform } from 'ionic-angular';
+import { FbImagesPage } from './fb-images/fb-images';
 
 @Component({
   selector: 'page-gallery',
@@ -16,7 +17,7 @@ export class GalleryPage {
     {headline: "Israel", content: "1 states"}
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private events: Events) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private events: Events, public platform: Platform) {
   }
 
   ionViewDidEnter(){
@@ -29,6 +30,6 @@ export class GalleryPage {
   }
 
   callAlbum(text){
-    alert(text);
+    this.navCtrl.push(FbImagesPage, {text1: text})
   }
 }

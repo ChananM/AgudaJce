@@ -9,7 +9,7 @@
 
 <ion-content padding>
     <ion-row justify-content-center *ngFor="let album of albumArray;">
-        <ion-card (click) = "callAlbum(album.content)">
+        <ion-card [ngClass]="{'album': this.platform.is('core')}" (click) = "callAlbum(album.content)">
             <img src="https://image.freepik.com/free-psd/abstract-background-design_1297-87.jpg"/>
             <div class="card-title">{{album.headline}}</div>
             <div class="card-subtitle">{{album.content}}</div>

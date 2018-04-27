@@ -1,10 +1,21 @@
 page-info-tabs {
 
-.infoTabsUp
-{
-    background-color: aqua;
+    .infoTabsUp>div.tabbar {
+        background:grey;
+    }
     
-
-}
+    .infoTabsUp a[aria-selected=true] {
+        background : rgb(71, 68, 67);
+    }
+    
+    .infoTabsUp>div.tabbar .tab-button-text {
+        color: red;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .infoTabsUp>div.tabbar .icon {
+        color: azure;
+    }
 
 }

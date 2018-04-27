@@ -28035,6 +28035,9 @@ page-entry-screen {
 page-gallery ion-card {
   position: relative;
   text-align: center;
+}
+
+page-gallery .album {
   width: 35% !important;
 }
 
@@ -28063,8 +28066,26 @@ page-home .desktop-card {
   width: 35% !important;
 }
 
-page-info-tabs .infoTabsUp {
-  background-color: aqua;
+page-info-tabs .infoTabsUp > div.tabbar {
+  background: grey;
+}
+
+page-info-tabs .infoTabsUp a[aria-selected=true] {
+  background: #474443;
+}
+
+page-info-tabs .infoTabsUp > div.tabbar .tab-button-text {
+  color: red;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+page-info-tabs .infoTabsUp > div.tabbar .icon {
+  color: azure;
+}
+
+page-dep-info .a {
+  background-color: forestgreen;
 }
 
 .tabbar_red > div.tabbar {

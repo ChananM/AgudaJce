@@ -28,6 +28,7 @@ import { ContactPage } from '../pages/info-tabs/contact/contact';
 import { DepInfoPage } from '../pages/info-tabs/dep-info/dep-info';
 import { FaqPage } from '../pages/info-tabs/faq/faq';
 import { AboutPage } from '../pages/info-tabs/about/about';
+import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { AboutPage } from '../pages/info-tabs/about/about';
     AboutPage,
     ContactPage,
     DepInfoPage,
-    FaqPage
+    FaqPage,
+    FbImagesPage
   ],
 
   imports: [
@@ -71,7 +73,8 @@ import { AboutPage } from '../pages/info-tabs/about/about';
     AboutPage,
     ContactPage,
     DepInfoPage,
-    FaqPage
+    FaqPage,
+    FbImagesPage
   ],
 
   providers: [
