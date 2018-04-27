@@ -1,3 +1,4 @@
+import { InfoTabsPage } from './../pages/info-tabs/info-tabs';
 import { AdminPanelPage } from './../pages/admin-panel/admin-panel';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +24,10 @@ import { ComponentsModule } from '../components/components.module';
 import { EntryScreenPageModule } from './../pages/entry-screen/entry-screen.module';
 import { HomeDataProvider } from '../providers/home-data/home-data';
 import { CalendarEventProvider } from '../providers/calendar-event/calendar-event';
+import { ContactPage } from '../pages/info-tabs/contact/contact';
+import { DepInfoPage } from '../pages/info-tabs/dep-info/dep-info';
+import { FaqPage } from '../pages/info-tabs/faq/faq';
+import { AboutPage } from '../pages/info-tabs/about/about';
 
 
 @NgModule({
@@ -34,7 +39,12 @@ import { CalendarEventProvider } from '../providers/calendar-event/calendar-even
     GalleryPage,
     RefreshComponent,
     AdminPanelPage,
-    TabsPage
+    TabsPage,
+    InfoTabsPage,
+    AboutPage,
+    ContactPage,
+    DepInfoPage,
+    FaqPage
   ],
 
   imports: [
@@ -56,7 +66,12 @@ import { CalendarEventProvider } from '../providers/calendar-event/calendar-even
     GalleryPage,
     RefreshComponent,
     AdminPanelPage,
-    TabsPage
+    TabsPage,
+    InfoTabsPage,
+    AboutPage,
+    ContactPage,
+    DepInfoPage,
+    FaqPage
   ],
 
   providers: [

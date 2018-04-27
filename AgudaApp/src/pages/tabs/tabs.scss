@@ -1,17 +1,17 @@
-.tabbar_red .tabbar {
+.tabbar_red>div.tabbar {
     background: red;
 }
 
-.tabbar a[aria-selected=true] {
+.tabbar_red>div.tabbar a[aria-selected=true] {
     background: brown;
 }
 
-.tabbar .tab-button-text {
+.tabbar_red>div.tabbar .tab-button-text {
     color: azure;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.tabbar .icon {
+.tabbar_red>div.tabbar .icon {
     color: azure;
 }
