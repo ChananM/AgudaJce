@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Events } from 'ionic-angular';
+import { InfoTabsPage } from '../info-tabs/info-tabs';
 
 @Component({
   selector: 'page-about',
@@ -10,6 +11,7 @@ export class InfoPage {
   tabName = 'מידע';
   refresh_id = 'infoRef';
 
+  infoRoot = InfoTabsPage;
 
   constructor(public navCtrl: NavController, private events: Events) {
 

@@ -48,6 +48,7 @@ nb-configuration.xml
 .nodemonignore
 npm-debug.log
 AgudaApp/node_modules/
+www/
 
 # --------------------
 # SASS Files
