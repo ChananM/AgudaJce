@@ -1,12 +1,47 @@
-<ion-header>
-
-    <ion-navbar>
-        <ion-title>adminPanel</ion-title>
-    </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
+    <div padding>
+        <ion-segment [(ngModel)]="modelController">
+            <ion-segment-button value="home">
+                Home
+            </ion-segment-button>
+            <ion-segment-button value="calendar">
+                Calendar
+            </ion-segment-button>
+            <ion-segment-button value="info">
+                Information
+            </ion-segment-button>
+        </ion-segment>
+    </div>
 
+    <div [ngSwitch]="modelController">
+
+        <!-- Home Data admin panel segment -->
+
+        <ng-container *ngSwitchCase="'home'">
+            <ion-list>
+                <ion-item *ngFor="let post of homeData.posts;">
+                    <h2>{{post.headline}}</h2>
+                </ion-item>
+            </ion-list>
+            <button ion-button>Add Post</button>
+        </ng-container>
+
+        <!-- Calendar admin panel segment -->
+
+        <ng-container *ngSwitchCase="'calendar'">
+            <ion-list>
+                <ion-item *ngFor="let event of calendarData.posts;">
+                    <h2>{{event.headline}}</h2>
+                </ion-item>
+            </ion-list>
+        </ng-container>
+
+        <!-- Information admin panel segment -->
+
+        <ng-container *ngSwitchCase="'info'">
+            <div class="center">
+                <h1>Unavailable</h1>
+            </div>
+        </ng-container>
+    </div>
 </ion-content>
