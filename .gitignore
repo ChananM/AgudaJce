@@ -49,6 +49,7 @@ nb-configuration.xml
 npm-debug.log
 AgudaApp/node_modules/
 www/
+.sourcemaps/
 
 # --------------------
 # SASS Files
