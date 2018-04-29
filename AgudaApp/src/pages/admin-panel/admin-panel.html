@@ -19,7 +19,7 @@
 
         <ng-container *ngSwitchCase="'home'">
             <ion-list>
-                <ion-item *ngFor="let post of homeData.posts;">
+                <ion-item *ngFor="let post of storyProv.posts;">
                     <h2>{{post.headline}}</h2>
                 </ion-item>
             </ion-list>
@@ -30,7 +30,7 @@
 
         <ng-container *ngSwitchCase="'calendar'">
             <ion-list>
-                <ion-item *ngFor="let event of calendarData.posts;">
+                <ion-item *ngFor="let event of calProv.posts;">
                     <h2>{{event.headline}}</h2>
                 </ion-item>
             </ion-list>

@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { HomePage } from '../pages/home/home';
 import { InfoPage } from '../pages/info/info';
@@ -22,13 +23,14 @@ import { RefreshComponent } from '../components/refresh/refresh';
 
 import { ComponentsModule } from '../components/components.module';
 import { EntryScreenPageModule } from './../pages/entry-screen/entry-screen.module';
-import { HomeDataProvider } from '../providers/home-data/home-data';
+import { HomeStoryProvider } from './../providers/home-story/home-story';
 import { CalendarEventProvider } from '../providers/calendar-event/calendar-event';
 import { ContactPage } from '../pages/info-tabs/contact/contact';
 import { DepInfoPage } from '../pages/info-tabs/dep-info/dep-info';
 import { FaqPage } from '../pages/info-tabs/faq/faq';
 import { AboutPage } from '../pages/info-tabs/about/about';
 import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
+import { DatabaseProvider } from '../providers/database/database';
 
 
 @NgModule({
@@ -54,6 +56,7 @@ import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
+    AngularFirestoreModule,
     ComponentsModule,
     EntryScreenPageModule
   ],
@@ -81,8 +84,9 @@ import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HomeDataProvider,
-    CalendarEventProvider
+    HomeStoryProvider,
+    CalendarEventProvider,
+    DatabaseProvider
   ]
 })
 
