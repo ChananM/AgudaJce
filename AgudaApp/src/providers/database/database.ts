@@ -36,27 +36,39 @@ export class DatabaseProvider {
 
   }
 
+ //*******************************************************/
  /* #### USE IT LIKE THIS: ####
   dbProvider.getHomeStories().subscribe(stories => { 
-    stories.forEach(element => { //stories is HomeStory[]
-      console.log(element.id); 
+    stories.forEach(element => { //stories is HomeStory[] in json mode,
+                                  //you should use toHomeStory static function on the elements
+                                  //or use them as anonymous objects
+
+      console.log(element.id);  //you will get the id automaticlly from firebase.   
     });
   }); */
   getHomeStories(){
     return this.homeStories;
   }
+//*******************************************************/
 
-  //or you can do: let x = dbProvider.getHomeStories();
+//*******************************************************/
+  //you can also do: let x = dbProvider.getHomeStories();
   //                x.subscribe...... etc
+//*******************************************************/
 
+//*******************************************************/
   /* #### USE IT LIKE THIS: ####
    dbProvider.getCalEvents().subscribe(events => { ;
-     .....  //events is CalendarEvent[]     
+     .....  //events is CalendarEvent[] in json mode,
+                //you should use toCalEvent static function on the elements
+                ////or use them as anonymous objects
+
             ////you will get the id automaticlly from firebase.       
   }); */
   getCalEvents(){
     return this.calEvents;
   }
+//*******************************************************/
 
   addHomeStory(story: HomeStory){
     this.homeStoriesCollection.add(HomeStory.toObject(story));
