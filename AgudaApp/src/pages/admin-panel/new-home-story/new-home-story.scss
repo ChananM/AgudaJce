@@ -1,0 +1,20 @@
+page-new-home-story {
+
+    direction: ltr;
+
+    ion-title{
+        text-align: center;
+    }
+
+    textarea {
+        height: 20vh; 
+    }
+
+    ion-buttons{
+        text-align: center;
+        width: 100%;
+        button{
+            min-width: 45%;
+        }  
+    }
+}

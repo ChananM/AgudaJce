@@ -1,3 +1,5 @@
+import { NewEventPageModule } from './../pages/admin-panel/new-event/new-event.module';
+import { NewHomeStoryPageModule } from './../pages/admin-panel/new-home-story/new-home-story.module';
 import { InfoTabsPage } from './../pages/info-tabs/info-tabs';
 import { AdminPanelPage } from './../pages/admin-panel/admin-panel';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -32,7 +34,6 @@ import { AboutPage } from '../pages/info-tabs/about/about';
 import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
 import { DatabaseProvider } from '../providers/database/database';
 
-
 @NgModule({
   declarations: [
     MyApp,
@@ -58,7 +59,9 @@ import { DatabaseProvider } from '../providers/database/database';
     AngularFireAuthModule,
     AngularFirestoreModule,
     ComponentsModule,
-    EntryScreenPageModule
+    EntryScreenPageModule,
+    NewHomeStoryPageModule,
+    NewEventPageModule
   ],
 
   bootstrap: [IonicApp],

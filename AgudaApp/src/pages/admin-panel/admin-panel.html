@@ -21,9 +21,10 @@
             <ion-list>
                 <ion-item *ngFor="let post of storyProv.posts;">
                     <h2>{{post.headline}}</h2>
+                    <button icon-only item-end (click)="deleteStory(post)"><ion-icon name="close" color="danger"></ion-icon></button>
                 </ion-item>
             </ion-list>
-            <button ion-button>Add Post</button>
+            <button ion-button (click)="presentModal(newHomePage)">Add Story</button>
         </ng-container>
 
         <!-- Calendar admin panel segment -->
@@ -34,7 +35,7 @@
                     <h2>{{event.headline}}</h2>
                 </ion-item>
             </ion-list>
-            <button ion-button>Add Event</button>
+            <button ion-button (click)="presentModal(newCalendarPage)">Add Event</button>
         </ng-container>
 
         <!-- Information admin panel segment -->
