@@ -15,21 +15,23 @@ export class DatabaseProvider {
 
   constructor(public afs: AngularFirestore) {
 
-    this.homeStoriesCollection = afs.collection<HomeStory>('HomeStories');
-    this.calEventsCollection = afs.collection<CalendarEvent>('Events');
+    this.homeStoriesCollection = afs.collection<HomeStory>('HomeStories', ref => ref.orderBy('createdOn', 'desc'));
+    this.calEventsCollection = afs.collection<CalendarEvent>('Events', ref => ref.orderBy('createdOn', 'desc'));
 
     this.homeStories = this.homeStoriesCollection.snapshotChanges().map(changes => {
       return changes.map(a => {
-        const data = a.payload.doc.data() as HomeStory;
-        data.id = a.payload.doc.id;
+        let temp = a.payload.doc.data() as HomeStory;
+        temp.id = a.payload.doc.id;
+        const data = HomeStory.toHomeStory(temp);
         return data;
       })
     });
 
-    this.calEvents = afs.collection('Events').snapshotChanges().map(changes => {
+    this.calEvents = this.calEventsCollection.snapshotChanges().map(changes => {
       return changes.map(a => {
-        const data = a.payload.doc.data() as CalendarEvent;
-        data.id = a.payload.doc.id;
+        let temp = a.payload.doc.data() as CalendarEvent;
+        temp.id = a.payload.doc.id;
+        const data = CalendarEvent.toCalEvent(temp);
         return data;
       })
     });
@@ -39,13 +41,11 @@ export class DatabaseProvider {
  //*******************************************************/
  /* #### USE IT LIKE THIS: ####
   dbProvider.getHomeStories().subscribe(stories => { 
-    stories.forEach(element => { //stories is HomeStory[] in json mode,
-                                  //you should use toHomeStory static function on the elements
-                                  //or use them as anonymous objects
-
+    stories.forEach(element => {
       console.log(element.id);  //you will get the id automaticlly from firebase.   
     });
-  }); */
+  }); 
+      i already put it in your provider constructor. */
   getHomeStories(){
     return this.homeStories;
   }
@@ -59,23 +59,39 @@ export class DatabaseProvider {
 //*******************************************************/
   /* #### USE IT LIKE THIS: ####
    dbProvider.getCalEvents().subscribe(events => { ;
-     .....  //events is CalendarEvent[] in json mode,
-                //you should use toCalEvent static function on the elements
-                ////or use them as anonymous objects
-
-            ////you will get the id automaticlly from firebase.       
-  }); */
+     .....  
+        ////you will get the id automaticlly from firebase.       
+  }); 
+      i already put it in your provider constructor.*/
   getCalEvents(){
     return this.calEvents;
   }
 //*******************************************************/
 
   addHomeStory(story: HomeStory){
-    this.homeStoriesCollection.add(HomeStory.toObject(story));
-    
+    story.createdOn = this.getCurrentTimestamp();
+    return this.homeStoriesCollection.add(HomeStory.toObject(story));
   }
 
   addCalEvent(event: CalendarEvent){
-    this.homeStoriesCollection.add(CalendarEvent.toObject(event));
+    event.createdOn = this.getCurrentTimestamp();
+    return this.calEventsCollection.add(CalendarEvent.toObject(event));
+  }
+
+  deleteHomeStory(story: HomeStory){
+    return this.homeStoriesCollection.doc(story.id).delete();
+  }
+
+  deleteCalEvent(event: CalendarEvent){
+    return this.calEventsCollection.doc(event.id).delete();
+  }
+
+  getCurrentTimestamp(): string{ //format: yyyyMMddHHmmSS
+    let date = new Date();
+    return "" + date.getFullYear() + (date.getMonth()+1 < 10 ? "0" : "") + (date.getMonth()+1)
+           + (date.getDate() < 10 ? "0" : "") + date.getDate()
+           + (date.getHours() == 0 ? "0" : "") + (date.getHours() < 10 ? "0" : "") + date.getHours()
+           + (date.getMinutes() == 0 ? "0" : "") + (date.getMinutes() < 10 ? "0" : "") + date.getMinutes()
+           + (date.getSeconds() == 0 ? "0" : "") + (date.getSeconds() < 10 ? "0" : "") + date.getSeconds();
   }
 }
