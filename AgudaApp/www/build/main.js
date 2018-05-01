@@ -531,32 +531,40 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_info_tabs_info_tabs__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_admin_panel_admin_panel__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(321);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_firebase_config__ = __webpack_require__(330);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_auth__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_info_info__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_tabs_tabs__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_calendar_calendar__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_gallery_gallery__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_refresh_refresh__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_components_module__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_entry_screen_entry_screen_module__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_home_data_home_data__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_calendar_event_calendar_event__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_info_tabs_contact_contact__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_info_tabs_dep_info_dep_info__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_info_tabs_faq_faq__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_info_tabs_about_about__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_gallery_fb_images_fb_images__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_admin_panel_new_event_new_event_module__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_admin_panel_new_event_new_event_module___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__pages_admin_panel_new_event_new_event_module__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_admin_panel_new_home_story_new_home_story_module__ = __webpack_require__(390);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_admin_panel_new_home_story_new_home_story_module___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__pages_admin_panel_new_home_story_new_home_story_module__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_info_tabs_info_tabs__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_admin_panel_admin_panel__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_firebase_config__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angularfire2_auth__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angularfire2_firestore__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_info_info__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_tabs_tabs__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_calendar_calendar__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_gallery_gallery__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_refresh_refresh__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_components_module__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_entry_screen_entry_screen_module__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_home_story_home_story__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_home_story_home_story___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22__providers_home_story_home_story__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_calendar_event_calendar_event__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_info_tabs_contact_contact__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_info_tabs_dep_info_dep_info__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_info_tabs_faq_faq__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_info_tabs_about_about__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_gallery_fb_images_fb_images__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__providers_database_database__ = __webpack_require__(444);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__providers_database_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29__providers_database_database__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -589,63 +597,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_info_info__["a" /* InfoPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_calendar_calendar__["a" /* CalendarPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_gallery_gallery__["a" /* GalleryPage */],
-                __WEBPACK_IMPORTED_MODULE_16__components_refresh_refresh__["a" /* RefreshComponent */],
-                __WEBPACK_IMPORTED_MODULE_1__pages_admin_panel_admin_panel__["a" /* AdminPanelPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_0__pages_info_tabs_info_tabs__["a" /* InfoTabsPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_info_tabs_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_info_tabs_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_info_tabs_dep_info_dep_info__["a" /* DepInfoPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_info_tabs_faq_faq__["a" /* FaqPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_gallery_fb_images_fb_images__["a" /* FbImagesPage */]
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_info_info__["a" /* InfoPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_calendar_calendar__["a" /* CalendarPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_gallery_gallery__["a" /* GalleryPage */],
+                __WEBPACK_IMPORTED_MODULE_19__components_refresh_refresh__["a" /* RefreshComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__pages_admin_panel_admin_panel__["a" /* AdminPanelPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__pages_info_tabs_info_tabs__["a" /* InfoTabsPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_info_tabs_about_about__["a" /* AboutPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_info_tabs_contact_contact__["a" /* ContactPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_info_tabs_dep_info_dep_info__["a" /* DepInfoPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_info_tabs_faq_faq__["a" /* FaqPage */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_gallery_fb_images_fb_images__["a" /* FbImagesPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/admin-login/admin-login.module#AdminLoginPageModule', name: 'aguda-admin', segment: 'adminpanel', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/entry-screen/entry-screen.module#EntryScreenPageModule', name: 'EntryScreenPage', segment: 'entry-screen', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_8_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_9__app_firebase_config__["a" /* FIREBASE_CONFIG */]),
-                __WEBPACK_IMPORTED_MODULE_10_angularfire2_auth__["b" /* AngularFireAuthModule */],
-                __WEBPACK_IMPORTED_MODULE_17__components_components_module__["a" /* ComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_entry_screen_entry_screen_module__["EntryScreenPageModule"]
+                __WEBPACK_IMPORTED_MODULE_10_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_11__app_firebase_config__["a" /* FIREBASE_CONFIG */]),
+                __WEBPACK_IMPORTED_MODULE_12_angularfire2_auth__["b" /* AngularFireAuthModule */],
+                __WEBPACK_IMPORTED_MODULE_13_angularfire2_firestore__["a" /* AngularFirestoreModule */],
+                __WEBPACK_IMPORTED_MODULE_20__components_components_module__["a" /* ComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_entry_screen_entry_screen_module__["EntryScreenPageModule"],
+                __WEBPACK_IMPORTED_MODULE_1__pages_admin_panel_new_home_story_new_home_story_module__["NewHomeStoryPageModule"],
+                __WEBPACK_IMPORTED_MODULE_0__pages_admin_panel_new_event_new_event_module__["NewEventPageModule"]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["c" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_6_ionic_angular__["c" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_info_info__["a" /* InfoPage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_calendar_calendar__["a" /* CalendarPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_gallery_gallery__["a" /* GalleryPage */],
-                __WEBPACK_IMPORTED_MODULE_16__components_refresh_refresh__["a" /* RefreshComponent */],
-                __WEBPACK_IMPORTED_MODULE_1__pages_admin_panel_admin_panel__["a" /* AdminPanelPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_0__pages_info_tabs_info_tabs__["a" /* InfoTabsPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_info_tabs_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_info_tabs_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_info_tabs_dep_info_dep_info__["a" /* DepInfoPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_info_tabs_faq_faq__["a" /* FaqPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_gallery_fb_images_fb_images__["a" /* FbImagesPage */]
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_info_info__["a" /* InfoPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_calendar_calendar__["a" /* CalendarPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_gallery_gallery__["a" /* GalleryPage */],
+                __WEBPACK_IMPORTED_MODULE_19__components_refresh_refresh__["a" /* RefreshComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__pages_admin_panel_admin_panel__["a" /* AdminPanelPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__pages_info_tabs_info_tabs__["a" /* InfoTabsPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_info_tabs_about_about__["a" /* AboutPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_info_tabs_contact_contact__["a" /* ContactPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_info_tabs_dep_info_dep_info__["a" /* DepInfoPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_info_tabs_faq_faq__["a" /* FaqPage */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_gallery_fb_images_fb_images__["a" /* FbImagesPage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["d" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_19__providers_home_data_home_data__["a" /* HomeDataProvider */],
-                __WEBPACK_IMPORTED_MODULE_20__providers_calendar_event_calendar_event__["a" /* CalendarEventProvider */]
+                __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_4__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["d" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_22__providers_home_story_home_story__["HomeStoryProvider"],
+                __WEBPACK_IMPORTED_MODULE_23__providers_calendar_event_calendar_event__["a" /* CalendarEventProvider */],
+                __WEBPACK_IMPORTED_MODULE_29__providers_database_database__["DatabaseProvider"]
             ]
         })
     ], AppModule);
@@ -850,6 +866,34 @@ var ComponentsModule = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=components.module.js.map
+
+/***/ }),
+
+/***/ 389:
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\OdeliaAbginehsaz\\Desktop\\proj\\AgudaJce\\AgudaApp\\src\\pages\\admin-panel\\new-event\\new-event.module.js'");
+
+/***/ }),
+
+/***/ 390:
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\OdeliaAbginehsaz\\Desktop\\proj\\AgudaJce\\AgudaApp\\src\\pages\\admin-panel\\new-home-story\\new-home-story.module.js'");
+
+/***/ }),
+
+/***/ 443:
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\OdeliaAbginehsaz\\Desktop\\proj\\AgudaJce\\AgudaApp\\src\\providers\\home-story\\home-story.js'");
+
+/***/ }),
+
+/***/ 444:
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\OdeliaAbginehsaz\\Desktop\\proj\\AgudaJce\\AgudaApp\\src\\providers\\database\\database.js'");
 
 /***/ }),
 

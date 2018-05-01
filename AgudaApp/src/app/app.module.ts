@@ -1,3 +1,5 @@
+import { NewEventPageModule } from './../pages/admin-panel/new-event/new-event.module';
+import { NewHomeStoryPageModule } from './../pages/admin-panel/new-home-story/new-home-story.module';
 import { InfoTabsPage } from './../pages/info-tabs/info-tabs';
 import { AdminPanelPage } from './../pages/admin-panel/admin-panel';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -11,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { HomePage } from '../pages/home/home';
 import { InfoPage } from '../pages/info/info';
@@ -22,14 +25,14 @@ import { RefreshComponent } from '../components/refresh/refresh';
 
 import { ComponentsModule } from '../components/components.module';
 import { EntryScreenPageModule } from './../pages/entry-screen/entry-screen.module';
-import { HomeDataProvider } from '../providers/home-data/home-data';
+import { HomeStoryProvider } from './../providers/home-story/home-story';
 import { CalendarEventProvider } from '../providers/calendar-event/calendar-event';
 import { ContactPage } from '../pages/info-tabs/contact/contact';
 import { DepInfoPage } from '../pages/info-tabs/dep-info/dep-info';
 import { FaqPage } from '../pages/info-tabs/faq/faq';
 import { AboutPage } from '../pages/info-tabs/about/about';
 import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
-
+import { DatabaseProvider } from '../providers/database/database';
 
 @NgModule({
   declarations: [
@@ -54,8 +57,11 @@ import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
+    AngularFirestoreModule,
     ComponentsModule,
-    EntryScreenPageModule
+    EntryScreenPageModule,
+    NewHomeStoryPageModule,
+    NewEventPageModule
   ],
 
   bootstrap: [IonicApp],
@@ -81,8 +87,9 @@ import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HomeDataProvider,
-    CalendarEventProvider
+    HomeStoryProvider,
+    CalendarEventProvider,
+    DatabaseProvider
   ]
 })
 

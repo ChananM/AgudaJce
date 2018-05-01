@@ -45,7 +45,8 @@ export class AdminLoginPage {
         let alert = this.alertCtrl.create({
           title: 'Login Failed',
           message: e.message,
-          buttons: ['OK']
+          buttons: ['OK'],
+          cssClass: 'alertClass'
         });
         alert.present();
       });
