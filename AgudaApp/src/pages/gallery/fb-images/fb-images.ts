@@ -14,13 +14,23 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class FbImagesPage {
 
-  title: string
+  headline: string 
+  content: string 
+  imageUrl: Array<string>
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.title = navParams.get('text1')
+    this.headline = navParams.get('headline')
+    this.content = navParams.get('content')
+    this.imageUrl = navParams.get('imageUrl')
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FbImagesPage');
+  }
+
+  callImag() {
+    alert("click");
+    
   }
 
 }

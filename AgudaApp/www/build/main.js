@@ -59,7 +59,7 @@ var InfoTabsPage = /** @class */ (function () {
     }
     InfoTabsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-info-tabs',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/info-tabs.html"*/'<ion-tabs tabsPlacement="top" class="infoTabsUp">\n    <ion-tab [root]="aboutRoot" tabTitle="אודות"  tabIcon="information"></ion-tab>\n    <ion-tab [root]="faqRoot" tabTitle="שאלות ותשובות" tabIcon="help"></ion-tab>\n    <ion-tab [root]="contactRoot" tabTitle="צור קשר" tabIcon="call"></ion-tab>\n    <ion-tab [root]="depInfoRoot" tabTitle="מידע כללי" tabIcon="globe"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/info-tabs.html"*/
+            selector: 'page-info-tabs',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\info-tabs.html"*/'<ion-tabs tabsPlacement="top" class="infoTabsUp">\n    <ion-tab [root]="aboutRoot" tabTitle="אודות"  tabIcon="information"></ion-tab>\n    <ion-tab text-wrap [root]="faqRoot" tabTitle="שאלות ותשובות" tabIcon="help"></ion-tab>\n    <ion-tab [root]="contactRoot" tabTitle="צור קשר" tabIcon="call"></ion-tab>\n    <ion-tab [root]="depInfoRoot" tabTitle="מידע כללי" tabIcon="globe"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\info-tabs.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
     ], InfoTabsPage);
@@ -178,7 +178,7 @@ var EntryScreenPage = /** @class */ (function () {
     };
     EntryScreenPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-entry-screen',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/entry-screen/entry-screen.html"*/'<div class="entryLoader">\n\n    <img id=\'enter\' src="assets/imgs/logo.png">\n\n    <span id=\'overlay\'><i class="fas fa-spinner fa-pulse"></i></span>\n\n</div>\n\n'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/entry-screen/entry-screen.html"*/,
+            selector: 'page-entry-screen',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\entry-screen\entry-screen.html"*/'<div class="entryLoader">\n\n    <img id=\'enter\' src="assets/imgs/logo.png">\n\n    <span id=\'overlay\'><i class="fas fa-spinner fa-pulse"></i></span>\n\n</div>\n\n'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\entry-screen\entry-screen.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Platform */]])
     ], EntryScreenPage);
@@ -221,7 +221,7 @@ var TabsPage = /** @class */ (function () {
         this.infoTab = __WEBPACK_IMPORTED_MODULE_1__info_info__["a" /* InfoPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/tabs/tabs.html"*/'<ion-tabs class="tabbar_red">\n    <ion-tab [root]="homeTab" tabTitle="בית" tabIcon="home"></ion-tab>\n    <ion-tab [root]="calendarTab" tabTitle="יומן" tabIcon="calendar"></ion-tab>\n    <ion-tab [root]="galleryTab" tabTitle="גלריה" tabIcon="images"></ion-tab>\n    <ion-tab [root]="infoTab" tabTitle="מידע" tabIcon="information-circle"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\tabs\tabs.html"*/'<ion-tabs class="tabbar_red">\n\n    <ion-tab [root]="homeTab" tabTitle="בית" tabIcon="home"></ion-tab>\n\n    <ion-tab [root]="calendarTab" tabTitle="יומן" tabIcon="calendar"></ion-tab>\n\n    <ion-tab [root]="galleryTab" tabTitle="גלריה" tabIcon="images"></ion-tab>\n\n    <ion-tab [root]="infoTab" tabTitle="מידע" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -260,18 +260,24 @@ var FbImagesPage = /** @class */ (function () {
     function FbImagesPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.title = navParams.get('text1');
+        this.headline = navParams.get('headline');
+        this.content = navParams.get('content');
+        this.imageUrl = navParams.get('imageUrl');
     }
     FbImagesPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad FbImagesPage');
     };
+    FbImagesPage.prototype.callImag = function () {
+        alert("click");
+    };
     FbImagesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-fb-images',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/gallery/fb-images/fb-images.html"*/'<!--\n  Generated template for the FbImagesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/gallery/fb-images/fb-images.html"*/,
+            selector: 'page-fb-images',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\gallery\fb-images\fb-images.html"*/'<!--\n  Generated template for the FbImagesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{headline}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-row justify-content-center *ngFor="let image of imageUrl;">\n     <!-- <ion-card [ngClass]="{\'image\': this.platform.is(\'core\')}"> (click) = "callImag()"> -->\n        <img src = {{image}}/>\n    <!-- </ion-card> -->\n</ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\gallery\fb-images\fb-images.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
     ], FbImagesPage);
     return FbImagesPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=fb-images.js.map
@@ -312,7 +318,7 @@ var AboutPage = /** @class */ (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/about/about.html"*/'<!--\n  Generated template for the AboutPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n\n  <ion-navbar>\n    <ion-title>about</ion-title>\n  </ion-navbar>\n\n</ion-header> -->\n\n\n<ion-content padding>\n  <h1>עמוד מידע פנימי - אודות</h1>\n</ion-content>\n'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/about/about.html"*/,
+            selector: 'page-about',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\about\about.html"*/'<!--\n\n  Generated template for the AboutPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<!-- <ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>about</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header> -->\n\n\n\n\n\n<ion-content padding>\n\n  <h1>עמוד מידע פנימי - אודות</h1>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\about\about.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], AboutPage);
@@ -357,7 +363,7 @@ var FaqPage = /** @class */ (function () {
     };
     FaqPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-faq',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/faq/faq.html"*/'<!--\n  Generated template for the FaqPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n\n    <ion-navbar>\n        <ion-title>faq</ion-title>\n    </ion-navbar>\n\n</ion-header> -->\n\n\n<ion-content padding>\n    <h1>עמוד מידע פנימי - שאלות ותשובות</h1>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/faq/faq.html"*/,
+            selector: 'page-faq',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\faq\faq.html"*/'<!--\n\n  Generated template for the FaqPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<!-- <ion-header>\n\n\n\n    <ion-navbar>\n\n        <ion-title>faq</ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header> -->\n\n\n\n\n\n<ion-content padding>\n\n    <h1>עמוד מידע פנימי - שאלות ותשובות</h1>\n\n</ion-content>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\faq\faq.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], FaqPage);
@@ -402,7 +408,7 @@ var ContactPage = /** @class */ (function () {
     };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/contact/contact.html"*/'<!--\n  Generated template for the ContactPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n\n  <ion-navbar>\n    <ion-title>contact</ion-title>\n  </ion-navbar>\n\n</ion-header> -->\n\n\n<ion-content padding>\n  <h1>עמוד מידע פנימי - צור קשר</h1>\n</ion-content>\n'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/contact/contact.html"*/,
+            selector: 'page-contact',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\contact\contact.html"*/'<!--\n\n  Generated template for the ContactPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<!-- <ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>contact</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header> -->\n\n\n\n\n\n<ion-content padding>\n\n  <h1>עמוד מידע פנימי - צור קשר</h1>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\contact\contact.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], ContactPage);
@@ -447,7 +453,7 @@ var DepInfoPage = /** @class */ (function () {
     };
     DepInfoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-dep-info',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/dep-info/dep-info.html"*/'<!--\n  Generated template for the DepInfoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n\n  <ion-navbar>\n    <ion-title>depInfo</ion-title>\n  </ion-navbar>\n\n</ion-header> -->\n\n\n<ion-content padding >\n  <h1>עמוד מידע פנימי - מידע על מחלקות</h1>\n</ion-content>\n'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info-tabs/dep-info/dep-info.html"*/,
+            selector: 'page-dep-info',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\dep-info\dep-info.html"*/'<!--\n\n  Generated template for the DepInfoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<!-- <ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>depInfo</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header> -->\n\n\n\n\n\n<ion-content padding >\n\n  <h1>עמוד מידע פנימי - מידע על מחלקות</h1>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info-tabs\dep-info\dep-info.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], DepInfoPage);
@@ -495,7 +501,7 @@ var AdminPanelPage = /** @class */ (function () {
     };
     AdminPanelPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
-            selector: 'page-admin-panel',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/admin-panel/admin-panel.html"*/'<ion-content padding>\n    <div padding>\n        <ion-segment [(ngModel)]="modelController">\n            <ion-segment-button value="home">\n                Home\n            </ion-segment-button>\n            <ion-segment-button value="calendar">\n                Calendar\n            </ion-segment-button>\n            <ion-segment-button value="info">\n                Information\n            </ion-segment-button>\n        </ion-segment>\n    </div>\n\n    <div [ngSwitch]="modelController">\n\n        <!-- Home Data admin panel segment -->\n\n        <ng-container *ngSwitchCase="\'home\'">\n            <ion-list>\n                <ion-item *ngFor="let post of homeData.posts;">\n                    <h2>{{post.headline}}</h2>\n                </ion-item>\n            </ion-list>\n            <button ion-button>Add Post</button>\n        </ng-container>\n\n        <!-- Calendar admin panel segment -->\n\n        <ng-container *ngSwitchCase="\'calendar\'">\n            <ion-list>\n                <ion-item *ngFor="let event of calendarData.posts;">\n                    <h2>{{event.headline}}</h2>\n                </ion-item>\n            </ion-list>\n            <button ion-button>Add Event</button>\n        </ng-container>\n\n        <!-- Information admin panel segment -->\n\n        <ng-container *ngSwitchCase="\'info\'">\n            <div class="center">\n                <h1>Unavailable</h1>\n            </div>\n        </ng-container>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/admin-panel/admin-panel.html"*/,
+            selector: 'page-admin-panel',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\admin-panel\admin-panel.html"*/'<ion-content padding>\n\n    <div padding>\n\n        <ion-segment [(ngModel)]="modelController">\n\n            <ion-segment-button value="home">\n\n                Home\n\n            </ion-segment-button>\n\n            <ion-segment-button value="calendar">\n\n                Calendar\n\n            </ion-segment-button>\n\n            <ion-segment-button value="info">\n\n                Information\n\n            </ion-segment-button>\n\n        </ion-segment>\n\n    </div>\n\n\n\n    <div [ngSwitch]="modelController">\n\n\n\n        <!-- Home Data admin panel segment -->\n\n\n\n        <ng-container *ngSwitchCase="\'home\'">\n\n            <ion-list>\n\n                <ion-item *ngFor="let post of homeData.posts;">\n\n                    <h2>{{post.headline}}</h2>\n\n                </ion-item>\n\n            </ion-list>\n\n            <button ion-button>Add Post</button>\n\n        </ng-container>\n\n\n\n        <!-- Calendar admin panel segment -->\n\n\n\n        <ng-container *ngSwitchCase="\'calendar\'">\n\n            <ion-list>\n\n                <ion-item *ngFor="let event of calendarData.posts;">\n\n                    <h2>{{event.headline}}</h2>\n\n                </ion-item>\n\n            </ion-list>\n\n            <button ion-button>Add Event</button>\n\n        </ng-container>\n\n\n\n        <!-- Information admin panel segment -->\n\n\n\n        <ng-container *ngSwitchCase="\'info\'">\n\n            <div class="center">\n\n                <h1>Unavailable</h1>\n\n            </div>\n\n        </ng-container>\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\admin-panel\admin-panel.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__providers_home_data_home_data__["a" /* HomeDataProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__["a" /* CalendarEventProvider */]])
     ], AdminPanelPage);
@@ -721,7 +727,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -806,7 +812,7 @@ var RefreshComponent = /** @class */ (function () {
     RefreshComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             providers: [__WEBPACK_IMPORTED_MODULE_1__pages_home_home__["a" /* HomePage */], __WEBPACK_IMPORTED_MODULE_3__pages_calendar_calendar__["a" /* CalendarPage */], __WEBPACK_IMPORTED_MODULE_4__pages_gallery_gallery__["a" /* GalleryPage */], __WEBPACK_IMPORTED_MODULE_5__pages_info_info__["a" /* InfoPage */]],
-            selector: 'refresh',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/components/refresh/refresh.html"*/'<!-- Generated template for the RefreshComponent component -->\n<button (click)="doRefresh();">\n    <i class="fas fa-sync"></i>\n</button>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/components/refresh/refresh.html"*/
+            selector: 'refresh',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\components\refresh\refresh.html"*/'<!-- Generated template for the RefreshComponent component -->\n\n<button (click)="doRefresh();">\n\n    <i class="fas fa-sync"></i>\n\n</button>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\components\refresh\refresh.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_1__pages_home_home__["a" /* HomePage */], __WEBPACK_IMPORTED_MODULE_3__pages_calendar_calendar__["a" /* CalendarPage */], __WEBPACK_IMPORTED_MODULE_4__pages_gallery_gallery__["a" /* GalleryPage */], __WEBPACK_IMPORTED_MODULE_5__pages_info_info__["a" /* InfoPage */]])
     ], RefreshComponent);
@@ -974,7 +980,7 @@ var InfoPage = /** @class */ (function () {
     };
     InfoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info/info.html"*/'<!-- <ion-header>\n    <ion-navbar>\n        <page-info-tabs></page-info-tabs>\n        <ion-title>\n            {{tabName}}\n            <refresh id={{refresh_id}}></refresh>\n        </ion-title>\n    </ion-navbar>\n</ion-header> -->\n\n<ion-content>\n    <ion-nav [root]="infoRoot"></ion-nav>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/info/info.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info\info.html"*/'<!-- <ion-header>\n\n    <ion-navbar>\n\n        <page-info-tabs></page-info-tabs>\n\n        <ion-title>\n\n            {{tabName}}\n\n            <refresh id={{refresh_id}}></refresh>\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header> -->\n\n\n\n<ion-content>\n\n    <ion-nav [root]="infoRoot"></ion-nav>\n\n</ion-content>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\info\info.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]])
     ], InfoPage);
@@ -1031,7 +1037,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            {{tabName}}\n            <refresh id={{refresh_id}}></refresh>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <main>\n        <h1>\n            {{ title }}\n        </h1>\n        <img src="assets/imgs/logo.png" width="200" height="200">\n        <hr>\n        <ion-row justify-content-center *ngFor="let post of postsService.posts; let i = index;">\n            <ion-card id="postCard_{{i}}" [ngClass]="browserSize">\n                <img src={{post.imageURL}}/>\n                <ion-card-content text-wrap>\n                    <ion-card-title text-wrap>\n                        {{post.headline}}\n                    </ion-card-title>\n                    <p>\n                        {{post.content}}\n                    </p>\n                </ion-card-content>\n            </ion-card>\n        </ion-row>\n    </main>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\home\home.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>\n\n            {{tabName}}\n\n            <refresh id={{refresh_id}}></refresh>\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <main>\n\n        <h1>\n\n            {{ title }}\n\n        </h1>\n\n        <img src="assets/imgs/logo.png" width="200" height="200">\n\n        <hr>\n\n        <ion-row justify-content-center *ngFor="let post of postsService.posts; let i = index;">\n\n            <ion-card id="postCard_{{i}}" [ngClass]="browserSize">\n\n                <img src={{post.imageURL}}/>\n\n                <ion-card-content text-wrap>\n\n                    <ion-card-title text-wrap>\n\n                        {{post.headline}}\n\n                    </ion-card-title>\n\n                    <p>\n\n                        {{post.content}}\n\n                    </p>\n\n                </ion-card-content>\n\n            </ion-card>\n\n        </ion-row>\n\n    </main>\n\n</ion-content>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_0__providers_home_data_home_data__["a" /* HomeDataProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Platform */]])
     ], HomePage);
@@ -1071,9 +1077,21 @@ var GalleryPage = /** @class */ (function () {
         this.tabName = 'גלריה';
         this.refresh_id = 'gallRef';
         this.albumArray = [
-            { headline: "USA", content: "51 states", imageUrl: "blablabla" },
-            { headline: "Canada", content: "3 states" },
-            { headline: "Israel", content: "1 states" }
+            { headline: "USA",
+                content: "3",
+                imageUrl: ["https://image.freepik.com/free-psd/abstract-background-design_1297-87.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXQ5OuPIS8LJkCmfAr-zPV_Q4Z2KD_DACAI7bvs0RzfBe_iQZf",
+                    "https://www.hayadan.org.il/images/content3/2010/05/Drinking_water_wikipedia.jpg"] },
+            { headline: "Canada",
+                content: "3 states",
+                imageUrl: ["https://image.freepik.com/free-psd/abstract-background-design_1297-87.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXQ5OuPIS8LJkCmfAr-zPV_Q4Z2KD_DACAI7bvs0RzfBe_iQZf",
+                    "https://www.hayadan.org.il/images/content3/2010/05/Drinking_water_wikipedia.jpg"] },
+            { headline: "Israel",
+                content: "1 states",
+                imageUrl: ["https://image.freepik.com/free-psd/abstract-background-design_1297-87.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXQ5OuPIS8LJkCmfAr-zPV_Q4Z2KD_DACAI7bvs0RzfBe_iQZf",
+                    "https://www.hayadan.org.il/images/content3/2010/05/Drinking_water_wikipedia.jpg"] },
         ];
     }
     GalleryPage.prototype.ionViewDidEnter = function () {
@@ -1083,16 +1101,17 @@ var GalleryPage = /** @class */ (function () {
     GalleryPage.prototype.doRefresh = function () {
         console.log("galery refresh");
     };
-    GalleryPage.prototype.callAlbum = function (text) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__fb_images_fb_images__["a" /* FbImagesPage */], { text1: text });
+    GalleryPage.prototype.callAlbum = function (headline, content, imageUrl) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__fb_images_fb_images__["a" /* FbImagesPage */], { headline: headline, content: content, imageUrl: imageUrl });
     };
     GalleryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-gallery',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/gallery/gallery.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            {{tabName}}\n            <refresh id={{refresh_id}}></refresh>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-row justify-content-center *ngFor="let album of albumArray;">\n        <ion-card [ngClass]="{\'album\': this.platform.is(\'core\')}" (click) = "callAlbum(album.content)">\n            <img src="https://image.freepik.com/free-psd/abstract-background-design_1297-87.jpg"/>\n            <div class="card-title">{{album.headline}}</div>\n            <div class="card-subtitle">{{album.content}}</div>\n        </ion-card>\n    </ion-row>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/gallery/gallery.html"*/,
+            selector: 'page-gallery',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\gallery\gallery.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>\n\n            {{tabName}}\n\n            <refresh id={{refresh_id}}></refresh>\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <ion-row justify-content-center *ngFor="let album of albumArray;">\n\n        <ion-card [ngClass]="{\'album\': this.platform.is(\'core\')}" (click) = "callAlbum(album.headline, album.content, album.imageUrl)">\n\n            <img src = {{album.imageUrl[0]}}/>\n\n            <div class="card-title">{{album.headline}}</div>\n\n            <div class="card-subtitle">{{album.content}}</div>\n\n        </ion-card>\n\n    </ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\gallery\gallery.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]) === "function" && _d || Object])
     ], GalleryPage);
     return GalleryPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=gallery.js.map
@@ -1148,7 +1167,7 @@ var CalendarPage = /** @class */ (function () {
     };
     CalendarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-calendar',template:/*ion-inline-start:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/calendar/calendar.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            {{tabName}}\n            <refresh id={{refresh_id}}></refresh>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list *ngFor="let post of calendarProvider.posts; let i = index">\n        <ion-item-sliding>\n            <ion-item>\n                <ion-thumbnail item-start>\n                    <img *ngIf="post.imageURL != \'\'; else elsetag" src={{post.imageURL}}>\n                    <ng-template #elsetag>\n                        <img src="assets/imgs/logo.png">\n                    </ng-template>\n                </ion-thumbnail>\n                <h2 text-wrap>{{post.headline}}</h2>\n                <p text-wrap>{{post.date.toLocaleString(\'he-IL\',dateOptions)}}</p>\n                <button ion-button clear item-end (click)="toggleSection(i)" detail-none [ngClass]="{\'section-active\': post.open, \'section\': !post.open}">\n                    <ion-icon item-left name="arrow-dropdown-circle" *ngIf="!post.open"></ion-icon>\n                    <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>\n                </button>\n            </ion-item>\n            <ion-item-options side="left" dir="ltr">\n                <button ion-button color="primary" (click)="addToPlatformCalendar(i)">\n                    <ion-icon name="add"></ion-icon>\n                    ללוח שנה\n                </button>\n            </ion-item-options>\n            <ion-item *ngIf="post.open">\n                <p text-wrap>{{post.content}}</p>\n            </ion-item>\n            \n        </ion-item-sliding>\n     </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp/src/pages/calendar/calendar.html"*/,
+            selector: 'page-calendar',template:/*ion-inline-start:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\calendar\calendar.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>\n\n            {{tabName}}\n\n            <refresh id={{refresh_id}}></refresh>\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <ion-list *ngFor="let post of calendarProvider.posts; let i = index">\n\n        <ion-item-sliding>\n\n            <ion-item>\n\n                <ion-thumbnail item-start>\n\n                    <img *ngIf="post.imageURL != \'\'; else elsetag" src={{post.imageURL}}>\n\n                    <ng-template #elsetag>\n\n                        <img src="assets/imgs/logo.png">\n\n                    </ng-template>\n\n                </ion-thumbnail>\n\n                <h2 text-wrap>{{post.headline}}</h2>\n\n                <p text-wrap>{{post.date.toLocaleString(\'he-IL\',dateOptions)}}</p>\n\n                <button ion-button clear item-end (click)="toggleSection(i)" detail-none [ngClass]="{\'section-active\': post.open, \'section\': !post.open}">\n\n                    <ion-icon item-left name="arrow-dropdown-circle" *ngIf="!post.open"></ion-icon>\n\n                    <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>\n\n                </button>\n\n            </ion-item>\n\n            <ion-item-options side="left" dir="ltr">\n\n                <button ion-button color="primary" (click)="addToPlatformCalendar(i)">\n\n                    <ion-icon name="add"></ion-icon>\n\n                    ללוח שנה\n\n                </button>\n\n            </ion-item-options>\n\n            <ion-item *ngIf="post.open">\n\n                <p text-wrap>{{post.content}}</p>\n\n            </ion-item>\n\n            \n\n        </ion-item-sliding>\n\n     </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\OdeliaAbginehsaz\Desktop\proj\AgudaJce\AgudaApp\src\pages\calendar\calendar.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* Events */], __WEBPACK_IMPORTED_MODULE_0__providers_calendar_event_calendar_event__["a" /* CalendarEventProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Platform */]])
     ], CalendarPage);

@@ -7,12 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{title}}</ion-title>
+    <ion-title>{{headline}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-row justify-content-center *ngFor="let image of imageUrl;">
+     <!-- <ion-card [ngClass]="{'image': this.platform.is('core')}"> (click) = "callImag()"> -->
+        <img src = {{image}}/>
+    <!-- </ion-card> -->
+</ion-row>
 </ion-content>
