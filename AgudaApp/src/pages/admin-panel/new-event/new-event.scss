@@ -1,3 +1,20 @@
 page-new-event {
 
+    direction: ltr;
+
+    ion-title{
+        text-align: center;
+    }
+
+    textarea {
+        height: 10vh; 
+    }
+
+    ion-buttons{
+        text-align: center;
+        width: 100%;
+        button{
+            min-width: 45%;
+        }  
+    }
 }

@@ -1,6 +1,6 @@
 import { HomeStoryProvider } from './../../../providers/home-story/home-story';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, ViewController, LoadingController } from 'ionic-angular';
 import { HomeStory } from '../../../models/homeStory.model';
 
 @IonicPage()
@@ -15,7 +15,9 @@ export class NewHomeStoryPage {
   imageUrl: string;
 
   constructor(public navCtrl: NavController, 
-              public navParams: NavParams, 
+              public navParams: NavParams,
+              public viewCtrl: ViewController,
+              private loadingCtrl: LoadingController,
               public storyProvider: HomeStoryProvider,
               private toastCtrl: ToastController) {
   }
@@ -24,26 +26,28 @@ export class NewHomeStoryPage {
     console.log('ionViewDidLoad NewHomeStoryPage');
   }
 
-  save(){
+  async save(){
     let toastOpt = {
       message: '',
       duration: 3000,
       cssClass: 'toastClass',
       position: 'bottom'
     };
-    this.storyProvider.addStory(new HomeStory(this.imageUrl, this.headline, this.content))
+    let loader = this.loadingCtrl.create();
+    loader.present();
+    await this.storyProvider.addStory(new HomeStory(this.imageUrl, this.headline, this.content))
       .then(() => {
         toastOpt.message = 'Story added successfully';
       })
       .catch(() => {
         toastOpt.message = 'Failed to add story';
       });
+    loader.dismiss();
     this.toastCtrl.create(toastOpt).present();
-    this.navCtrl.pop();
+    this.viewCtrl.dismiss();
   }
 
   cancel(){
-    this.navCtrl.pop();
+    this.viewCtrl.dismiss();
   }
-
 }

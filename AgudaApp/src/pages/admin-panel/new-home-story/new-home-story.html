@@ -7,15 +7,15 @@
 <ion-content padding>
   <ion-item>
     <ion-label floating>Headline</ion-label>
-    <ion-input [(ngModel)]="headline" type="headline" name="Headline" required="required"></ion-input>
+    <ion-input [(ngModel)]="headline" type="text" name="Headline" required="required"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Content</ion-label>
-    <ion-textarea [(ngModel)]="content" type="content" name="Content" required="required" item-height="300px"></ion-textarea>
+    <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
   </ion-item>
   <ion-item>
     <ion-label floating>Image URL</ion-label>
-    <ion-input [(ngModel)]="imageUrl" type="imageURL" name="Image URL" required="required"></ion-input>
+    <ion-input [(ngModel)]="imageUrl" type="url" name="Image URL" required="required"></ion-input>
   </ion-item>
   <p></p>
   <ion-buttons>

@@ -1,10 +1,9 @@
 import { HomeStory } from './../../models/homeStory.model';
-import { NewEventPage } from './new-event/new-event';
-import { NewHomeStoryPage } from './new-home-story/new-home-story';
 import { CalendarEventProvider } from './../../providers/calendar-event/calendar-event';
 import { HomeStoryProvider } from '../../providers/home-story/home-story';
 import { Component } from '@angular/core';
-import { NavController, ModalController, ToastController } from 'ionic-angular';
+import { NavController, ModalController, ToastController, LoadingController } from 'ionic-angular';
+import { CalendarEvent } from '../../models/calendarEvent.model';
 
 @Component({
   selector: 'page-admin-panel',
@@ -12,42 +11,62 @@ import { NavController, ModalController, ToastController } from 'ionic-angular';
 })
 export class AdminPanelPage {
 
-  modelController: any;
-  newHomePage = NewHomeStoryPage;
-  newCalendarPage = NewEventPage;
+  modelController: string;
 
   constructor(public navCtrl: NavController, 
-              public modalCtrl: ModalController, 
+              public modalCtrl: ModalController,
+              private loadingCtrl: LoadingController, 
               public storyProv: HomeStoryProvider, 
               public calProv: CalendarEventProvider,
               private toastCtrl: ToastController) {     
   }
 
-  ionViewDidLoad() {
+  async ionViewDidLoad() {
     console.log('ionViewDidLoad AdminPanelPage');
-    this.storyProv.load();
-    this.calProv.load();
     this.modelController = "home";
   }
 
-  deleteStory(story: HomeStory){
+  async deleteStory(story: HomeStory){
     let toastOpt = {
       message: '',
       duration: 3000,
       cssClass: 'toastClass',
       position: 'bottom'
     };
-    this.storyProv.deleteStory(story)
+    let loader = this.loadingCtrl.create();
+    loader.present();
+    await this.storyProv.deleteStory(story)
       .then(() => {
         toastOpt.message = 'Story deleted successfully';
       })
       .catch(() => {
         toastOpt.message = 'Failed to delete story';
       });
+    loader.dismiss();
     this.toastCtrl.create(toastOpt).present();
   }
 
-  presentModal(page) {
+  async deleteEvent(event: CalendarEvent){
+    let toastOpt = {
+      message: '',
+      duration: 3000,
+      cssClass: 'toastClass',
+      position: 'bottom'
+    };
+    let loader = this.loadingCtrl.create();
+    loader.present();
+    await this.calProv.deleteEvent(event)
+      .then(() => {
+        toastOpt.message = 'Event deleted successfully';
+      })
+      .catch(() => {
+        toastOpt.message = 'Failed to delete event';
+      });
+    loader.dismiss();
+    this.toastCtrl.create(toastOpt).present();
+  }
+
+  presentModal(page: string) {
     let modal = this.modalCtrl.create(page);
     modal.present();
   }
