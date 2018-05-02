@@ -31,6 +31,5 @@ export class HomePage {
 
   doRefresh(){
     console.log("home refresh");
-    this.postsService.load();
   }
 }
