@@ -74,8 +74,16 @@ export class DatabaseProvider {
   }
 
   addCalEvent(event: CalendarEvent){
-    event.createdOn = this.getCurrentTimestamp();
+    event.createdOn = this.getDateTimestamp(event.getDate());
     return this.calEventsCollection.add(CalendarEvent.toObject(event));
+  }
+
+  updateHomeStory(story: HomeStory){
+    return this.homeStoriesCollection.doc(story.id).update(HomeStory.toObject(story));
+  }
+
+  updateCalEvent(event: CalendarEvent){
+    return this.calEventsCollection.doc(event.id).update(CalendarEvent.toObject(event));
   }
 
   deleteHomeStory(story: HomeStory){
@@ -89,9 +97,16 @@ export class DatabaseProvider {
   getCurrentTimestamp(): string{ //format: yyyyMMddHHmmSS
     let date = new Date();
     return "" + date.getFullYear() + (date.getMonth()+1 < 10 ? "0" : "") + (date.getMonth()+1)
-           + (date.getDate() < 10 ? "0" : "") + date.getDate()
-           + (date.getHours() == 0 ? "0" : "") + (date.getHours() < 10 ? "0" : "") + date.getHours()
-           + (date.getMinutes() == 0 ? "0" : "") + (date.getMinutes() < 10 ? "0" : "") + date.getMinutes()
-           + (date.getSeconds() == 0 ? "0" : "") + (date.getSeconds() < 10 ? "0" : "") + date.getSeconds();
+            + (date.getDate() < 10 ? "0" : "") + date.getDate()
+            + (date.getHours() == 0 ? "0" : "") + (date.getHours() < 10 ? "0" : "") + date.getHours()
+            + (date.getMinutes() == 0 ? "0" : "") + (date.getMinutes() < 10 ? "0" : "") + date.getMinutes()
+            + (date.getSeconds() == 0 ? "0" : "") + (date.getSeconds() < 10 ? "0" : "") + date.getSeconds();
+  }
+
+  getDateTimestamp(date: Date){
+    return "" + date.getFullYear() + (date.getMonth()+1 < 10 ? "0" : "") + (date.getMonth()+1)
+            + (date.getDate() < 10 ? "0" : "") + date.getDate()
+            + (date.getHours() == 0 ? "0" : "") + (date.getHours() < 10 ? "0" : "") + date.getHours()
+            + (date.getMinutes() == 0 ? "0" : "") + (date.getMinutes() < 10 ? "0" : "") + date.getMinutes();
   }
 }

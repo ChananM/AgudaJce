@@ -1,10 +1,10 @@
 import { Item } from "./item";
 
 //NEVER set the fields "id" and "createdOn" manually. firebase will do it automaticlly
-export class CalendarEvent extends Item{
+export class CalendarEvent extends Item {
+
     constructor (public imageURL: string, public date: string,
-                public headline: string, public content: string,
-                public open: boolean, public id?: string, public createdOn?: string){
+                public headline: string, public content: string, public open: boolean){
         super();
     }
 
@@ -16,6 +16,5 @@ export class CalendarEvent extends Item{
 
     public getDate() :Date{
         return new Date(this.date);
-         
     }
 }
