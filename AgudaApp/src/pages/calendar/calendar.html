@@ -18,8 +18,7 @@
                     </ng-template>
                 </ion-thumbnail>
                 <h2 text-wrap>{{post.headline}}</h2>
-                <!-- Change this line to work with the new string input -->
-                <!-- <p text-wrap>{{post.date.toLocaleString('he-IL',dateOptions)}}</p> -->
+                <p text-wrap>{{post.getDate().toLocaleString('he-IL',dateOptions)}}</p>
                 <button ion-button clear item-end (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': post.open, 'section': !post.open}">
                     <ion-icon item-left name="arrow-dropdown-circle" *ngIf="!post.open"></ion-icon>
                     <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>

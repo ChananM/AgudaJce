@@ -13,4 +13,9 @@ export class CalendarEvent extends Item{
         let event = Object.create(CalendarEvent.prototype);
         return Object.assign(event, json);
     }
+
+    public getDate() :Date{
+        return new Date(this.date);
+         
+    }
 }
