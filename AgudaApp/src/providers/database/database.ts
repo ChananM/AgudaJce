@@ -16,7 +16,7 @@ export class DatabaseProvider {
   constructor(public afs: AngularFirestore) {
 
     this.homeStoriesCollection = afs.collection<HomeStory>('HomeStories', ref => ref.orderBy('createdOn', 'desc'));
-    this.calEventsCollection = afs.collection<CalendarEvent>('Events', ref => ref.orderBy('createdOn', 'desc'));
+    this.calEventsCollection = afs.collection<CalendarEvent>('Events', ref => ref.orderBy('createdOn', 'asc'));
 
     this.homeStories = this.homeStoriesCollection.snapshotChanges().map(changes => {
       return changes.map(a => {
@@ -74,7 +74,7 @@ export class DatabaseProvider {
   }
 
   addCalEvent(event: CalendarEvent){
-    event.createdOn = this.getDateTimestamp(event.getDate());
+    event.createdOn = this.getDateTimestamp(event.getDate()); //created on = the event date timestamp
     return this.calEventsCollection.add(CalendarEvent.toObject(event));
   }
 
