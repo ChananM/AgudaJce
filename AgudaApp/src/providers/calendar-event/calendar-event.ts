@@ -15,9 +15,6 @@ export class CalendarEventProvider {
       console.log(this.posts);
     })
   }
-  async load(){
-    await this.posts.length > 0;
-  }
 
   addEvent(event: CalendarEvent){
     return this.dbProvider.addCalEvent(event);

@@ -21,8 +21,4 @@ export class HomeStoryProvider {
   deleteStory(story: HomeStory){
     return this.dbProvider.deleteHomeStory(story);
   }
-
-  async load(){
-    await this.posts.length > 0 ;
-  }
 }

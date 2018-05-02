@@ -13,7 +13,7 @@ export class NewEventPage {
   headline: string;
   date: string;
   content: string;
-  imageUrl: string;
+  imageUrl: string = "";
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -36,7 +36,7 @@ export class NewEventPage {
     };
     let loader = this.loadingCtrl.create();
     loader.present();
-    await this.eventProvider.addEvent(new CalendarEvent(this.imageUrl, new Date(this.date), this.headline, this.content, false))
+    await this.eventProvider.addEvent(new CalendarEvent(this.imageUrl, this.date.replace("T", " ").replace("Z", ""), this.headline, this.content, false))
       .then(() => {
         toastOpt.message = 'Event added successfully';
       })

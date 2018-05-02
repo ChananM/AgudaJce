@@ -26,7 +26,6 @@ export class CalendarPage {
 
   doRefresh(){
     console.log("calendar refresh");
-    this.calendarProvider.load();
   }
 
   toggleSection(i) {
