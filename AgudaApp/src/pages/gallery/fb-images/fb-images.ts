@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the FbImagesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ImageSlidesPage } from '../image-slides/image-slides';
 
 @Component({
   selector: 'page-fb-images',
@@ -28,8 +22,8 @@ export class FbImagesPage {
     console.log('ionViewDidLoad FbImagesPage');
   }
 
-  callImag() {
-    alert("click");
+  callImage(index) {
+    this.navCtrl.push(ImageSlidesPage, {index: index})
     
   }
 

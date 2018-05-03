@@ -33,6 +33,7 @@ import { FaqPage } from '../pages/info-tabs/faq/faq';
 import { AboutPage } from '../pages/info-tabs/about/about';
 import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
 import { DatabaseProvider } from '../providers/database/database';
+import { ImageSlidesPage } from '../pages/gallery/image-slides/image-slides';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { DatabaseProvider } from '../providers/database/database';
     ContactPage,
     DepInfoPage,
     FaqPage,
-    FbImagesPage
+    FbImagesPage,
+    ImageSlidesPage
   ],
 
   imports: [
@@ -80,7 +82,8 @@ import { DatabaseProvider } from '../providers/database/database';
     ContactPage,
     DepInfoPage,
     FaqPage,
-    FbImagesPage
+    FbImagesPage,
+    ImageSlidesPage
   ],
 
   providers: [
