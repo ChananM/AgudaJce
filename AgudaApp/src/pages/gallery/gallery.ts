@@ -17,6 +17,7 @@ export class GalleryPage {
      imageUrl: ["https://image.freepik.com/free-psd/abstract-background-design_1297-87.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXQ5OuPIS8LJkCmfAr-zPV_Q4Z2KD_DACAI7bvs0RzfBe_iQZf", 
                 "https://www.hayadan.org.il/images/content3/2010/05/Drinking_water_wikipedia.jpg",
+                "https://wallpapercave.com/wp/mgQSn9p.jpg",
                 "https://image.freepik.com/free-psd/abstract-background-design_1297-87.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXQ5OuPIS8LJkCmfAr-zPV_Q4Z2KD_DACAI7bvs0RzfBe_iQZf", 
                 "https://www.hayadan.org.il/images/content3/2010/05/Drinking_water_wikipedia.jpg",

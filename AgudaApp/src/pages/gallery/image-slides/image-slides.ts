@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Slides } from 'ionic-angular';
 
 @Component({
   selector: 'page-image-slides',
@@ -7,18 +7,35 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ImageSlidesPage {
 
-  images: Array<string>
+  images: string[]
   index: number
 
-  //  @ViewChildren(Slides) slides: Slides;
+  tabBarElement: any;
+
+  @ViewChild('mySlider') slider: Slides;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.images = this.navParams.get('imageUrl')
     this.index = this.navParams.get('index')
-    // this.slides.slideTo(this.index, 0);
+    this.images = this.navParams.get('imageUrl')
+    console.log(this.images);
+    setTimeout(() => {
+      this.slider.slideTo(this.index, 0);
+    }, 60)
+  }
+
+  close(){
+    this.navCtrl.pop();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ImageSlidesPage');
   }
 
+  ionViewWillEnter(){
+    document.getElementsByClassName('tabbar').item(0).classList.add('tabbar_hidden')
+  }
+
+  ionViewWillLeave(){
+    document.getElementsByClassName('tabbar').item(0).classList.remove('tabbar_hidden')
+  }
 }

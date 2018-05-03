@@ -10,7 +10,7 @@ export class FbImagesPage {
 
   headline: string 
   content: string 
-  imageUrl: Array<string>
+  imageUrl: string[]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.headline = navParams.get('headline')
@@ -23,8 +23,7 @@ export class FbImagesPage {
   }
 
   callImage(index) {
-    this.navCtrl.push(ImageSlidesPage, {index: index})
-    
+    this.navCtrl.push(ImageSlidesPage, {index: index, imageUrl: this.imageUrl})
   }
 
 }
