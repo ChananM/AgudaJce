@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, Slides } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-image-slides',
@@ -12,15 +12,12 @@ export class ImageSlidesPage {
 
   tabBarElement: any;
 
-  @ViewChild('mySlider') slider: Slides;
+  //@ViewChild('mySlider') slider: Slides;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.index = this.navParams.get('index')
     this.images = this.navParams.get('imageUrl')
     console.log(this.images);
-    setTimeout(() => {
-      this.slider.slideTo(this.index, 0);
-    }, 60)
   }
 
   close(){

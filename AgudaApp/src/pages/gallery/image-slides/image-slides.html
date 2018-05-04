@@ -1,14 +1,16 @@
 <ion-header>
     <ion-navbar hideBackButton color="black">
         <button ion-button icon-only round color="dark" (click)="close()">
-        <ion-icon name="close"></ion-icon>
-      </button>
+            <ion-icon name="close"></ion-icon>
+         </button>
     </ion-navbar>
 </ion-header>
 <ion-content>
-    <ion-slides [zoom]='true' #mySlider style="background-color: black">
+    <ion-slides [initialSlide]=index [zoom]='true' #mySlider style="background-color: black">
         <ion-slide *ngFor="let image of images">
-            <img src={{image}}>
+            <div class='swiper-zoom-container'>
+                <img src={{image}}>
+            </div>
         </ion-slide>
     </ion-slides>
 </ion-content>
