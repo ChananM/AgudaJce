@@ -34,11 +34,13 @@ import { AboutPage } from '../pages/info-tabs/about/about';
 import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
 import { DatabaseProvider } from '../providers/database/database';
 import { ImageSlidesPage } from '../pages/gallery/image-slides/image-slides';
+import { StoryArticlePage } from '../pages/home/story-article/story-article';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    StoryArticlePage,
     InfoPage,
     CalendarPage,
     GalleryPage,
@@ -72,6 +74,7 @@ import { ImageSlidesPage } from '../pages/gallery/image-slides/image-slides';
     MyApp,
     InfoPage,
     HomePage,
+    StoryArticlePage,
     CalendarPage,
     GalleryPage,
     RefreshComponent,

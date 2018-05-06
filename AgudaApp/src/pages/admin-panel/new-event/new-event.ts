@@ -14,6 +14,8 @@ export class NewEventPage {
   date: string;
   content: string;
   imageUrl: string = "";
+  purchaseURL: string = "";
+
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -36,7 +38,7 @@ export class NewEventPage {
     };
     let loader = this.loadingCtrl.create();
     loader.present();
-    await this.eventProvider.addEvent(new CalendarEvent(this.imageUrl, this.date.replace("T", " ").replace("Z", "").replace("-", "/").replace("-", "/"), this.headline, this.content, false))
+    await this.eventProvider.addEvent(new CalendarEvent(this.imageUrl, this.date.replace("T", " ").replace("Z", "").replace("-", "/").replace("-", "/"), this.headline, this.content, this.purchaseURL, false))
       .then(() => {
         toastOpt.message = 'Event added successfully';
       })

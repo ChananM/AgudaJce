@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <!-- TODO: Replace with application banner when ready -->
+    <ion-buttons right>
+      <button ion-button icon-only (click)="viewCtrl.dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="{{story.imageURL}}">
+  <h1>{{story.headline}}</h1>
+  <article>
+    {{story.content}}
+  </article>
+</ion-content>
