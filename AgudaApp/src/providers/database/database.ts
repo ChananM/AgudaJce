@@ -15,6 +15,9 @@ export class DatabaseProvider {
 
   constructor(public afs: AngularFirestore) {
 
+    const settings = { timestampsInSnapshots: true };
+    afs.app.firestore().settings(settings);
+
     this.homeStoriesCollection = afs.collection<HomeStory>('HomeStories', ref => ref.orderBy('createdOn', 'desc'));
     this.calEventsCollection = afs.collection<CalendarEvent>('Events', ref => ref.orderBy('createdOn', 'asc'));
 
