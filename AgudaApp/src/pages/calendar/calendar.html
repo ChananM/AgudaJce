@@ -10,7 +10,7 @@
 <ion-content padding>
     <ion-list *ngFor="let post of calendarProvider.posts; let i = index">
         <ion-item-sliding>
-            <ion-item>
+            <ion-item (click)="toggleSection(i)">
                 <ion-thumbnail item-start>
                     <img *ngIf="post.imageURL != ''; else elsetag" src={{post.imageURL}}>
                     <ng-template #elsetag>
@@ -19,10 +19,10 @@
                 </ion-thumbnail>
                 <h2 text-wrap>{{post.headline}}</h2>
                 <p text-wrap>{{post.getDate().toLocaleString('he-IL',dateOptions)}}</p>
-                <button ion-button clear item-end (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': post.open, 'section': !post.open}">
+                <span clear item-end detail-none>
                     <ion-icon item-left name="arrow-dropdown-circle" *ngIf="!post.open"></ion-icon>
                     <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>
-                </button>
+            </span>
             </ion-item>
             <ion-item-options side="left" dir="ltr">
                 <button ion-button color="primary" (click)="addToPlatformCalendar(i)">
