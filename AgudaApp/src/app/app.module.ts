@@ -35,6 +35,8 @@ import { FbImagesPage } from '../pages/gallery/fb-images/fb-images';
 import { DatabaseProvider } from '../providers/database/database';
 import { ImageSlidesPage } from '../pages/gallery/image-slides/image-slides';
 import { StoryArticlePage } from '../pages/home/story-article/story-article';
+import { Calendar } from '@ionic-native/calendar';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @NgModule({
   declarations: [
@@ -95,7 +97,9 @@ import { StoryArticlePage } from '../pages/home/story-article/story-article';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HomeStoryProvider,
     CalendarEventProvider,
-    DatabaseProvider
+    DatabaseProvider,
+    Calendar,
+    InAppBrowser
   ]
 })
 
