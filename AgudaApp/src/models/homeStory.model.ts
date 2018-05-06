@@ -3,7 +3,7 @@ import { Item } from "./item";
 export class HomeStory extends Item {
 
     //NEVER set the fields "id" and "createdOn" manually. firebase will do it automaticlly
-    constructor(public imageURL: string, public headline: string, public content: string) {
+    constructor(public imageURL: string, public headline: string, public content: string, public preview: string) {
         super();
     }
 

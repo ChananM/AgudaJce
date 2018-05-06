@@ -6,23 +6,20 @@
         </ion-title>
     </ion-navbar>
 </ion-header>
-
 <ion-content padding>
     <main>
-        <h1>
-            {{ title }}
-        </h1>
-        <img src="assets/imgs/logo.png" width="200" height="200">
-        <hr>
         <ion-row justify-content-center *ngFor="let post of postsService.posts; let i = index;">
-            <ion-card id="postCard_{{i}}" [ngClass]="browserSize">
-                <img src={{post.imageURL}}/>
+            <ion-card id="postCard_{{i}}" [ngClass]="browserSize" (click)="showStory(post)">
+                <img *ngIf="post.imageURL != ''; else elsetag" src={{post.imageURL}}>
+                <ng-template #elsetag>
+                    <img src="assets/imgs/logo.jpg">
+                </ng-template>
                 <ion-card-content text-wrap>
                     <ion-card-title text-wrap>
                         {{post.headline}}
                     </ion-card-title>
                     <p>
-                        {{post.content}}
+                        {{post.preview}}
                     </p>
                 </ion-card-content>
             </ion-card>

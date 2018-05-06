@@ -22,6 +22,10 @@
     <ion-label floating>Image URL</ion-label>
     <ion-input [(ngModel)]="imageUrl" type="url" name="Image URL" required="required"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label floating>Purchase URL</ion-label>
+    <ion-input [(ngModel)]="purchaseURL" type="url" name="Purchase URL" required="required"></ion-input>
+  </ion-item>
   <p></p>
   <ion-buttons>
     <button *ngIf="headline && date && content" ion-button (click)="save()">Save</button>

@@ -12,7 +12,8 @@ export class NewHomeStoryPage {
 
   headline: string;
   content: string;
-  imageUrl: string;
+  imageUrl: string = "";
+  preview: string;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -35,7 +36,7 @@ export class NewHomeStoryPage {
     };
     let loader = this.loadingCtrl.create();
     loader.present();
-    await this.storyProvider.addStory(new HomeStory(this.imageUrl, this.headline, this.content))
+    await this.storyProvider.addStory(new HomeStory(this.imageUrl, this.headline, this.content, this.preview))
       .then(() => {
         toastOpt.message = 'Story added successfully';
       })
