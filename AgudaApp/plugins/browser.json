@@ -27,6 +27,12 @@
     },
     "cordova-plugin-firebase": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-calendar": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
     }
   },
   "dependent_plugins": {}

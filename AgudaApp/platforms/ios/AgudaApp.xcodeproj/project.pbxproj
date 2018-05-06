@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		0A142819F814479482CAEDA6 /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6EB0A9A19646D69337888C /* GCDWebServerStreamedResponse.m */; };
@@ -65,6 +64,10 @@
 		F55C4AA4DA664AB484B3BB34 /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6525FE74CD0344E4A3D950F9 /* GCDWebServerFileRequest.m */; };
 		FD449B1942364B2B9A7C7766 /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 781A9A21F3E7404FACC2F580 /* GCDWebServerDataResponse.m */; };
 		FF0734DB39B34C368FE8CE9F /* AppDelegate+FirebasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE577350422428094935AF5 /* AppDelegate+FirebasePlugin.m */; };
+		6F570E5CFC7145A9A5E2F053 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D983C40DD8C84C1B96475EEC /* CDVInAppBrowser.m */; };
+		A8324418977642B49C4C7B72 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = D662DA0056E243F69EFA3A33 /* Calendar.m */; };
+		42489E9E4CAE453BB735D303 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE054E76E9C34AB691F63EC7 /* EventKit.framework */; };
+		3DFFE15FDFAE4D0DA578E3F4 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2538AABBBDB84EA8A61AFA84 /* EventKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +194,12 @@
 		F6F1E0F82C724E64B3466BCA /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = AgudaApp/config.xml; sourceTree = "<group>"; };
 		FB52B9FFF1174A93885112AE /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileRequest.h; path = "cordova-plugin-ionic-webview/GCDWebServerFileRequest.h"; sourceTree = "<group>"; };
+		D983C40DD8C84C1B96475EEC /* CDVInAppBrowser.m */ = {isa = PBXFileReference; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		29F65C9EF6E040B1AFC28F53 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D662DA0056E243F69EFA3A33 /* Calendar.m */ = {isa = PBXFileReference; name = "Calendar.m"; path = "cordova-plugin-calendar/Calendar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		67446AD6456242888E729215 /* Calendar.h */ = {isa = PBXFileReference; name = "Calendar.h"; path = "cordova-plugin-calendar/Calendar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		EE054E76E9C34AB691F63EC7 /* EventKit.framework */ = {isa = PBXFileReference; name = "EventKit.framework"; path = "System/Library/Frameworks/EventKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		2538AABBBDB84EA8A61AFA84 /* EventKitUI.framework */ = {isa = PBXFileReference; name = "EventKitUI.framework"; path = "System/Library/Frameworks/EventKitUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +234,8 @@
 				3572EB70C85B4695B120FB54 /* FirebaseRemoteConfig.framework in Frameworks */,
 				D2754144B462424980ABCB0B /* FirebaseAuth.framework in Frameworks */,
 				5564CF60BC174D42A1CED79B /* GTMSessionFetcher.framework in Frameworks */,
+				42489E9E4CAE453BB735D303 /* EventKit.framework in Frameworks */,
+				3DFFE15FDFAE4D0DA578E3F4 /* EventKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +333,8 @@
 				607475A10BCF4D07A7DD08EA /* FirebaseRemoteConfig.framework */,
 				3E9754314723427BBE953A51 /* FirebaseAuth.framework */,
 				0A9B0724CBED4760B2BE2ACA /* GTMSessionFetcher.framework */,
+				EE054E76E9C34AB691F63EC7 /* EventKit.framework */,
+				2538AABBBDB84EA8A61AFA84 /* EventKitUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -400,6 +413,10 @@
 				4F34D03AE0B84AB7B161C5B5 /* AppDelegate+FirebasePlugin.h */,
 				942C90D0609245549905A054 /* FirebasePlugin.h */,
 				ED1149387369401FAD94209B /* Firebase.h */,
+				D983C40DD8C84C1B96475EEC /* CDVInAppBrowser.m */,
+				29F65C9EF6E040B1AFC28F53 /* CDVInAppBrowser.h */,
+				D662DA0056E243F69EFA3A33 /* Calendar.m */,
+				67446AD6456242888E729215 /* Calendar.h */,
 			);
 			name = Plugins;
 			path = AgudaApp/Plugins;
@@ -552,6 +569,8 @@
 				1D3B464860464EA0AE77AB63 /* AppDelegate+FCMPlugin.m in Sources */,
 				FF0734DB39B34C368FE8CE9F /* AppDelegate+FirebasePlugin.m in Sources */,
 				9027CD2B022E49588B4ADE6E /* FirebasePlugin.m in Sources */,
+				6F570E5CFC7145A9A5E2F053 /* CDVInAppBrowser.m in Sources */,
+				A8324418977642B49C4C7B72 /* Calendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
