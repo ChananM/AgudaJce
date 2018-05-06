@@ -1,6 +1,7 @@
 import { CalendarEventProvider } from './../../providers/calendar-event/calendar-event';
 import { Component } from '@angular/core';
 import { NavController, Events, Platform } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @Component({
   selector: 'page-calendar',
@@ -12,7 +13,12 @@ export class CalendarPage {
   refresh_id = 'calendarRef';
   dateOptions = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hourCycle: 'h24'};
 
-  constructor(public navCtrl: NavController, public events: Events, public calendarProvider: CalendarEventProvider, public platform: Platform) {
+  constructor(public navCtrl: NavController,
+              public events: Events,
+              public calendarProvider: CalendarEventProvider,
+              public platform: Platform,
+              private iab: InAppBrowser
+            ) {
   }
 
   ionViewDidLoad(){
@@ -37,7 +43,8 @@ export class CalendarPage {
     console.log(this.calendarProvider.posts[i]);
   }
 
-  gotoPurachase(i){
-    console.log("redirected");
+  gotoPurachase(url: string){
+    console.log("redirect to: "+url);
+    const browser = this.iab.create(url);
   }
 }
