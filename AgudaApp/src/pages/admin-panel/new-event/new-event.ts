@@ -36,7 +36,7 @@ export class NewEventPage {
     };
     let loader = this.loadingCtrl.create();
     loader.present();
-    await this.eventProvider.addEvent(new CalendarEvent(this.imageUrl, this.date.replace("T", " ").replace("Z", ""), this.headline, this.content, false))
+    await this.eventProvider.addEvent(new CalendarEvent(this.imageUrl, this.date.replace("T", " ").replace("Z", "").replace("-", "/").replace("-", "/"), this.headline, this.content, false))
       .then(() => {
         toastOpt.message = 'Event added successfully';
       })
