@@ -36,4 +36,8 @@ export class CalendarPage {
     console.log("this event will be added to the platform calendar");
     console.log(this.calendarProvider.posts[i]);
   }
+
+  gotoPurachase(i){
+    console.log("redirected");
+  }
 }

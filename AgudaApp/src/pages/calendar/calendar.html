@@ -29,6 +29,10 @@
                     <ion-icon name="add"></ion-icon>
                     ללוח שנה
                 </button>
+                <button ion-button color="secondary" *ngIf="post.purchaseURL != ''" (click)="gotoPurachase(i)">
+                    <ion-icon name="pricetags"></ion-icon>
+                    רכישת כרטיסים
+                </button>
             </ion-item-options>
             <ion-item *ngIf="post.open">
                 <p text-wrap>{{post.content}}</p>

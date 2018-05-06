@@ -4,7 +4,8 @@ import { Item } from "./item";
 export class CalendarEvent extends Item {
 
     constructor (public imageURL: string, public date: string,
-                public headline: string, public content: string, public open: boolean){
+                public headline: string, public content: string,
+                 public purchaseURL: string, public open: boolean){
         super();
     }
 

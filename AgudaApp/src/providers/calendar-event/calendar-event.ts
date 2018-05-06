@@ -2,7 +2,7 @@ import { DatabaseProvider } from './../database/database';
 import { CalendarEvent } from './../../models/calendarEvent.model';
 import { Injectable } from '@angular/core';
   
-//Date format is ISO 8601 "YYYY-MM-DD" the value is a string
+//Date format is ISO 8601 "YYYY/MM/DD HH:MM:SS" the value is a string
 
 @Injectable()
 export class CalendarEventProvider {
