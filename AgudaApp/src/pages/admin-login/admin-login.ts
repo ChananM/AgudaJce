@@ -32,13 +32,10 @@ export class AdminLoginPage {
       loader.present();
 
       const res = await this.afAuth.auth.signInWithEmailAndPassword(this.email, this.password);
-      console.log(res);
 
-      loader.dismiss().then(() => {
-        console.log('uid: ' + res.uid);
-        this.navCtrl.setRoot(AdminPanelPage);
-      });
-
+      console.log('uid: ' + res.uid);
+      this.navCtrl.setRoot(AdminPanelPage, { blocker: loader });
+      
     } catch (e) {
       console.error(e);
       loader.dismiss().then(() => {

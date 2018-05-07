@@ -2,7 +2,7 @@ import { HomeStory } from './../../models/homeStory.model';
 import { CalendarEventProvider } from './../../providers/calendar-event/calendar-event';
 import { HomeStoryProvider } from '../../providers/home-story/home-story';
 import { Component } from '@angular/core';
-import { NavController, ModalController, ToastController, LoadingController } from 'ionic-angular';
+import { NavController, ModalController, ToastController, LoadingController, NavParams, Loading } from 'ionic-angular';
 import { CalendarEvent } from '../../models/calendarEvent.model';
 
 @Component({
@@ -13,7 +13,8 @@ export class AdminPanelPage {
 
   modelController: string;
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
               public modalCtrl: ModalController,
               private loadingCtrl: LoadingController, 
               public storyProv: HomeStoryProvider, 
@@ -21,8 +22,17 @@ export class AdminPanelPage {
               private toastCtrl: ToastController) {     
   }
 
-  async ionViewDidLoad() {
+  ionViewDidLoad() {
     console.log('ionViewDidLoad AdminPanelPage');
+
+    let interval = setInterval(() => {
+      if(this.storyProv.posts.length > 0){
+        let loader = <Loading>this.navParams.get('blocker');
+        loader.dismiss();
+        clearInterval(interval);
+      }
+    }, 1000);
+
     this.modelController = "home";
   }
 
