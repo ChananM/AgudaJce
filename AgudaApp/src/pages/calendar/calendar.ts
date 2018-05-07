@@ -44,7 +44,7 @@ export class CalendarPage {
   }
 
   gotoPurachase(url: string){
-    console.log("redirect to: "+url);
-    const browser = this.iab.create(url);
+    console.log("redirect to: " + url);
+    /*const browser = */ this.iab.create(url);
   }
 }

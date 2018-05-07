@@ -10,7 +10,7 @@ import { HomeStoryProvider } from '../../providers/home-story/home-story';
 })
 export class EntryScreenPage {
 
-  constructor(public navCtrl: NavController, public platform: Platform, private hs: HomeStoryProvider) {
+  constructor(public navCtrl: NavController, public platform: Platform, public hs: HomeStoryProvider) {
     let interval = setInterval(() => {
       if(hs.posts.length > 0){
         navCtrl.setRoot(TabsPage, {}, {animate: true, direction: 'forward', duration: 1250});
