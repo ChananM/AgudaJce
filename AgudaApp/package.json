@@ -65,10 +65,10 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-fcm": {},
       "cordova-plugin-firebase": {},
-      "cordova-plugin-inappbrowser": {},
       "cordova-plugin-calendar": {
         "CALENDAR_USAGE_DESCRIPTION": " "
-      }
+      },
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": [
       "browser",

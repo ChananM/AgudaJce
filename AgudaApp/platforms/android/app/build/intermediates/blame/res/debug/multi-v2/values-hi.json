@@ -4,7 +4,7 @@
             "outputFile": "D:\\webDev\\AgudaJce\\AgudaApp\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-15.0.0.aar\\537674c66249b5f60678a494247c5f2e\\res\\values-hi\\values.xml",
+                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-15.0.2.aar\\a39c8fc18aad70fb26215316bf6cff55\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -13,11 +13,11 @@
                         "endOffsets": "303"
                     },
                     "to": {
-                        "startLines": "3",
+                        "startLines": "20",
                         "startColumns": "4",
-                        "startOffsets": "310",
+                        "startOffsets": "2825",
                         "endColumns": "102",
-                        "endOffsets": "408"
+                        "endOffsets": "2923"
                     }
                 },
                 {
@@ -30,15 +30,15 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "4",
+                        "startLines": "21",
                         "startColumns": "4",
-                        "startOffsets": "413",
+                        "startOffsets": "2928",
                         "endColumns": "100",
-                        "endOffsets": "509"
+                        "endOffsets": "3024"
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.0.aar\\aa41a1c1b2fef233676594bf692e11ad\\res\\values-hi\\values.xml",
+                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\6769d7d07e6b60be56c71934d6494452\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -47,11 +47,28 @@
                         "endOffsets": "451"
                     },
                     "to": {
-                        "startLines": "2",
+                        "startLines": "10",
                         "startColumns": "4",
-                        "startOffsets": "105",
+                        "startOffsets": "1274",
                         "endColumns": "204",
-                        "endOffsets": "305"
+                        "endOffsets": "1474"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\7ad8b1f7713ae4248692e4e6287ef36b\\res\\values-hi\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,351,543,667,777,987,1115,1253,1390,1606,1713,1910,2038,2238,2417,2506,2599",
+                        "endColumns": "105,191,123,109,209,127,137,136,215,106,196,127,199,178,88,92,112",
+                        "endOffsets": "350,542,666,776,986,1114,1252,1389,1605,1712,1909,2037,2237,2416,2505,2598,2711"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,407,535,649,859,991,1133,1479,1695,1806,2003,2135,2335,2518,2611,2708",
+                        "endColumns": "109,191,127,113,209,131,141,140,215,110,196,131,199,182,92,96,116",
+                        "endOffsets": "210,402,530,644,854,986,1128,1269,1690,1801,1998,2130,2330,2513,2606,2703,2820"
                     }
                 }
             ]

@@ -13,11 +13,11 @@
     "cordova-plugin-firebase": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "jce.aguda.teamcal"
-    },
     "cordova-plugin-calendar": {
       "CALENDAR_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     }
   },

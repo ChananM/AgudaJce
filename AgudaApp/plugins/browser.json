@@ -28,10 +28,10 @@
     "cordova-plugin-firebase": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     },
-    "cordova-plugin-inappbrowser": {
+    "cordova-plugin-calendar": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     },
-    "cordova-plugin-calendar": {
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     }
   },

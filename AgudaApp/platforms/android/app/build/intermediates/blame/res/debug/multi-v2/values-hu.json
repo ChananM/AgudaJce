@@ -13,32 +13,15 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "4",
+                        "startLines": "21",
                         "startColumns": "4",
-                        "startOffsets": "445",
+                        "startOffsets": "3126",
                         "endColumns": "100",
-                        "endOffsets": "541"
+                        "endOffsets": "3222"
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-15.0.0.aar\\537674c66249b5f60678a494247c5f2e\\res\\values-hu\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "99",
-                        "endOffsets": "304"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "341",
-                        "endColumns": "103",
-                        "endOffsets": "440"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.0.aar\\aa41a1c1b2fef233676594bf692e11ad\\res\\values-hu\\values.xml",
+                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\6769d7d07e6b60be56c71934d6494452\\res\\values-hu\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -47,11 +30,45 @@
                         "endOffsets": "482"
                     },
                     "to": {
-                        "startLines": "2",
+                        "startLines": "10",
                         "startColumns": "4",
-                        "startOffsets": "105",
+                        "startOffsets": "1343",
                         "endColumns": "235",
-                        "endOffsets": "336"
+                        "endOffsets": "1574"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\7ad8b1f7713ae4248692e4e6287ef36b\\res\\values-hu\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,354,570,706,813,1040,1176,1324,1459,1688,1794,2010,2145,2376,2574,2671,2765",
+                        "endColumns": "108,215,135,106,226,135,147,134,228,105,215,134,230,197,96,93,112",
+                        "endOffsets": "353,569,705,812,1039,1175,1323,1458,1687,1793,2009,2144,2375,2573,2670,2764,2877"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,218,434,574,685,912,1052,1204,1579,1808,1918,2134,2273,2504,2706,2807,2905",
+                        "endColumns": "112,215,139,110,226,139,151,138,228,109,215,138,230,201,100,97,116",
+                        "endOffsets": "213,429,569,680,907,1047,1199,1338,1803,1913,2129,2268,2499,2701,2802,2900,3017"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-15.0.2.aar\\a39c8fc18aad70fb26215316bf6cff55\\res\\values-hu\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "99",
+                        "endOffsets": "304"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "3022",
+                        "endColumns": "103",
+                        "endOffsets": "3121"
                     }
                 }
             ]

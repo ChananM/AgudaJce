@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\webDev\\AgudaJce\\AgudaApp\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-15.0.2.aar\\a39c8fc18aad70fb26215316bf6cff55\\res\\values-or\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "102",
+                        "endOffsets": "307"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "106",
+                        "endOffsets": "157"
+                    }
+                }
+            ]
+        }
+    ]
+}

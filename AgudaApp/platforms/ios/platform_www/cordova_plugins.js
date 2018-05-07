@@ -49,20 +49,20 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-calendar.Calendar",
+    "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
+    "pluginId": "cordova-plugin-calendar",
+    "clobbers": [
+      "Calendar"
+    ]
+  },
+  {
     "id": "cordova-plugin-inappbrowser.inappbrowser",
     "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
     "pluginId": "cordova-plugin-inappbrowser",
     "clobbers": [
       "cordova.InAppBrowser.open",
       "window.open"
-    ]
-  },
-  {
-    "id": "cordova-plugin-calendar.Calendar",
-    "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
-    "pluginId": "cordova-plugin-calendar",
-    "clobbers": [
-      "Calendar"
     ]
   }
 ];
@@ -76,8 +76,8 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-fcm": "2.1.2",
   "cordova-plugin-firebase": "0.1.25",
-  "cordova-plugin-inappbrowser": "3.0.0",
-  "cordova-plugin-calendar": "5.0.0"
+  "cordova-plugin-calendar": "5.0.0",
+  "cordova-plugin-inappbrowser": "3.0.0"
 };
 // BOTTOM OF METADATA
 });

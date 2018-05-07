@@ -39,10 +39,10 @@
     "cordova-plugin-firebase": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     },
-    "cordova-plugin-inappbrowser": {
+    "cordova-plugin-calendar": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     },
-    "cordova-plugin-calendar": {
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     }
   },
@@ -93,6 +93,14 @@
       ]
     },
     {
+      "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
+      "id": "cordova-plugin-calendar.Calendar",
+      "pluginId": "cordova-plugin-calendar",
+      "clobbers": [
+        "Calendar"
+      ]
+    },
+    {
       "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
       "id": "cordova-plugin-inappbrowser.inappbrowser",
       "pluginId": "cordova-plugin-inappbrowser",
@@ -106,14 +114,6 @@
       "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
       "pluginId": "cordova-plugin-inappbrowser",
       "runs": true
-    },
-    {
-      "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
-      "id": "cordova-plugin-calendar.Calendar",
-      "pluginId": "cordova-plugin-calendar",
-      "clobbers": [
-        "Calendar"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -124,7 +124,7 @@
     "cordova-plugin-ionic-keyboard": "2.0.5",
     "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-firebase": "0.1.25",
-    "cordova-plugin-inappbrowser": "3.0.0",
-    "cordova-plugin-calendar": "5.0.0"
+    "cordova-plugin-calendar": "5.0.0",
+    "cordova-plugin-inappbrowser": "3.0.0"
   }
 }

@@ -55,18 +55,18 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-inappbrowser": {
+  "cordova-plugin-calendar": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-inappbrowser@^3.0.0"
+      "id": "cordova-plugin-calendar@latest"
     },
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-calendar": {
+  "cordova-plugin-inappbrowser": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-calendar@^5.0.0"
+      "id": "cordova-plugin-inappbrowser@latest"
     },
     "is_top_level": true,
     "variables": {}

@@ -1,19 +1,19 @@
 {
-  "_from": "cordova-plugin-inappbrowser@3.0.0",
+  "_from": "cordova-plugin-inappbrowser@latest",
   "_id": "cordova-plugin-inappbrowser@3.0.0",
   "_inBundle": false,
   "_integrity": "sha1-1K4A02Z2IQdRBXrSWK5K1KkWGto=",
   "_location": "/cordova-plugin-inappbrowser",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "tag",
     "registry": true,
-    "raw": "cordova-plugin-inappbrowser@3.0.0",
+    "raw": "cordova-plugin-inappbrowser@latest",
     "name": "cordova-plugin-inappbrowser",
     "escapedName": "cordova-plugin-inappbrowser",
-    "rawSpec": "3.0.0",
+    "rawSpec": "latest",
     "saveSpec": null,
-    "fetchSpec": "3.0.0"
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
     "#USER",
@@ -21,8 +21,8 @@
   ],
   "_resolved": "https://registry.npmjs.org/cordova-plugin-inappbrowser/-/cordova-plugin-inappbrowser-3.0.0.tgz",
   "_shasum": "d4ae00d36676210751057ad258ae4ad4a9161ada",
-  "_spec": "cordova-plugin-inappbrowser@3.0.0",
-  "_where": "/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp",
+  "_spec": "cordova-plugin-inappbrowser@latest",
+  "_where": "D:\\webDev\\AgudaJce\\AgudaApp",
   "author": {
     "name": "Apache Software Foundation"
   },

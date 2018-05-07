@@ -1,19 +1,19 @@
 {
-  "_from": "cordova-plugin-calendar@5.0.0",
+  "_from": "cordova-plugin-calendar@latest",
   "_id": "cordova-plugin-calendar@5.0.0",
   "_inBundle": false,
   "_integrity": "sha512-Z2Fwv47a7hi18hcOwEodEjyykOFUxbgslzYN7Rh6eoh0lL94k+G1xjVUQeWSbG7sGp5cwYdmWJ6XyxrNmYrWSg==",
   "_location": "/cordova-plugin-calendar",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "tag",
     "registry": true,
-    "raw": "cordova-plugin-calendar@5.0.0",
+    "raw": "cordova-plugin-calendar@latest",
     "name": "cordova-plugin-calendar",
     "escapedName": "cordova-plugin-calendar",
-    "rawSpec": "5.0.0",
+    "rawSpec": "latest",
     "saveSpec": null,
-    "fetchSpec": "5.0.0"
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
     "#USER",
@@ -21,8 +21,8 @@
   ],
   "_resolved": "https://registry.npmjs.org/cordova-plugin-calendar/-/cordova-plugin-calendar-5.0.0.tgz",
   "_shasum": "e7ba65b427a82ed347d340a450f11d27a0bb17be",
-  "_spec": "cordova-plugin-calendar@5.0.0",
-  "_where": "/Users/eliyahweinberg/Public/SE-project/AgudaJce/AgudaApp",
+  "_spec": "cordova-plugin-calendar@latest",
+  "_where": "D:\\webDev\\AgudaJce\\AgudaApp",
   "author": {
     "name": "Eddy Verbruggen",
     "email": "eddyverbruggen@gmail.com",
