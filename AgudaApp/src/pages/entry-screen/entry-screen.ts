@@ -1,6 +1,7 @@
 import { TabsPage } from './../tabs/tabs';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { IonicPage, NavController, Platform } from 'ionic-angular';
+import { HomeStoryProvider } from '../../providers/home-story/home-story';
 
 @IonicPage()
 @Component({
@@ -9,10 +10,13 @@ import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 })
 export class EntryScreenPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
-    setTimeout(function() {
-      navCtrl.setRoot(TabsPage, {}, {animate: true, direction: 'forward', duration: 1250});
-    }, 3000);
+  constructor(public navCtrl: NavController, public platform: Platform, private hs: HomeStoryProvider) {
+    let interval = setInterval(() => {
+      if(hs.posts.length > 0){
+        navCtrl.setRoot(TabsPage, {}, {animate: true, direction: 'forward', duration: 1250});
+        clearInterval(interval);
+      }
+    }, 2500);
   }
 
   ionViewDidLoad() {

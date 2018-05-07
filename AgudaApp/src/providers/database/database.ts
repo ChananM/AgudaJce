@@ -7,11 +7,11 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 @Injectable()
 export class DatabaseProvider {
 
-  homeStoriesCollection: AngularFirestoreCollection<HomeStory>;
-  calEventsCollection: AngularFirestoreCollection<CalendarEvent>;
+  private homeStoriesCollection: AngularFirestoreCollection<HomeStory>;
+  private calEventsCollection: AngularFirestoreCollection<CalendarEvent>;
 
-  homeStories: Observable<HomeStory[]>;
-  calEvents: Observable<CalendarEvent[]>;
+  private homeStories: Observable<HomeStory[]>;
+  private calEvents: Observable<CalendarEvent[]>;
 
   constructor(public afs: AngularFirestore) {
 
@@ -41,35 +41,13 @@ export class DatabaseProvider {
 
   }
 
- //*******************************************************/
- /* #### USE IT LIKE THIS: ####
-  dbProvider.getHomeStories().subscribe(stories => { 
-    stories.forEach(element => {
-      console.log(element.id);  //you will get the id automaticlly from firebase.   
-    });
-  }); 
-      i already put it in your provider constructor. */
   getHomeStories(){
     return this.homeStories;
   }
-//*******************************************************/
 
-//*******************************************************/
-  //you can also do: let x = dbProvider.getHomeStories();
-  //                x.subscribe...... etc
-//*******************************************************/
-
-//*******************************************************/
-  /* #### USE IT LIKE THIS: ####
-   dbProvider.getCalEvents().subscribe(events => { ;
-     .....  
-        ////you will get the id automaticlly from firebase.       
-  }); 
-      i already put it in your provider constructor.*/
   getCalEvents(){
     return this.calEvents;
   }
-//*******************************************************/
 
   addHomeStory(story: HomeStory){
     story.createdOn = this.getCurrentTimestamp();
