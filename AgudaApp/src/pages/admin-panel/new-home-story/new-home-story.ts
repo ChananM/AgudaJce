@@ -10,10 +10,15 @@ import { HomeStory } from '../../../models/homeStory.model';
 })
 export class NewHomeStoryPage {
 
+  inputStory: HomeStory;
+
   headline: string;
   content: string;
   imageUrl: string = "";
   preview: string;
+
+  pageTitle = "סיפור חדש";
+  actionButton = "הוספה";
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -21,13 +26,31 @@ export class NewHomeStoryPage {
               private loadingCtrl: LoadingController,
               public storyProvider: HomeStoryProvider,
               private toastCtrl: ToastController) {
+
+                this.inputStory = this.navParams.get('story');
+                if(this.inputStory != null){
+                  this.headline = this.inputStory.headline;
+                  this.content = this.inputStory.content;
+                  this.imageUrl = this.inputStory.imageURL;
+                  this.preview = this.inputStory.preview;
+                  this.pageTitle = "ערוך סיפור";
+                  this.actionButton = "ערוך";
+                }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewHomeStoryPage');
   }
 
-  async save(){
+  save(){
+    if(this.actionButton === "הוספה"){
+      this.addStory();
+    } else {
+      this.editStory();
+    }
+  }
+
+  async addStory(){
     let toastOpt = {
       message: '',
       duration: 3000,
@@ -38,10 +61,31 @@ export class NewHomeStoryPage {
     loader.present();
     await this.storyProvider.addStory(new HomeStory(this.imageUrl, this.headline, this.content, this.preview))
       .then(() => {
-        toastOpt.message = 'Story added successfully';
+        toastOpt.message = 'הסיפור נוסף בהצלחה';
       })
       .catch(() => {
-        toastOpt.message = 'Failed to add story';
+        toastOpt.message = 'וואלה הסתבכתי קצת, נסה שוב';
+      });
+    loader.dismiss();
+    this.toastCtrl.create(toastOpt).present();
+    this.viewCtrl.dismiss();
+  }
+
+  async editStory(){
+    let toastOpt = {
+      message: '',
+      duration: 3000,
+      cssClass: 'toastClass',
+      position: 'bottom'
+    };
+    let loader = this.loadingCtrl.create();
+    loader.present();
+    await this.storyProvider.editStory(this.inputStory.setParams(this.imageUrl, this.headline, this.content, this.preview))
+      .then(() => {
+        toastOpt.message = 'הסיפור שונה בהצלחה';
+      })
+      .catch(() => {
+        toastOpt.message = 'וואלה הסתבכתי קצת, נסה שוב';
       });
     loader.dismiss();
     this.toastCtrl.create(toastOpt).present();

@@ -1,3 +1,4 @@
+import { StoryArticlePage } from './../home/story-article/story-article';
 import { HomeStory } from './../../models/homeStory.model';
 import { CalendarEventProvider } from './../../providers/calendar-event/calendar-event';
 import { HomeStoryProvider } from '../../providers/home-story/home-story';
@@ -12,6 +13,7 @@ import { CalendarEvent } from '../../models/calendarEvent.model';
 export class AdminPanelPage {
 
   modelController: string;
+  storyPreview = StoryArticlePage;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -76,8 +78,8 @@ export class AdminPanelPage {
     this.toastCtrl.create(toastOpt).present();
   }
 
-  presentModal(page: string) {
-    let modal = this.modalCtrl.create(page);
+  presentModal(page, params) {
+    let modal = this.modalCtrl.create(page, params);
     modal.present();
   }
 }

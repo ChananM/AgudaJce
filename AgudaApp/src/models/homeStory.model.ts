@@ -7,6 +7,14 @@ export class HomeStory extends Item {
         super();
     }
 
+    public setParams(imageURL, headline, content, preview) : HomeStory{
+        this.imageURL = imageURL;
+        this.headline = headline;
+        this.content = content;
+        this.preview = preview;
+        return this;
+    }
+
     //func for firebase, avoid it.
     public static toHomeStory(json){
         let story = Object.create(HomeStory.prototype);

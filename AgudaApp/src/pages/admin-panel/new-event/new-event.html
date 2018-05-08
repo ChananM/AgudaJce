@@ -1,36 +1,34 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>New Event</ion-title>
+    <ion-title>{{pageTitle}}</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
   <ion-item>
-    <ion-label floating>Headline</ion-label>
+    <ion-label floating>כותרת</ion-label>
     <ion-input [(ngModel)]="headline" type="text" name="Headline" required="required"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Content</ion-label>
+    <ion-label floating>תוכן</ion-label>
     <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
   </ion-item>
   <ion-item>
-    <ion-label floating>Date</ion-label>
-    <!-- display format is set to the JS Date valid date standart, DO NOT CHANGE -->
-    <ion-datetime [(ngModel)]="date" displayFormat="MMMM D, YYYY H:m" pickerFormat="m H YYYY MMM D" required="required"></ion-datetime>
+    <ion-label floating>תאריך</ion-label>
+    <ion-datetime [(ngModel)]="date" min="2018" max="{{yearOffset}}" displayFormat="DD/MM/YYYY H:mm" pickerFormat="D MMM YYYY H m" required="required"></ion-datetime>
   </ion-item>
   <ion-item>
-    <ion-label floating>Image URL</ion-label>
-    <ion-input [(ngModel)]="imageUrl" type="url" name="Image URL" required="required"></ion-input>
+    <ion-label floating>תמונה</ion-label>
+    <ion-input [(ngModel)]="imageUrl" type="url" name="Image URL"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Purchase URL</ion-label>
-    <ion-input [(ngModel)]="purchaseURL" type="url" name="Purchase URL" required="required"></ion-input>
+    <ion-label floating>קישור לקניית כרטיסים</ion-label>
+    <ion-input [(ngModel)]="purchaseURL" type="url" name="Purchase URL"></ion-input>
   </ion-item>
   <p></p>
   <ion-buttons>
-    <button *ngIf="headline && date && content" ion-button (click)="save()">Save</button>
+    <button *ngIf="headline && date && content" ion-button (click)="save()">{{actionButton}}</button>
     <!-- Show dead button if form is not filled -->
-    <button *ngIf="!headline || !date || !content" ion-button color="darkGray">Save</button>
-    <button ion-button (click)="cancel()">Cancel</button>
+    <button *ngIf="!headline || !date || !content" ion-button color="darkGray">{{actionButton}}</button>
+    <button ion-button (click)="cancel()">ביטול</button>
   </ion-buttons>
 </ion-content>

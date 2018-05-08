@@ -12,6 +12,15 @@ export class CalendarEvent extends Item {
         super();
     }
 
+    public setParams(imageURL, date, headline, content, purchaseURL) : CalendarEvent{
+        this.imageURL = imageURL;
+        this.date = date;
+        this.headline = headline;
+        this.content = content;
+        this.purchaseURL = purchaseURL;
+        return this;
+    }
+
     //func for firebase, avoid it.
     public static toCalEvent(json){
         let event = Object.create(CalendarEvent.prototype);

@@ -20,6 +20,10 @@ export class CalendarEventProvider {
     return this.dbProvider.addCalEvent(event);
   }
 
+  editEvent(event: CalendarEvent){
+    return this.dbProvider.updateCalEvent(event);
+  }
+
   deleteEvent(event: CalendarEvent){
     return this.dbProvider.deleteCalEvent(event);
   }

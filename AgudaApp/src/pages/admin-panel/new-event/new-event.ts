@@ -10,12 +10,18 @@ import { CalendarEvent } from '../../../models/calendarEvent.model';
 })
 export class NewEventPage {
 
+  yearOffset = new Date().getFullYear() + 2;
+
+  inputEvent: CalendarEvent;
+
   headline: string;
   date: string;
   content: string;
   imageUrl: string = "";
   purchaseURL: string = "";
 
+  pageTitle = "אירוע חדש";
+  actionButton = "הוספה";
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -23,13 +29,31 @@ export class NewEventPage {
               private loadingCtrl: LoadingController,
               public eventProvider: CalendarEventProvider,
               private toastCtrl: ToastController) {
+
+                this.inputEvent = this.navParams.get('event');
+                if(this.inputEvent != null){
+                  this.headline = this.inputEvent.headline;
+                  this.date = this.inputEvent.date.replace(" ", "T").replace("/", "-").replace("/", "-") + "Z";
+                  this.content = this.inputEvent.content;
+                  this.imageUrl = this.inputEvent.imageURL;
+                  this.purchaseURL = this.inputEvent.purchaseURL;
+                  this.pageTitle = "ערוך אירוע";
+                  this.actionButton = "ערוך";
+                }
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewEventPage');
   }
 
   async save(){
+    if(this.actionButton === "הוספה"){
+      this.addEvent();
+    } else {
+      this.editEvent();
+    }
+  }
+
+  async addEvent(){
     let toastOpt = {
       message: '',
       duration: 3000,
@@ -40,10 +64,31 @@ export class NewEventPage {
     loader.present();
     await this.eventProvider.addEvent(new CalendarEvent(this.imageUrl, this.date.replace("T", " ").replace("Z", "").replace("-", "/").replace("-", "/"), this.headline, this.content, this.purchaseURL, false))
       .then(() => {
-        toastOpt.message = 'Event added successfully';
+        toastOpt.message = 'האירוע נוסף בהצלחה';
       })
       .catch(() => {
-        toastOpt.message = 'Failed to add event';
+        toastOpt.message = 'וואלה הסתבכתי קצת, נסה שוב';
+      });
+    loader.dismiss();
+    this.toastCtrl.create(toastOpt).present();
+    this.viewCtrl.dismiss();
+  }
+
+  async editEvent(){
+    let toastOpt = {
+      message: '',
+      duration: 3000,
+      cssClass: 'toastClass',
+      position: 'bottom'
+    };
+    let loader = this.loadingCtrl.create();
+    loader.present();
+    await this.eventProvider.editEvent(this.inputEvent.setParams(this.imageUrl, this.date.replace("T", " ").replace("Z", "").replace("-", "/").replace("-", "/"), this.headline, this.content, this.purchaseURL))
+      .then(() => {
+        toastOpt.message = 'האירוע נערך בהצלחה';
+      })
+      .catch(() => {
+        toastOpt.message = 'וואלה הסתבכתי קצת, נסה שוב';
       });
     loader.dismiss();
     this.toastCtrl.create(toastOpt).present();

@@ -1,17 +1,17 @@
 <ion-content padding>
     <div padding>
         <ion-segment [(ngModel)]="modelController">
-            <ion-segment-button dir="ltr" value="home">
+            <ion-segment-button value="home">
                 <ion-icon name="home"></ion-icon>
-                Home
+                <span class="segment-title">בית</span>
             </ion-segment-button>
-            <ion-segment-button dir="ltr" value="calendar">
+            <ion-segment-button value="calendar">
                 <ion-icon name="calendar"> </ion-icon>
-                Calendar
+                <span class="segment-title">יומן</span>
             </ion-segment-button>
-            <ion-segment-button dir="ltr" value="info">
+            <ion-segment-button value="info">
                 <ion-icon name="information-circle"> </ion-icon>
-                Information
+                <span class="segment-title">מידע</span>
             </ion-segment-button>
         </ion-segment>
     </div>
@@ -24,12 +24,18 @@
             <ion-list>
                 <ion-item *ngFor="let post of storyProv.posts;">
                     <h2>{{post.headline}}</h2>
+                    <button icon-only item-end (click)="presentModal(storyPreview, {story: post})">
+                        <ion-icon name="eye" color="primary"></ion-icon>
+                    </button>
+                    <button icon-only item-end (click)="presentModal('NewHomeStoryPage', {story: post})">
+                        <ion-icon name="create" color="yorange"></ion-icon>
+                    </button>
                     <button icon-only item-end (click)="deleteStory(post)">
                         <ion-icon name="close-circle" color="danger"></ion-icon>
                     </button>
                 </ion-item>
             </ion-list>
-            <button ion-button (click)="presentModal('NewHomeStoryPage')">Add Story</button>
+            <button ion-button (click)="presentModal('NewHomeStoryPage')">הוסף סיפור</button>
         </ng-container>
 
         <!-- Calendar admin panel segment -->
@@ -38,12 +44,15 @@
             <ion-list>
                 <ion-item *ngFor="let event of calProv.posts;">
                     <h2>{{event.headline}}</h2>
+                    <button icon-only item-end (click)="presentModal('NewEventPage', {event: event})">
+                        <ion-icon name="create" color="yorange"></ion-icon>
+                    </button>
                     <button icon-only item-end (click)="deleteEvent(event)">
                         <ion-icon name="close-circle" color="danger"></ion-icon>
                     </button>
                 </ion-item>
             </ion-list>
-            <button ion-button (click)="presentModal('NewEventPage')">Add Event</button>
+            <button ion-button (click)="presentModal('NewEventPage')">הוסף אירוע</button>
         </ng-container>
 
         <!-- Information admin panel segment -->

@@ -18,6 +18,10 @@ export class HomeStoryProvider {
     return this.dbProvider.addHomeStory(story);
   }
 
+  editStory(story: HomeStory){
+    return this.dbProvider.updateHomeStory(story);
+  }
+
   deleteStory(story: HomeStory){
     return this.dbProvider.deleteHomeStory(story);
   }
