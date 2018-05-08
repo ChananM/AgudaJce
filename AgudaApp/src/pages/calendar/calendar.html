@@ -24,7 +24,7 @@
                     <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>
             </span>
             </ion-item>
-            <ion-item-options side="left" dir="ltr">
+            <ion-item-options side="left">
                 <button ion-button color="primary" (click)="addToPlatformCalendar(i)">
                     <ion-icon name="add"></ion-icon>
                     ללוח שנה
@@ -37,7 +37,7 @@
             <ion-item *ngIf="post.open">
                 <p text-wrap>{{post.content}}</p>
             </ion-item>
-            
+
         </ion-item-sliding>
-     </ion-list>
+    </ion-list>
 </ion-content>
