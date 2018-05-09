@@ -1,31 +1,33 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>{{pageTitle}}</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{pageTitle}}</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-label floating>כותרת</ion-label>
-    <ion-input [(ngModel)]="headline" type="text" name="Headline" required="required"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>הקדמה</ion-label>
-    <ion-input [(ngModel)]="preview" type="text" name="Preview" required="required"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>תוכן</ion-label>
-    <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>תמונה</ion-label>
-    <ion-input [(ngModel)]="imageUrl" type="url" name="Image URL"></ion-input>
-  </ion-item>
-  <p></p>
-  <ion-buttons>
-    <button *ngIf="headline && content && preview" ion-button (click)="save()">{{actionButton}}</button>
-    <!-- Show dead button if form is not filled -->
-    <button *ngIf="!headline || !content || !preview" ion-button color="darkGray">{{actionButton}}</button>
-    <button ion-button (click)="cancel()">ביטול</button>
-  </ion-buttons>
+    <ion-item>
+        <ion-label floating>כותרת</ion-label>
+        <ion-input [(ngModel)]="headline" type="text" name="Headline" required="required"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>הקדמה</ion-label>
+        <ion-input [(ngModel)]="preview" type="text" name="Preview" required="required"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>תוכן</ion-label>
+        <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
+    </ion-item>
+    <ion-item>
+        <ion-icon name="cloud-upload" color='primary' item-end (click)='upImg.click()'></ion-icon>
+        <ion-label floating>תמונה - לינק או לחץ לבחירה</ion-label>
+        <ion-input [(ngModel)]="imageUrl" type="url" name="Image URL"></ion-input>
+        <input #upImg type="file" (change)="uploadFile($event)">
+    </ion-item>
+    <p></p>
+    <ion-buttons>
+        <button *ngIf="headline && content && preview" ion-button (click)="save()">{{actionButton}}</button>
+        <!-- Show dead button if form is not filled -->
+        <button *ngIf="!headline || !content || !preview" ion-button color="darkGray">{{actionButton}}</button>
+        <button ion-button (click)="cancel()">ביטול</button>
+    </ion-buttons>
 </ion-content>

@@ -64,6 +64,7 @@ export class DatabaseProvider {
   }
 
   updateCalEvent(event: CalendarEvent){
+    event.createdOn = this.getDateTimestamp(event.getDate()); //created on = the event date timestamp
     return this.calEventsCollection.doc(event.id).update(CalendarEvent.toObject(event));
   }
 

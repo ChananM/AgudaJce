@@ -99,4 +99,10 @@ export class NewEventPage {
     this.viewCtrl.dismiss();
   }
 
+  uploadFile(event){
+    console.log(event);
+    const file = <File>event.target.files[0];
+    console.log(file.name);
+    //not done - do not touch
+  }
 }
