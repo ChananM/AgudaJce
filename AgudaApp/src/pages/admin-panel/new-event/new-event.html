@@ -17,7 +17,7 @@
         <ion-datetime [(ngModel)]="date" min="2018" max="{{yearOffset}}" displayFormat="DD/MM/YYYY H:mm" pickerFormat="D MMM YYYY H m" required="required"></ion-datetime>
     </ion-item>
     <ion-item>
-        <ion-icon name="cloud-upload" color='primary' item-end (click)='upImg.click()'></ion-icon>
+        <ion-icon style="cursor: pointer;" name="cloud-upload" color='primary' item-end (click)='upImg.click()'></ion-icon>
         <ion-label floating>תמונה - לינק או לחץ לבחירה</ion-label>
         <ion-input [(ngModel)]="imageUrl" type="url" name="Image URL"></ion-input>
         <input #upImg type="file" (change)="uploadFile($event)">
