@@ -33,7 +33,7 @@ export class AdminPanelPage {
         loader.dismiss();
         clearInterval(interval);
       }
-    }, 1000);
+    }, 250);
 
     this.modelController = "home";
   }
@@ -49,10 +49,10 @@ export class AdminPanelPage {
     loader.present();
     await this.storyProv.deleteStory(story)
       .then(() => {
-        toastOpt.message = 'Story deleted successfully';
+        toastOpt.message = 'הסיפור נמחק בהצלחה';
       })
       .catch(() => {
-        toastOpt.message = 'Failed to delete story';
+        toastOpt.message = 'וואלה הסתבכתי קצת, נסה שוב';
       });
     loader.dismiss();
     this.toastCtrl.create(toastOpt).present();
@@ -69,10 +69,10 @@ export class AdminPanelPage {
     loader.present();
     await this.calProv.deleteEvent(event)
       .then(() => {
-        toastOpt.message = 'Event deleted successfully';
+        toastOpt.message = 'האירוע נמחק בהצלחה';
       })
       .catch(() => {
-        toastOpt.message = 'Failed to delete event';
+        toastOpt.message = 'וואלה הסתבכתי קצת, נסה שוב';
       });
     loader.dismiss();
     this.toastCtrl.create(toastOpt).present();

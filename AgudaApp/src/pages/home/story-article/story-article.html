@@ -10,7 +10,10 @@
 </ion-header>
 
 <ion-content padding>
-  <img src="{{story.imageURL}}">
+  <img *ngIf="story.imageURL != ''; else elsetag" src={{story.imageURL}}>
+  <ng-template #elsetag>
+    <img src="assets/imgs/logo.jpg">
+  </ng-template>
   <h1>{{story.headline}}</h1>
   <article>
     {{story.content}}
