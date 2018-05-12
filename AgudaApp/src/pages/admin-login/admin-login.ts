@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController, ToastController } from 'ionic-angular';
 import { AdminPanelPage } from '../admin-panel/admin-panel';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AuthProvider } from '../../providers/auth/auth';
 
 @IonicPage({
   name: 'aguda-admin',
@@ -15,13 +15,26 @@ export class AdminLoginPage {
 
   email: string;
   password: string;
+  rememberMe: boolean = false;
+  showPage: boolean = false;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private afAuth: AngularFireAuth,
+              private authProv: AuthProvider,
               private loadingCtrl: LoadingController,
               private alertCtrl: AlertController,
               private toastCtrl: ToastController) {
+
+            let loader = this.loadingCtrl.create();
+            loader.present();
+            setTimeout(() =>{
+              if(authProv.isSignedIn()){
+                this.navCtrl.setRoot(AdminPanelPage, { blocker: loader });
+              } else {
+                loader.dismiss();
+                this.showPage = true;
+              }
+            }, 1000)
   }
 
   async login() {
@@ -31,9 +44,9 @@ export class AdminLoginPage {
       loader = this.loadingCtrl.create();
       loader.present();
 
-      const res = await this.afAuth.auth.signInWithEmailAndPassword(this.email, this.password);
-
-      console.log('uid: ' + res.uid);
+      await this.authProv.setPersistence(this.rememberMe).then(() => {
+        return this.authProv.signIn(this.email, this.password);
+      });
       this.navCtrl.setRoot(AdminPanelPage, { blocker: loader });
       
     } catch (e) {
@@ -77,7 +90,7 @@ export class AdminLoginPage {
               cssClass: 'toastClass',
               position: 'middle'
             };
-            this.afAuth.auth.sendPasswordResetEmail(data.emailAddress)
+            this.authProv.resetPassword(data.emailAddress)
               .then(() => {
                 toastOpt.message = 'Mail with steps about password recovery was sent to you';
               })

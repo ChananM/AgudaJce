@@ -5,6 +5,8 @@ import { HomeStoryProvider } from '../../providers/home-story/home-story';
 import { Component } from '@angular/core';
 import { NavController, ModalController, ToastController, LoadingController, NavParams, Loading } from 'ionic-angular';
 import { CalendarEvent } from '../../models/calendarEvent.model';
+import { AuthProvider } from '../../providers/auth/auth';
+import { AdminLoginPage } from '../admin-login/admin-login';
 
 @Component({
   selector: 'page-admin-panel',
@@ -21,7 +23,8 @@ export class AdminPanelPage {
               private loadingCtrl: LoadingController, 
               public storyProv: HomeStoryProvider, 
               public calProv: CalendarEventProvider,
-              private toastCtrl: ToastController) {     
+              private toastCtrl: ToastController,
+              private authProv: AuthProvider) {
   }
 
   ionViewDidLoad() {
@@ -81,5 +84,10 @@ export class AdminPanelPage {
   presentModal(page, params) {
     let modal = this.modalCtrl.create(page, params);
     modal.present();
+  }
+
+  logOut(){
+    this.authProv.signOut();
+    this.navCtrl.setRoot(AdminLoginPage);
   }
 }

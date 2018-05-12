@@ -47,6 +47,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { RefreshComponent } from '../components/refresh/refresh';
 
 /* #### PROVIDERS #### */ 
+import { AuthProvider } from '../providers/auth/auth';
 import { DatabaseProvider } from '../providers/database/database';
 import { HomeStoryProvider } from './../providers/home-story/home-story';
 import { CalendarEventProvider } from '../providers/calendar-event/calendar-event';
@@ -112,7 +113,8 @@ import { CalendarEventProvider } from '../providers/calendar-event/calendar-even
     CalendarEventProvider,
     DatabaseProvider,
     Calendar,
-    InAppBrowser
+    InAppBrowser,
+    AuthProvider
   ]
 })
 

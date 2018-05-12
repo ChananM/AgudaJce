@@ -1,12 +1,11 @@
 <ion-header>
     <ion-navbar color="primary">
-        <ion-title text-center>Login</ion-title>
+        <ion-title text-center *ngIf="showPage">Login</ion-title>
     </ion-navbar>
 </ion-header>
 
-
 <ion-content padding dir='ltr'>
-    <ion-list>
+    <ion-list *ngIf="showPage">
 
         <ion-item>
             <ion-label floating>Email</ion-label>
@@ -19,6 +18,9 @@
         </ion-item>
 
         <div padding text-center>
+            <ion-checkbox id="rememberMeC" center color="primary" [(ngModel)]="rememberMe"></ion-checkbox>
+            <label for="rememberMeC">Remember me</label>
+            <p></p>
             <button *ngIf="email && password " ion-button color="dark" round (click)="login()">Login</button>
             <!-- Show dead button if form is not filled -->
             <button *ngIf="!email || !password" ion-button color="darkGray" round>Login</button>
@@ -26,8 +28,7 @@
 
     </ion-list>
 
-    <br/>
-    <div padding text-center>
+    <div padding text-center *ngIf="showPage">
         <button ion-button color="gray" clear (click)="forgotPassword()">Forgot Password</button>
     </div>
 </ion-content>

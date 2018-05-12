@@ -1,13 +1,20 @@
 // http://ionicframework.com/docs/theming/
 // App Global Sass
-
-.fixed-content{
+.fixed-content {
     background: rgb(224, 224, 224);
 }
 
 .item.item-trns {
-	border-color: rgba(0, 0, 0, 0);
-	background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.toolbar-background {
+    background-image: url('/assets/imgs/banner.png')!important;
+    background-size: 20%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-position-x: 100%
 }
 
 // --------------------------------------------------
