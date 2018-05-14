@@ -1,6 +1,6 @@
 import { CalendarEventProvider } from './../../providers/calendar-event/calendar-event';
 import { Component } from '@angular/core';
-import { NavController, Events, Platform } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @Component({
@@ -9,12 +9,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 })
 export class CalendarPage {
 
-  tabName = 'יומן אירועים';
-  refresh_id = 'calendarRef';
   dateOptions = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hourCycle: 'h24'};
 
   constructor(public navCtrl: NavController,
-              public events: Events,
               public calendarProvider: CalendarEventProvider,
               public platform: Platform,
               private iab: InAppBrowser
@@ -26,7 +23,6 @@ export class CalendarPage {
   }
 
   ionViewDidEnter(){
-    this.events.publish('tab', this.tabName, this.refresh_id);
     this.doRefresh();
   }
 

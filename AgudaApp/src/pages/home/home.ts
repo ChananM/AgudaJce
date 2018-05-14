@@ -1,6 +1,6 @@
 import { HomeStoryProvider } from './../../providers/home-story/home-story';
 import { Component } from '@angular/core';
-import { NavController, Events, Platform, ModalController } from 'ionic-angular';
+import { NavController, Platform, ModalController } from 'ionic-angular';
 import { HomeStory } from '../../models/homeStory.model';
 import { StoryArticlePage } from './story-article/story-article';
 
@@ -10,13 +10,10 @@ import { StoryArticlePage } from './story-article/story-article';
 })
 export class HomePage {
 
-  tabName = 'ראשי';
-  refresh_id = 'homeRef';
   browserSize;
 
   constructor(public navCtrl: NavController,
               public modalCtrl: ModalController,
-              public events: Events, 
               public postsService: HomeStoryProvider, 
               public platform: Platform) {
 
@@ -32,7 +29,6 @@ export class HomePage {
   }
 
   ionViewDidEnter(){
-    this.events.publish('tab', this.tabName, this.refresh_id);
     this.doRefresh();
   }
 

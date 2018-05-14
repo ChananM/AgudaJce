@@ -1,21 +1,20 @@
 <ion-header>
-  <ion-navbar>
-    <!-- TODO: Replace with application banner when ready -->
-    <ion-buttons right>
-      <button ion-button icon-only (click)="viewCtrl.dismiss()">
+    <ion-navbar>
+        <ion-buttons>
+            <button ion-button icon-only (click)="viewCtrl.dismiss()">
         <ion-icon name="arrow-back"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-navbar>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <img *ngIf="story.imageURL != ''; else elsetag" src={{story.imageURL}}>
-  <ng-template #elsetag>
-    <img src="assets/imgs/logo.jpg">
-  </ng-template>
-  <h1>{{story.headline}}</h1>
-  <article>
-    {{story.content}}
-  </article>
+    <img *ngIf="story.imageURL != ''; else elsetag" src={{story.imageURL}}>
+    <ng-template #elsetag>
+        <img src="assets/imgs/logo.jpg">
+    </ng-template>
+    <h1>{{story.headline}}</h1>
+    <article>
+        {{story.content}}
+    </article>
 </ion-content>
