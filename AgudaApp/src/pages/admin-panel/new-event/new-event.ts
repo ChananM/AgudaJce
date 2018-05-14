@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, LoadingController, ToastController } from 'ionic-angular';
 import { CalendarEventProvider } from '../../../providers/calendar-event/calendar-event';
 import { CalendarEvent } from '../../../models/calendarEvent.model';
+import { AuthProvider } from '../../../providers/auth/auth';
 
 @IonicPage()
 @Component({
@@ -28,7 +29,8 @@ export class NewEventPage {
               public viewCtrl: ViewController,
               private loadingCtrl: LoadingController,
               public eventProvider: CalendarEventProvider,
-              private toastCtrl: ToastController) {
+              private toastCtrl: ToastController,
+              private auth: AuthProvider) {
 
                 this.inputEvent = this.navParams.get('event');
                 if(this.inputEvent != null){
@@ -42,7 +44,8 @@ export class NewEventPage {
                 }
   }
 
-  ionViewDidLoad() {
+  ionViewCanEnter(){
+    return this.auth.isSignedIn() && document.URL.includes('adminpanel');
   }
 
   async save(){
