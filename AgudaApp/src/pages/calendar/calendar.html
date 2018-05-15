@@ -5,8 +5,8 @@
 
 <ion-content padding>
     <ion-list *ngFor="let post of calendarProvider.posts; let i = index">
-        <ion-item-sliding>
-            <ion-item (click)="toggleSection(i)">
+        <ion-item-sliding (ionDrag)="closeItem(post)">
+            <ion-item (click)="toggleSection(i)" >
                 <ion-thumbnail item-start>
                     <img *ngIf="post.imageURL != ''; else elsetag" src={{post.imageURL}}>
                     <ng-template #elsetag>
@@ -20,13 +20,13 @@
                     <ion-icon item-left name="arrow-dropup-circle" *ngIf="post.open"></ion-icon>
             </span>
             </ion-item>
-            <ion-item-options side="left">
-                <button ion-button color="primary" (click)="addToPlatformCalendar(i)">
+            <ion-item-options side="left" >
+                <button ion-button color="primary" (click)="addToPlatformCalendar(post)" clear>
                     <ion-icon name="add"></ion-icon>
                     ללוח שנה
                 </button>
-                <button ion-button color="secondary" *ngIf="post.purchaseURL != ''" (click)="gotoPurachase(post.purchaseURL)">
-                    <ion-icon name="pricetags"></ion-icon>
+                <button ion-button color="secondary" *ngIf="post.purchaseURL != ''" (click)="gotoPurachase(post.purchaseURL)" clear>
+                    <ion-icon name="pricetags"></ion-icon >
                     רכישת כרטיס
                 </button>
             </ion-item-options>
