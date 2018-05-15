@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Events, Platform } from 'ionic-angular';
+import { NavController, NavParams, Platform } from 'ionic-angular';
 import { FbImagesPage } from './fb-images/fb-images';
 
 @Component({
@@ -7,9 +7,6 @@ import { FbImagesPage } from './fb-images/fb-images';
   templateUrl: 'gallery.html',
 })
 export class GalleryPage {
-
-  tabName = 'גלריה';
-  refresh_id = 'gallRef';
 
   albumArray = [
     {headline: "Wallpapers", 
@@ -33,12 +30,11 @@ export class GalleryPage {
                 "https://wallpaperbrowse.com/media/images/HD-Scenery-Wallpapers-1.jpg"]},
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private events: Events, public platform: Platform) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
     
   }
 
   ionViewDidEnter(){
-    this.events.publish('tab', this.tabName, this.refresh_id);
     this.doRefresh();
   }
 

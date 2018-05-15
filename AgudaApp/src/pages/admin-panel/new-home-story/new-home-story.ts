@@ -2,6 +2,7 @@ import { HomeStoryProvider } from './../../../providers/home-story/home-story';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, ViewController, LoadingController } from 'ionic-angular';
 import { HomeStory } from '../../../models/homeStory.model';
+import { AuthProvider } from '../../../providers/auth/auth';
 
 @IonicPage()
 @Component({
@@ -25,7 +26,8 @@ export class NewHomeStoryPage {
               public viewCtrl: ViewController,
               private loadingCtrl: LoadingController,
               public storyProvider: HomeStoryProvider,
-              private toastCtrl: ToastController) {
+              private toastCtrl: ToastController,
+              private auth: AuthProvider) {
 
                 this.inputStory = this.navParams.get('story');
                 if(this.inputStory != null){
@@ -36,6 +38,10 @@ export class NewHomeStoryPage {
                   this.pageTitle = "ערוך סיפור";
                   this.actionButton = "ערוך";
                 }
+  }
+
+  ionViewCanEnter(){
+    return this.auth.isSignedIn() && document.URL.includes('adminpanel');
   }
 
   ionViewDidLoad() {
