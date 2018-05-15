@@ -10,9 +10,10 @@ import { EntryScreenPage } from './../pages/entry-screen/entry-screen';
 })
 export class MyApp {
 
-  rootPage:any = EntryScreenPage;
+  rootPage:any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+    this.rootPage = EntryScreenPage;
     platform.ready().then(() => {
       
       statusBar.styleDefault();

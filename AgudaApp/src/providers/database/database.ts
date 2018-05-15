@@ -19,7 +19,7 @@ export class DatabaseProvider {
     afs.app.firestore().settings(settings);
 
     this.homeStoriesCollection = afs.collection<HomeStory>('HomeStories', ref => ref.orderBy('createdOn', 'desc'));
-    this.calEventsCollection = afs.collection<CalendarEvent>('Events', ref => ref.orderBy('createdOn', 'asc'));
+    this.calEventsCollection = afs.collection<CalendarEvent>('Events', ref => ref./*where('createdOn', '>=', this.getDateTimestamp(new Date())).*/orderBy('createdOn', 'asc'));
 
     this.homeStories = this.homeStoriesCollection.snapshotChanges().map(changes => {
       return changes.map(a => {

@@ -4,7 +4,7 @@
             "outputFile": "D:\\webDev\\AgudaJce\\AgudaApp\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\14cc809e2ba98d2b53b95b8fdffbcbe5\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Lior\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\ce7112ad70ec42d99723f75ffc50716e\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
