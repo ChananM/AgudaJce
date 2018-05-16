@@ -1,5 +1,4 @@
 <ion-content padding>
-    <button ion-button color="dark" (click)="logOut()">התנתק</button>
     <div padding>
         <ion-segment [(ngModel)]="modelController">
             <ion-segment-button value="home">
@@ -64,4 +63,5 @@
             </div>
         </ng-container>
     </div>
+    <button class="logout-button" color="black" ion-button clear (click)="logOut()">התנתק</button>
 </ion-content>

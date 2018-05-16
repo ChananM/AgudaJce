@@ -9,13 +9,9 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-ion-navbar{
-    height: 10vw;
-}
-
 .toolbar-background {
     background-image: url('../assets/imgs/banner.png')!important;
-    background-size: 100vw;
+    background-size: auto 100%;
     background-position: center center;
     background-repeat: no-repeat;
 }
