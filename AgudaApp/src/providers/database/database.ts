@@ -3,6 +3,7 @@ import { HomeStory } from './../../models/homeStory.model';
 import { Observable } from 'rxjs/Rx';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AngularFireStorage } from 'angularfire2/storage';
 
 @Injectable()
 export class DatabaseProvider {
@@ -13,7 +14,7 @@ export class DatabaseProvider {
   private homeStories: Observable<HomeStory[]>;
   private calEvents: Observable<CalendarEvent[]>;
 
-  constructor(public afs: AngularFirestore) {
+  constructor(public afs: AngularFirestore, public storage: AngularFireStorage) {
 
     const settings = { timestampsInSnapshots: true };
     afs.app.firestore().settings(settings);
@@ -69,11 +70,27 @@ export class DatabaseProvider {
   }
 
   deleteHomeStory(story: HomeStory){
+    if(story.imageURL.includes('firebasestorage')){
+      this.deleteImage(story.imageURL);
+    }
     return this.homeStoriesCollection.doc(story.id).delete();
   }
 
   deleteCalEvent(event: CalendarEvent){
+    if(event.imageURL.includes('firebasestorage')){
+      this.deleteImage(event.imageURL);
+    }
     return this.calEventsCollection.doc(event.id).delete();
+  }
+
+  uploadImage(path: string, img: File){
+    const _path = path + '/' + this.getCurrentTimestamp() + '_' + img.name;
+    return this.storage.upload(_path, img);
+  }
+
+  deleteImage(url: string){
+    const path = url.substring(url.lastIndexOf('/') + 1, url.indexOf('?')).replace('%2F', '/');
+    return this.storage.ref(path).delete();
   }
 
   getCurrentTimestamp(): string{ //format: yyyyMMddHHmmSS

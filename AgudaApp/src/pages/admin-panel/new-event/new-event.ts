@@ -19,10 +19,14 @@ export class NewEventPage {
   date: string;
   content: string;
   imageUrl: string = "";
+  tmpUrl: string = "";
   purchaseURL: string = "";
 
   pageTitle = "אירוע חדש";
   actionButton = "הוספה";
+
+  imgFile: File = null;
+  uploadPercent: number = null;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -65,6 +69,7 @@ export class NewEventPage {
     };
     let loader = this.loadingCtrl.create();
     loader.present();
+    if(this.imageUrl == "") {this.imageUrl = this.tmpUrl};
     await this.eventProvider.addEvent(new CalendarEvent(this.imageUrl, this.date.replace("T", " ").replace("Z", "").replace("-", "/").replace("-", "/"), this.headline, this.content, this.purchaseURL, false))
       .then(() => {
         toastOpt.message = 'האירוע נוסף בהצלחה';
@@ -86,6 +91,7 @@ export class NewEventPage {
     };
     let loader = this.loadingCtrl.create();
     loader.present();
+    if(this.imageUrl == "") {this.imageUrl = this.tmpUrl};
     await this.eventProvider.editEvent(this.inputEvent.setParams(this.imageUrl, this.date.replace("T", " ").replace("Z", "").replace("-", "/").replace("-", "/"), this.headline, this.content, this.purchaseURL))
       .then(() => {
         toastOpt.message = 'האירוע נערך בהצלחה';
@@ -99,13 +105,46 @@ export class NewEventPage {
   }
 
   cancel(){
+    if (this.imgFile != null){
+      this.removeImage(this.imageUrl);
+    }
     this.viewCtrl.dismiss();
   }
 
-  uploadFile(event){
+  uploadImage(event){
     console.log(event);
-    const file = <File>event.target.files[0];
-    console.log(file.name);
-    //not done - do not touch
+    if(event.target.files[0] != null){
+      if(this.imgFile == event.target.files[0]){
+        return;
+      }
+      if(this.imgFile != null && this.imgFile != event.target.files[0]){
+        this.removeImage(this.imageUrl);
+      }
+      this.imgFile = <File>event.target.files[0];
+      if(!this.imgFile.type.includes('image')){
+        alert('File should be image only.')
+        this.imgFile = null;
+        return;
+      }
+      const task = this.eventProvider.uploadImg(this.imgFile);
+      let sub1 = task.percentageChanges().subscribe(percent => {
+        this.uploadPercent = Math.round(percent);
+        if(percent == 100)
+          sub1.unsubscribe();
+      })
+      let sub2 = task.downloadURL().subscribe(url => {
+        this.imageUrl = url;
+        sub2.unsubscribe();
+      })
+      this.tmpUrl = this.imgFile.name;
+    }
+  }
+
+  removeImage(url){
+    this.eventProvider.deleteImg(url);
+    this.imgFile = null;
+    this.imageUrl = "";
+    this.tmpUrl = "";
+    this.uploadPercent = null;
   }
 }

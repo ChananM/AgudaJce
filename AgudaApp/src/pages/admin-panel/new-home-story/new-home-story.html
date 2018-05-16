@@ -18,16 +18,18 @@
         <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
     </ion-item>
     <ion-item>
-        <ion-icon style="cursor: pointer;" name="cloud-upload" color='primary' item-end (click)='upImg.click()'></ion-icon>
+        <ion-note *ngIf="uploadPercent != null" item-end>{{uploadPercent}}%</ion-note>
+        <ion-icon *ngIf="imgFile != null && uploadPercent == 100" title="הסר" style="cursor: pointer;" name="trash" color='danger' item-end (click)='removeImage(imageUrl)'></ion-icon>
+        <ion-icon *ngIf="uploadPercent == 100 || uploadPercent == null" style="cursor: pointer;" name="cloud-upload" color='primary' item-end (click)='upImg.click()'></ion-icon>
         <ion-label floating>תמונה - לינק או לחץ לבחירה</ion-label>
-        <ion-input [(ngModel)]="imageUrl" type="url" name="Image URL"></ion-input>
-        <input #upImg type="file" (change)="uploadFile($event)">
+        <ion-input [disabled]="imgFile != null" [(ngModel)]="tmpUrl" type="url" name="Image URL"></ion-input>
+        <input #upImg type="file" (change)="uploadImage($event)">
     </ion-item>
     <p></p>
     <ion-buttons>
-        <button *ngIf="headline && content && preview" ion-button (click)="save()">{{actionButton}}</button>
+        <button *ngIf="headline && content && preview && (uploadPercent == null || uploadPercent == 100)" ion-button (click)="save()">{{actionButton}}</button>
         <!-- Show dead button if form is not filled -->
-        <button *ngIf="!headline || !content || !preview" ion-button color="darkGray">{{actionButton}}</button>
+        <button *ngIf="!headline || !content || !preview || (uploadPercent != null && uploadPercent < 100)" ion-button color="darkGray">{{actionButton}}</button>
         <button ion-button (click)="cancel()">ביטול</button>
     </ion-buttons>
 </ion-content>

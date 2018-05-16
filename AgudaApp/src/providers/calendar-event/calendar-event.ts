@@ -27,5 +27,13 @@ export class CalendarEventProvider {
   deleteEvent(event: CalendarEvent){
     return this.dbProvider.deleteCalEvent(event);
   }
+
+  uploadImg(img: File){
+    return this.dbProvider.uploadImage('calendar', img);
+  }
+
+  deleteImg(url: string){
+    return this.dbProvider.deleteImage(url);
+  }
 }
 

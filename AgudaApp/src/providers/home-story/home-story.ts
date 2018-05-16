@@ -25,4 +25,12 @@ export class HomeStoryProvider {
   deleteStory(story: HomeStory){
     return this.dbProvider.deleteHomeStory(story);
   }
+
+  uploadImg(img: File){
+    return this.dbProvider.uploadImage('home', img);
+  }
+
+  deleteImg(url: string){
+    return this.dbProvider.deleteImage(url);
+  }
 }
