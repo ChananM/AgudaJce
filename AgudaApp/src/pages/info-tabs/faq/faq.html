@@ -19,21 +19,15 @@
 
     <ion-searchbar (ionInput)="getItems($event)" placeholder="חיפוש"></ion-searchbar>
     <ion-list  >
-        <ion-item *ngFor="let item of items; let i = index" >
+        <ion-item  *ngFor="let item of items; let i = index" >
 
-
-
-
-             
-
-
-
-            <ion-item (click)="toggleSection(i)" >
-                {{ item.quest }}
+            <ion-item no-lines (click)="toggleSection(i)" >
+              {{ item.quest }} 
+              <br>
+              <br>
+                <p *ngIf="item.isOpen" text-wrap>{{item.ans}}</p>
             </ion-item>
-            <ion-item *ngIf="item.isOpen">
-                    <p text-wrap>{{item.ans}}</p>
-                </ion-item>
+          
         </ion-item>
 
         

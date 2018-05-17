@@ -30,7 +30,7 @@ items;
 
   initializeItems() {
     this.items=[
-      {quest: "Wallpapers", ans: "6",isOpen:false},
+      {quest: "מה המייל של משה זילברמן ראש החוג להנדסת מכונות?", ans: "6",isOpen:false},
       {quest: "Galaxy", ans: "3",isOpen:false},
       {quest: "bla", ans: "lala",isOpen:false},
       {quest: "no", ans: "yes",isOpen:false},
