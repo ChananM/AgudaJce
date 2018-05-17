@@ -39,14 +39,14 @@ export class CalendarPage {
 
   async addToPlatformCalendar(event: CalendarEvent){
     if (this.platform.is('core') || this.platform.is('mobileweb')){
-      alert("Adding an event to a calendar aviable on mobile only");
+      alert("Adding an event to a calendar aviable from application only");
       return;
     } 
     console.log(event.date + "this event will be added to the platform calendar");
     if (this.platform.is('android')){
-      let x = await this.calendar.hasReadWritePermission();
+      let permission = await this.calendar.hasReadWritePermission();
       
-      if(!x){
+      if(!permission){
         await this.calendar.requestReadWritePermission();
       }
     }
