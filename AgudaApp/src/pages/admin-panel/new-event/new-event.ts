@@ -27,6 +27,8 @@ export class NewEventPage {
 
   imgFile: File = null;
   uploadPercent: number = null;
+  allowed: boolean = true;
+  fbImg: boolean = false;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -42,9 +44,14 @@ export class NewEventPage {
                   this.date = this.inputEvent.date.replace(" ", "T").replace("/", "-").replace("/", "-") + "Z";
                   this.content = this.inputEvent.content;
                   this.imageUrl = this.inputEvent.imageURL;
+                  this.tmpUrl = this.imageUrl;
                   this.purchaseURL = this.inputEvent.purchaseURL;
                   this.pageTitle = "ערוך אירוע";
                   this.actionButton = "ערוך";
+                  if(this.imageUrl.includes('firebasestorage')){
+                    this.tmpUrl = this.imageUrl.substring(this.imageUrl.indexOf('_')+1, this.imageUrl.indexOf('?'));
+                    this.fbImg = true;
+                  }
                 }
   }
 
@@ -112,31 +119,34 @@ export class NewEventPage {
   }
 
   uploadImage(event){
-    console.log(event);
     if(event.target.files[0] != null){
-      if(this.imgFile == event.target.files[0]){
+      if(!event.target.files[0].type.includes('image')){
+        alert('File should be image only.')
         return;
       }
-      if(this.imgFile != null && this.imgFile != event.target.files[0]){
-        this.removeImage(this.imageUrl);
+      if(this.imgFile != null){
+        if(this.imgFile.name == event.target.files[0].name){
+          return;
+        }
+        else {
+          this.removeImage(this.imageUrl);
+        }
       }
       this.imgFile = <File>event.target.files[0];
-      if(!this.imgFile.type.includes('image')){
-        alert('File should be image only.')
-        this.imgFile = null;
-        return;
-      }
-      const task = this.eventProvider.uploadImg(this.imgFile);
-      let sub1 = task.percentageChanges().subscribe(percent => {
-        this.uploadPercent = Math.round(percent);
-        if(percent == 100)
-          sub1.unsubscribe();
-      })
-      let sub2 = task.downloadURL().subscribe(url => {
-        this.imageUrl = url;
-        sub2.unsubscribe();
-      })
+      this.allowed = false;
       this.tmpUrl = this.imgFile.name;
+      const task = this.eventProvider.uploadImg(this.imgFile);
+
+      task.on('state_changed', (progress) => {
+        this.uploadPercent = Math.round((progress.bytesTransferred / progress.totalBytes) * 100);
+      }, (err) => {
+
+      }, () => { //complete upload, wait for url.
+        task.snapshot.ref.getDownloadURL().then(url => {
+          this.imageUrl = url;
+          this.allowed = true;
+        })
+      })
     }
   }
 
@@ -146,5 +156,6 @@ export class NewEventPage {
     this.imageUrl = "";
     this.tmpUrl = "";
     this.uploadPercent = null;
+    this.fbImg = false;
   }
 }

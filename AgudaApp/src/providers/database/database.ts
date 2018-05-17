@@ -85,7 +85,7 @@ export class DatabaseProvider {
 
   uploadImage(path: string, img: File){
     const _path = path + '/' + this.getCurrentTimestamp() + '_' + img.name;
-    return this.storage.upload(_path, img);
+    return this.storage.storage.ref(_path).put(img);
   }
 
   deleteImage(url: string){
