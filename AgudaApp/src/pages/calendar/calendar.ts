@@ -37,34 +37,21 @@ export class CalendarPage {
     this.calendarProvider.posts[i].open = !this.calendarProvider.posts[i].open;
   }
 
-  addToPlatformCalendar(event: CalendarEvent){
-    if (this.platform.is('core')){
+  async addToPlatformCalendar(event: CalendarEvent){
+    if (this.platform.is('core') || this.platform.is('mobileweb')){
       alert("Adding an event to a calendar aviable on mobile only");
       return;
     } 
     console.log(event.date + "this event will be added to the platform calendar");
     if (this.platform.is('android')){
-      this.calendar.hasWritePermission().then(permission => {
-        if (!permission){
-          console.log("required write permission");
-          this.calendar.requestReadWritePermission().then(res => {
-          }, err => {
-            console.log('err: perrmission request error', err);
-            alert("perrmission request error");
-          });
-        }
-      }).then(result => {
-        this.calendar.createEventInteractively(event.headline,"",event.content,event.getDate(),event.getDate()).then(res => {
-        });
-      }).catch(failuCallback => {});
+      let x = await this.calendar.hasReadWritePermission();
+      
+      if(!x){
+        await this.calendar.requestReadWritePermission();
+      }
     }
-    else if (this.platform.is('ios')){
-      this.calendar.createEventInteractively(event.headline,"",event.content,event.getDate(),event.getDate()).then(res => {
-      }, err => {
-        console.log('err: adding event error', err);
-        alert("adding event error: " + err);
-      });
-    }
+    this.calendar.createEventInteractively(event.headline,"",event.content,event.getDate(),event.getDate());
+    
     
   }
 
