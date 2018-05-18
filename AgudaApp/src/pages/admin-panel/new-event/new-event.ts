@@ -49,7 +49,7 @@ export class NewEventPage {
                   this.pageTitle = "ערוך אירוע";
                   this.actionButton = "ערוך";
                   if(this.imageUrl.includes('firebasestorage')){
-                    this.tmpUrl = this.imageUrl.substring(this.imageUrl.indexOf('_')+1, this.imageUrl.indexOf('?'));
+                    this.tmpUrl = decodeURI(this.imageUrl.substring(this.imageUrl.indexOf('_')+1, this.imageUrl.indexOf('?')));
                     this.fbImg = true;
                   }
                 }

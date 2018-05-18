@@ -45,7 +45,7 @@ export class NewHomeStoryPage {
                   this.pageTitle = "ערוך סיפור";
                   this.actionButton = "ערוך";
                   if(this.imageUrl.includes('firebasestorage')){
-                    this.tmpUrl = this.imageUrl.substring(this.imageUrl.indexOf('_')+1, this.imageUrl.indexOf('?'));
+                    this.tmpUrl = decodeURI(this.imageUrl.substring(this.imageUrl.indexOf('_')+1, this.imageUrl.lastIndexOf('?')));
                     this.fbImg = true;
                   }
                 }

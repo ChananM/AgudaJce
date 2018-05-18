@@ -89,8 +89,8 @@ export class DatabaseProvider {
   }
 
   deleteImage(url: string){
-    const path = url.substring(url.lastIndexOf('/') + 1, url.indexOf('?')).replace('%2F', '/');
-    return this.storage.ref(path).delete();
+    const path = url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('?')).replace('%2F', '/');
+    return this.storage.ref(decodeURI(path)).delete();
   }
 
   getCurrentTimestamp(): string{ //format: yyyyMMddHHmmSS
