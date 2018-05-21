@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, Platform, ModalController } from 'ionic-angular';
 import { HomeStory } from '../../models/homeStory.model';
 import { StoryArticlePage } from './story-article/story-article';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
               public modalCtrl: ModalController,
-              public postsService: HomeStoryProvider, 
+              public postsService: HomeStoryProvider,
+              public iab: InAppBrowser,
               public platform: Platform) {
 
     if(this.platform.is('core')){ 

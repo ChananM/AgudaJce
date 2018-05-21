@@ -15,6 +15,6 @@
     </ng-template>
     <h1>{{story.headline}}</h1>
     <article>
-        {{story.content}}
+        <div [innerHTML]="story.content"></div>
     </article>
 </ion-content>
