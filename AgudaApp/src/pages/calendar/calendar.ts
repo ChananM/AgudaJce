@@ -57,7 +57,7 @@ export class CalendarPage {
 
   gotoPurachase(url: string){
     console.log("redirect to: " + url);
-    /*const browser = */ this.iab.create(url);
+    this.iab.create(url, '_system');
   }
 
   closeItem(post: CalendarEvent){
