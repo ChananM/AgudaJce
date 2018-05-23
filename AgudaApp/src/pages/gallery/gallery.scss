@@ -13,6 +13,11 @@ page-gallery {
         position: absolute;
         top: 36%;
         font-size: 2.0em;
+        text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000; 
         width: 100%;
         font-weight: bold;
         color: #fff;

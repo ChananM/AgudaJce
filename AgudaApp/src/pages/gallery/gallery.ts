@@ -1,6 +1,8 @@
+import { Albums } from './../../models/interfaces';
 import { Component } from '@angular/core';
-import { NavController, NavParams, Platform } from 'ionic-angular';
+import { NavController, NavParams, Platform, LoadingController } from 'ionic-angular';
 import { FbImagesPage } from './fb-images/fb-images';
+import { FacebookProvider } from '../../providers/facebook/facebook';
 
 @Component({
   selector: 'page-gallery',
@@ -8,41 +10,40 @@ import { FbImagesPage } from './fb-images/fb-images';
 })
 export class GalleryPage {
 
-  albumArray = [
-    {headline: "Wallpapers", 
-     content: "6", 
-     imageUrl: ["https://wallpaperbrowse.com/media/images/303836.jpg", 
-                "https://wallpaperbrowse.com/media/images/pexels-photo.jpg",
-                "https://wallpapercave.com/wp/mgQSn9p.jpg",
-                "https://wallpaperbrowse.com/media/images/b807c2282ab0a491bd5c5c1051c6d312_rP0kQjJ.jpg", 
-                "https://wallpaperbrowse.com/media/images/general-night-golden-gate-bridge-hd-wallpapers-golden-gate-bridge-wallpaper.jpg",
-                "https://wallpaperbrowse.com/media/images/eiffel-tower-wallpaper-18_fRZLW4V.jpg"]},
-    {headline: "Galaxy", 
-     content: "3", 
-     imageUrl: ["https://wallpaperbrowse.com/media/images/galaxy-wallpaper-29.jpg",
-                "https://wallpaperbrowse.com/media/images/galaxy-wallpaper-30.jpg", 
-                "https://wallpaperbrowse.com/media/images/7D42mV5.jpg"]},
-    {headline: "Nature", 
-     content: "4", 
-     imageUrl: ["https://wallpaperbrowse.com/media/images/lake_mountain_scenery_11495.jpg",
-                "https://wallpaperbrowse.com/media/images/RDIqwj.jpg", 
-                "https://wallpaperbrowse.com/media/images/234a218c200ea9a5fc85bc9363cf2f2e.jpg",
-                "https://wallpaperbrowse.com/media/images/HD-Scenery-Wallpapers-1.jpg"]},
-  ];
+  public allowed: boolean = false; 
+  public albums: Albums;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
-    
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public platform: Platform,
+              public fbProv: FacebookProvider,
+              public loadingCtrl: LoadingController) {
+          
+                let loader = this.loadingCtrl.create();
+                loader.present();
+
+                fbProv.getAllAlbums().then(res =>{
+                  this.albums = res;
+                  console.log(this.albums)
+                  this.allowed = true;
+                  loader.dismiss()
+                }).catch(err => {
+                  console.log(err);
+                  loader.dismiss()
+                })   
+
   }
 
-  ionViewDidEnter(){
+  ionViewDidEnter() {
     this.doRefresh();
   }
 
-  doRefresh(){
+  doRefresh() {
     console.log("galery refresh");
   }
 
-  callAlbum(headline, content, imageUrl){
-    this.navCtrl.push(FbImagesPage, {headline: headline, content: content, imageUrl: imageUrl})
+  async callAlbum(album) {
+    console.log(album);
+    //this.navCtrl.push(FbImagesPage, {headline: headline, content: content, imageUrl: imageUrl})
   }
 }

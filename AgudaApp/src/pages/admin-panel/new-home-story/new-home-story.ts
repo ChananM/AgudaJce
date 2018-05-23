@@ -115,6 +115,7 @@ export class NewHomeStoryPage {
     if (this.imgFile != null){
       this.removeImage(this.imageUrl);
     }
+    console.log("Content: " + this.content);
     this.viewCtrl.dismiss();
   }
 

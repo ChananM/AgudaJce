@@ -13,13 +13,22 @@
         <ion-label floating>הקדמה</ion-label>
         <ion-input [(ngModel)]="preview" type="text" name="Preview" required="required"></ion-input>
     </ion-item>
-    <ion-item>
+    <!-- <ion-item>
         <ion-label floating>תוכן</ion-label>
         <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
-    </ion-item>
+    </ion-item> -->
+
+    <editor [(ngModel)]="content" [init]="{
+        selector: 'content',
+        plugins: 'directionality',
+        language: 'he-IL',
+        directionality : 'rtl'
+        }"></editor>
+
     <ion-item>
         <ion-note *ngIf="uploadPercent != null" item-end>{{uploadPercent}}%</ion-note>
-        <ion-icon *ngIf="(imgFile != null && uploadPercent == 100 && allowed) || fbImg" title="הסר" style="cursor: pointer;" name="trash" color='danger' item-end (click)='removeImage(imageUrl)'></ion-icon>
+        <ion-icon *ngIf="(imgFile != null && uploadPercent == 100 && allowed) || fbImg" title="הסר" style="cursor: pointer;" name="trash"
+            color='danger' item-end (click)='removeImage(imageUrl)'></ion-icon>
         <ion-icon *ngIf="allowed" style="cursor: pointer;" name="cloud-upload" color='primary' title="בחר תמונה" item-end (click)='upImg.click()'></ion-icon>
         <ion-label floating>תמונה - לינק או לחץ לבחירה</ion-label>
         <ion-input [disabled]="imgFile != null || fbImg" [(ngModel)]="tmpUrl" type="url" name="Image URL"></ion-input>

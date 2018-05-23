@@ -52,6 +52,9 @@ import { AuthProvider } from '../providers/auth/auth';
 import { DatabaseProvider } from '../providers/database/database';
 import { HomeStoryProvider } from './../providers/home-story/home-story';
 import { CalendarEventProvider } from '../providers/calendar-event/calendar-event';
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { FacebookProvider } from '../providers/facebook/facebook';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,7 @@ import { CalendarEventProvider } from '../providers/calendar-event/calendar-even
     NewHomeStoryPageModule,
     NewEventPageModule,
     ionicGalleryModal.GalleryModalModule,
+    HttpClientModule
   ],
 
   bootstrap: [IonicApp],
@@ -116,7 +120,8 @@ import { CalendarEventProvider } from '../providers/calendar-event/calendar-even
     DatabaseProvider,
     Calendar,
     InAppBrowser,
-    AuthProvider
+    AuthProvider,
+    FacebookProvider
   ]
 })
 
