@@ -15,4 +15,18 @@
 
 <ion-content padding >
   <h1>עמוד מידע פנימי - מידע על מחלקות</h1>
+
+  <ion-list  >
+      <ion-item  *ngFor="let item of items; let i = index" >
+
+          <ion-item >
+            {{ item }} 
+      
+            <br>
+          </ion-item>
+        
+      </ion-item>
+
+      
+  </ion-list>
 </ion-content>

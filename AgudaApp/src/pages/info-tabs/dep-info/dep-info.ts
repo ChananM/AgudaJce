@@ -12,13 +12,42 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-dep-info',
   templateUrl: 'dep-info.html',
 })
+
+
 export class DepInfoPage {
 
+
+items;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.initializeItems();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DepInfoPage');
   }
 
-}
+
+  initializeItems()
+  {
+    this.items=
+    [
+
+      "מחלקת תרבות",
+      "מחלקת ספורט",
+      "מחלקת דוברות",
+      "מחלקת תרבות חוץ"
+    ]
+
+      
+
+
+
+
+    }
+
+
+
+
+  }
+
