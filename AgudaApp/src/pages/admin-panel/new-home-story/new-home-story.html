@@ -13,18 +13,10 @@
         <ion-label floating>הקדמה</ion-label>
         <ion-input [(ngModel)]="preview" type="text" name="Preview" required="required"></ion-input>
     </ion-item>
-    <!-- <ion-item>
+    <ion-item>
         <ion-label floating>תוכן</ion-label>
         <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
-    </ion-item> -->
-
-    <editor [(ngModel)]="content" [init]="{
-        selector: 'content',
-        plugins: 'directionality',
-        language: 'he-IL',
-        directionality : 'rtl'
-        }"></editor>
-
+    </ion-item>
     <ion-item>
         <ion-note *ngIf="uploadPercent != null" item-end>{{uploadPercent}}%</ion-note>
         <ion-icon *ngIf="(imgFile != null && uploadPercent == 100 && allowed) || fbImg" title="הסר" style="cursor: pointer;" name="trash"
