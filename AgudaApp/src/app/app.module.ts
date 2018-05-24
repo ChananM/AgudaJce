@@ -2,6 +2,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -42,7 +43,8 @@ import { AngularFireModule } from 'angularfire2';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireStorageModule } from 'angularfire2/storage'
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { FCM } from '@ionic-native/fcm';
 
 /* #### COMPONENTS #### */
 import { RefreshComponent } from '../components/refresh/refresh';
@@ -53,7 +55,6 @@ import { DatabaseProvider } from '../providers/database/database';
 import { HomeStoryProvider } from './../providers/home-story/home-story';
 import { CalendarEventProvider } from '../providers/calendar-event/calendar-event';
 import { FacebookProvider } from '../providers/facebook/facebook';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -120,7 +121,8 @@ import { HttpClientModule } from '@angular/common/http';
     Calendar,
     InAppBrowser,
     AuthProvider,
-    FacebookProvider
+    FacebookProvider,
+    FCM,
   ]
 })
 

@@ -1,7 +1,7 @@
 import { CalendarEvent } from './../../models/calendarEvent.model';
 import { CalendarEventProvider } from './../../providers/calendar-event/calendar-event';
 import { Component } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, LoadingController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Calendar } from '@ionic-native/calendar';
 
@@ -17,12 +17,20 @@ export class CalendarPage {
               public calendarProvider: CalendarEventProvider,
               public platform: Platform,
               private iab: InAppBrowser,
-              private calendar: Calendar
+              private calendar: Calendar,
+              private loading: LoadingController
             ) {
   }
 
   ionViewDidLoad(){
-
+    let load = this.loading.create();
+    load.present()
+    let interval = setInterval(() => {
+      if(this.calendarProvider.posts.length > 0){
+        load.dismiss();
+        clearInterval(interval);
+      }
+    }, 250);
   }
 
   ionViewDidEnter(){
