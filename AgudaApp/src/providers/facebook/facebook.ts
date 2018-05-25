@@ -13,11 +13,11 @@ export class FacebookProvider {
   getAllAlbums(): Promise<Albums> {
     let counter = 0;
     return new Promise<Albums>((resolve, reject) => {
-      this.http.get('http://graph.facebook.com/aguda.jce/albums?limit=200&fields=name,count,cover_photo,created_time&access_token=' + this.access)
+      this.http.get('https://graph.facebook.com/aguda.jce/albums?limit=200&fields=name,count,cover_photo,created_time&access_token=' + this.access)
         .subscribe(albums => {
           let a = albums as Albums;
           for (let i = 0; i < a.data.length; i++) {
-            this.http.get('http://graph.facebook.com/' + a.data[i].cover_photo.id + '?fields=images&access_token=' + this.access)
+            this.http.get('https://graph.facebook.com/' + a.data[i].cover_photo.id + '?fields=images&access_token=' + this.access)
               .subscribe(cover => {
                 a.data[i].cover_photo = cover as Photo;
                 counter++;
@@ -34,7 +34,7 @@ export class FacebookProvider {
 
   getphotos(id: string): Promise<Photo[]> {
     return new Promise<Photo[]>((resolve, reject) =>{
-      this.http.get('http://graph.facebook.com/' + id + '/photos?fields=images&access_token=' + this.access)
+      this.http.get('https://graph.facebook.com/' + id + '/photos?fields=images&access_token=' + this.access)
         .subscribe( async photos => {
           let p = photos as Photos;
           let photo = p.data;

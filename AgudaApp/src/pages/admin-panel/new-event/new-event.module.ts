@@ -9,9 +9,8 @@ let config: QuillConfigInterface = {
       ['bold', 'italic', 'underline'],                  // toggled buttons
       [{ 'list': 'ordered' }, { 'list': 'bullet' }],
       [{ 'direction': 'rtl' }],                         // text direction
-
+      [{ 'align': [] }],                                // text alignment
       [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-
       [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
       [{ 'font': [] }],
     ],
