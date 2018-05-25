@@ -13,10 +13,7 @@
         <ion-label floating>הקדמה</ion-label>
         <ion-input [(ngModel)]="preview" type="text" name="Preview" required="required"></ion-input>
     </ion-item>
-    <ion-item>
-        <ion-label floating>תוכן</ion-label>
-        <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
-    </ion-item>
+    <!-- Image upload -->
     <ion-item>
         <ion-note *ngIf="uploadPercent != null" item-end>{{uploadPercent}}%</ion-note>
         <ion-icon *ngIf="(imgFile != null && uploadPercent == 100 && allowed) || fbImg" title="הסר" style="cursor: pointer;" name="trash"
@@ -26,6 +23,8 @@
         <ion-input [disabled]="imgFile != null || fbImg" [(ngModel)]="tmpUrl" type="url" name="Image URL"></ion-input>
         <input #upImg type="file" (click)="upImg.value=null" (change)="uploadImage($event)">
     </ion-item>
+    <!-- Rich text editor -->
+    <quill dir="ltr" [(value)]="content"></quill>
     <p></p>
     <ion-buttons>
         <button *ngIf="headline && content && preview && allowed" ion-button (click)="save()">{{actionButton}}</button>

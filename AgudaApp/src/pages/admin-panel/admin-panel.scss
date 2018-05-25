@@ -7,6 +7,10 @@ page-admin-panel {
         font-size: 3vh
     }
 
+    ion-item:hover { 
+        background-color: rgb(255, 255, 211);
+    }
+
     .center{
         text-align: center;
         padding: 30px 30px 30px 30px;

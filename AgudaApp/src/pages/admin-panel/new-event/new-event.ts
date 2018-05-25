@@ -55,6 +55,13 @@ export class NewEventPage {
                 }
   }
 
+  ionViewDidLoad(){
+    if(this.inputEvent == null){
+      let e = document.getElementsByClassName('ql-direction')[0] as HTMLElement;
+      e.click();
+    }
+  }
+
   ionViewCanEnter(){
     return this.auth.isSignedIn() && document.URL.includes('adminpanel');
   }

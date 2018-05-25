@@ -48,6 +48,7 @@ import { FCM } from '@ionic-native/fcm';
 
 /* #### COMPONENTS #### */
 import { RefreshComponent } from '../components/refresh/refresh';
+import { QuillModule } from 'ngx-quill-wrapper';
 
 /* #### PROVIDERS #### */ 
 import { AuthProvider } from '../providers/auth/auth';
@@ -87,7 +88,8 @@ import { FacebookProvider } from '../providers/facebook/facebook';
     NewHomeStoryPageModule,
     NewEventPageModule,
     ionicGalleryModal.GalleryModalModule,
-    HttpClientModule
+    HttpClientModule,
+    QuillModule
   ],
 
   bootstrap: [IonicApp],

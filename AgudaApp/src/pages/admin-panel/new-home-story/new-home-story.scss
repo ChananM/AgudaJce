@@ -4,8 +4,12 @@ page-new-home-story {
         text-align: center;
     }
 
-    textarea {
-        height: 15vh; 
+    quill{
+        border: 2px solid rgb(158, 158, 158);
+
+        .ql-container{
+            background-color: white;
+        }
     }
 
     ion-buttons{

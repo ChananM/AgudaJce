@@ -15,6 +15,6 @@
     </ng-template>
     <h1>{{story.headline}}</h1>
     <article>
-        <div [innerHTML]="story.content"></div>
+        <quill [(value)]="story.content" [disabled]="true"></quill>
     </article>
 </ion-content>

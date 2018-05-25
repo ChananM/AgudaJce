@@ -31,9 +31,8 @@
                 </button>
             </ion-item-options>
             <ion-item *ngIf="post.open">
-                <p text-wrap>{{post.content}}</p>
+                <quill [(value)]="post.content" [disabled]="true"></quill>
             </ion-item>
-
         </ion-item-sliding>
     </ion-list>
 </ion-content>

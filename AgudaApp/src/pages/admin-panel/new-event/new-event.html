@@ -9,10 +9,6 @@
         <ion-input [(ngModel)]="headline" type="text" name="Headline" required="required"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label floating>תוכן</ion-label>
-        <ion-textarea [(ngModel)]="content" type="text" name="Content" required="required"></ion-textarea>
-    </ion-item>
-    <ion-item>
         <ion-label floating>תאריך</ion-label>
         <ion-datetime [(ngModel)]="date" min="2018" max="{{yearOffset}}" displayFormat="DD/MM/YYYY H:mm" pickerFormat="D MMM YYYY H m" required="required"></ion-datetime>
     </ion-item>
@@ -24,6 +20,7 @@
         <ion-input [disabled]="imgFile != null || fbImg" [(ngModel)]="tmpUrl" type="url" name="Image URL"></ion-input>
         <input #upImg type="file" (click)="upImg.value=null" (change)="uploadImage($event)">
     </ion-item>
+    <quill dir="ltr" [(value)]="content"></quill>
     <ion-item>
         <ion-label floating>קישור לקניית כרטיסים</ion-label>
         <ion-input [(ngModel)]="purchaseURL" type="url" name="Purchase URL"></ion-input>

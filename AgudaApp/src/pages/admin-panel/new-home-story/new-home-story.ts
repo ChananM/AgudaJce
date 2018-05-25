@@ -56,7 +56,16 @@ export class NewHomeStoryPage {
   }
 
   ionViewDidLoad() {
+    if(this.inputStory == null){
+      let e = document.getElementsByClassName('ql-direction')[0] as HTMLElement;
+      e.click();
+    }
     console.log('ionViewDidLoad NewHomeStoryPage');
+  }
+
+  adjustEditor(){
+    //document.getElementsByClassName('ql-direction')[0].classList.add('ql-active');
+    console.log(document.getElementsByClassName('ql-direction'));
   }
 
   save(){
