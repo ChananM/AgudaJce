@@ -9,7 +9,6 @@
             <ion-card [ngClass]="{'album': this.platform.is('core')}" (click)="callAlbum(album)">
                 <img src="{{album.cover_photo.images[0].source}}">
                 <div class="card-title">{{album.name}}</div>
-                <div class="card-subtitle">{{album.count}}</div>
             </ion-card>
         </ion-row>
     </div>

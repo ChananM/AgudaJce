@@ -8,19 +8,12 @@ import { GalleryModal } from 'ionic-gallery-modal';
 })
 export class FbImagesPage {
 
-  headline: string 
-  content: string 
-  imageUrl: string[]
+  headline: string  
   photos: any[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
     this.headline = navParams.get('headline')
-    this.content = navParams.get('content')
-    this.imageUrl = navParams.get('imageUrl')
-
-    this.imageUrl.forEach((link) => {
-      this.photos.push({url: link});
-    })
+    this.photos = navParams.get('imageUrls')
   }
 
   ionViewDidLoad() {

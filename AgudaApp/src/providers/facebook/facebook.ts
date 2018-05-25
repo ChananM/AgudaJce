@@ -1,25 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Albums, Photo } from '../../models/interfaces';
+import { Albums, Photo, Photos } from '../../models/interfaces';
 
 @Injectable()
 export class FacebookProvider {
 
-  access = "EAACEdEose0cBAJycraDx1owSfUG20biYazq5QoZC2g2ZCNDaD5bMaPVOkRYSnB0aSPpMF51UZAXdbZCBOwZBmM1DZAcodWBEQJRofpMuwJKK6FnMrLCWz2wrhVDDnIjUjj06ID2jvAUgzpQt68A9DabIZC1UJqZCfL4UNuecdvG5yBSYbpBRjNlo35OknLisgZCYZD";
+  access = "EAACEdEose0cBAPMlwY96z99CWP3dPu6EK5qUZCZBsOy7fR7EglWZBPVRVlEzYguHABqGo3HFBg3ZAlGLvcA5OzMjVTFMkxkI7HUXmwiZClfBLo94ZBRZAcZAZC26NNV8dZBpFsvD0pAbyFrYUJ1qr6wCh00z4bVGwyFU623klXpMqJRd9WH0XfqTJ0ADT7ZCJ75s0In5ityXLJTkgZDZD";
 
   constructor(public http: HttpClient) {
-
-    // http.get('http://graph.facebook.com/aguda.jce/albums?limit=200&fields=name,count,cover_photo,created_time&access_token=' + this.access)
-    //   .subscribe(album => {
-    //     this.albums = album as Albums;
-    //     for(let i=0; i<this.albums.data.length; i++){
-    //       http.get('http://graph.facebook.com/' + this.albums.data[i].cover_photo.id + '?fields=images&access_token=' + this.access)
-    //           .subscribe(cover => {
-    //             this.albums.data[i].cover_photo = cover as Photo;
-    //           })
-    //     }
-    //     console.log(this.albums);
-    //   })
   }
 
   getAllAlbums(): Promise<Albums> {
@@ -38,6 +26,43 @@ export class FacebookProvider {
                 }
               })
             }
+          }, err => {
+            reject(err)
+          })
+    })
+  }
+
+  getphotos(id: string): Promise<Photo[]> {
+    return new Promise<Photo[]>((resolve, reject) =>{
+      this.http.get('http://graph.facebook.com/' + id + '/photos?fields=images&access_token=' + this.access)
+        .subscribe( async photos => {
+          let p = photos as Photos;
+          let photo = p.data;
+          while(p.paging.next != null) {
+            await this.getNextPhotos(p.paging.next)
+              .then( res =>{
+                p = res;
+                for (let i = 0; i < p.data.length; i++) {
+                   photo.push(p.data[i]);
+                }
+              }).catch(err => {
+                console.log(err);
+              })
+          } 
+          
+          resolve(photo);
+          }, err => {
+            reject(err)
+          })
+    })
+  }
+
+  getNextPhotos(next: string): Promise<Photos> {
+    return new Promise<Photos>((resolve, reject) => {
+      this.http.get(next)
+        .subscribe(photos => { 
+          let p = photos as Photos
+          resolve(p);
           }, err => {
             reject(err)
           })

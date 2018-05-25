@@ -1,4 +1,4 @@
-import { Albums } from './../../models/interfaces';
+import { Albums, Photo } from './../../models/interfaces';
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform, LoadingController } from 'ionic-angular';
 import { FbImagesPage } from './fb-images/fb-images';
@@ -24,14 +24,22 @@ export class GalleryPage {
 
                 fbProv.getAllAlbums().then(res =>{
                   this.albums = res;
+                  for(let i = 0; i < this.albums.data.length; i++) {
+                    if(this.albums.data[i].name == "Timeline Photos" || 
+                      this.albums.data[i].name == "Mobile Uploads" ||
+                      this.albums.data[i].name == "Cover Photos" ||
+                      this.albums.data[i].name == "Profile Pictures") {
+                        this.albums.data.splice(i, 1)
+                        i--;
+                    }
+                  }
                   console.log(this.albums)
                   this.allowed = true;
                   loader.dismiss()
                 }).catch(err => {
                   console.log(err);
                   loader.dismiss()
-                })   
-
+                })
   }
 
   ionViewDidEnter() {
@@ -42,8 +50,16 @@ export class GalleryPage {
     console.log("galery refresh");
   }
 
-  async callAlbum(album) {
-    console.log(album);
-    //this.navCtrl.push(FbImagesPage, {headline: headline, content: content, imageUrl: imageUrl})
+  callAlbum(album) {
+    (this.fbProv.getphotos(album.id)).then(res =>{
+      let photos = res as Photo[];
+      let imageUrls: any[] = [];
+      for(let i = 0; i < photos.length; i++) {
+        imageUrls.push({url: photos[i].images[0].source});
+      }
+      this.navCtrl.push(FbImagesPage, {headline: album.name, imageUrls: imageUrls});
+    }).catch(err => {
+      console.log(err);
+    })   
   }
 }

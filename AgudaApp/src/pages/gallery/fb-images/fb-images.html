@@ -7,8 +7,8 @@
 <ion-content>
     <ion-grid>
         <ion-row>
-            <ion-col col-6 col-md-4 col-xl-3 *ngFor="let image of imageUrl; let i = index;">
-                <div class="image-container" [style.background-image]="'url(' + image + ')'" (click)="callImage(i)"></div>
+            <ion-col col-6 col-md-4 col-xl-3 *ngFor="let image of photos; let i = index;">
+                <div class="image-container" [style.background-image]="'url(' + image.url + ')'" (click)="callImage(i)"></div>
             </ion-col>
         </ion-row>
     </ion-grid>
