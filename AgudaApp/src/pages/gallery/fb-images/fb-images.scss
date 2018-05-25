@@ -3,6 +3,27 @@ page-fb-images {
         min-height: 150px;
         background-size: cover;
     }
+
+    .images-navbar-item {
+        display: inline-block;
+        width: 20%;
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 3px solid #FF0000;
+        font-family: georgia;
+        font-weight: bold;
+        font-size: 2.5vh;
+        text-align: center;
+        border-radius: 1vh;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .images-navbar {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 gallery-modal {

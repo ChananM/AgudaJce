@@ -51,15 +51,6 @@ export class GalleryPage {
   }
 
   callAlbum(album) {
-    (this.fbProv.getphotos(album.id)).then(res =>{
-      let photos = res as Photo[];
-      let imageUrls: any[] = [];
-      for(let i = 0; i < photos.length; i++) {
-        imageUrls.push({url: photos[i].images[0].source});
-      }
-      this.navCtrl.push(FbImagesPage, {headline: album.name, imageUrls: imageUrls});
-    }).catch(err => {
-      console.log(err);
-    })   
+      this.navCtrl.push(FbImagesPage, {album: album});
   }
 }

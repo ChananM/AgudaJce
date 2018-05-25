@@ -5,7 +5,7 @@ import { Albums, Photo, Photos } from '../../models/interfaces';
 @Injectable()
 export class FacebookProvider {
 
-  access = "EAACEdEose0cBAIwBOvOGLffousDKog6BJ23qgVWQydbVmsafbm6SJUI2GTlzDF8FWPjTZA4bjukmZC4re2FCZAdBQep9yVxlI6xeRLDMnWmKAuFP1M8ZCAIZBWY0v1hdObSn2jHpjIBAVWqUqZCHNZA19oAuXvRXA3OnytLopWJBY3gZATWVlLGkQRQlCRk2VVwZD";
+  access = "EAACEdEose0cBAHxyZBHDYB6ZCoVer7WzzJVNWGPgBQc7rIqPeHo5A8SA9OUqMoZBUGjpH6YYj0W4XESXKjqPXaU3ZChwu5MeQPZARoPb8Dt1Orh4fZADXm3INJZBm56aZCt6FmQ0F1LPG6uRHPcZCQEI4EZBMusb4ilrPQi2uHeT7BZBUCbdkc7sIHifPcc7frvnRrAvLzdNVdJFAZDZD";
 
   constructor(public http: HttpClient) {
   }
@@ -32,13 +32,12 @@ export class FacebookProvider {
     })
   }
 
-  getphotos(id: string): Promise<Photo[]> {
-    return new Promise<Photo[]>((resolve, reject) =>{
+  getphotos(id: string): Promise<Photos> {
+    return new Promise<Photos>((resolve, reject) =>{
       this.http.get('https://graph.facebook.com/' + id + '/photos?fields=images&access_token=' + this.access)
         .subscribe( async photos => {
           let p = photos as Photos;
-          let photo = p.data;
-          while(p.paging.next != null) {
+          /*while(p.paging.next != null) {
             await this.getNextPhotos(p.paging.next)
               .then( res =>{
                 p = res;
@@ -48,9 +47,8 @@ export class FacebookProvider {
               }).catch(err => {
                 console.log(err);
               })
-          } 
-          
-          resolve(photo);
+          } */
+          resolve(p);
           }, err => {
             reject(err)
           })

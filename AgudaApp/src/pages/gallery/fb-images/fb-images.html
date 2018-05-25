@@ -1,6 +1,21 @@
 <ion-header>
     <ion-navbar>
+        <!-- <ion-buttons end>
+            <button ion-button icon-only (click)="nextPart()">
+                next
+            </button>
+        </ion-buttons>
+      
+        <ion-buttons end>
+            <button ion-button icon-only (click)="prePart()">
+                pre
+            </button>
+        </ion-buttons> -->
     </ion-navbar>
+    <div class="images-navbar">
+        <div class="images-navbar-item" (click)="nextPart()">next</div>
+        <div class="images-navbar-item" (click)="prePart()">pre</div>
+    </div>
 </ion-header>
 
 
