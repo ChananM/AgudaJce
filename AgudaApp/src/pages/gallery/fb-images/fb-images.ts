@@ -27,7 +27,7 @@ export class FbImagesPage {
                 let album = navParams.get('album');
                 let loader = this.loadingCtrl.create();
                 loader.present();
-                this.fbProv.getphotos(album.id).then(res =>{
+                this.fbProv.getPhotosFromAlbumId(album.id).then(res =>{
                   this.imageUrls = res;
                   this.getPhotosUrl(this.imageUrls.data, this.photos);
                   this.allowed = true;
@@ -37,19 +37,6 @@ export class FbImagesPage {
                 }).catch(err => {
                   console.log(err);
                 })   
-  }
-
-  onScrollEnd(event) {
-    /*this.content.ionScrollEnd.subscribe((data)=>{
-      this.nextPart()
-    });*/
-    console.log("end");
-    console.log(event);
-  }
-
-  onScrollStart(event) {
-    console.log("end");
-    console.log(event);
   }
 
   ionViewDidLoad() {
@@ -65,26 +52,17 @@ export class FbImagesPage {
     modal.present();
   }
 
-  nextPart() {
-    this.fbProv.getNextPhotos(this.imageUrls.paging.next).then(res => {
+  getPart(goTo: string) {
+    let loader = this.loadingCtrl.create();
+    loader.present();
+    this.fbProv.getPhotos(goTo).then(res => {
       this.imageUrls = res;
-      this.photos = [];
-      this.getPhotosUrl(this.imageUrls.data, this.photos);
+      this.photos = this.getPhotosUrl(this.imageUrls.data, []);
       this.content.scrollToTop();
     }).catch(err => {
-      console.log("no next");
-    })   
-  }
-
-  prePart() {
-    this.fbProv.getNextPhotos(this.imageUrls.paging.previous).then(res => {
-      this.imageUrls = res;
-      this.photos = [];
-      this.getPhotosUrl(this.imageUrls.data, this.photos);
-      this.content.scrollToTop();
-    }).catch(err => {
-      console.log("no pre");
-    })   
+      console.log(err);
+    })
+    loader.dismiss()
   }
 
   getPhotosUrl(photos: Photo[], urls: any[]): any[] {

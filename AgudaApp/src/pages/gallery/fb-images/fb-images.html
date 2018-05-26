@@ -1,27 +1,18 @@
 <ion-header>
     <ion-navbar>
-        <!-- <ion-buttons end>
-            <button ion-button icon-only (click)="nextPart()">
-                next
-            </button>
-        </ion-buttons>
-      
-        <ion-buttons end>
-            <button ion-button icon-only (click)="prePart()">
-                pre
-            </button>
-        </ion-buttons> -->
     </ion-navbar>
     <div class="images-navbar">
-        <div class="images-navbar-item" (click)="nextPart()">next</div>
-        <div class="images-navbar-item" (click)="prePart()">pre</div>
+            <button *ngIf="allowed && imageUrls.paging.next != null" ion-button class="images-navbar-item" color="blue" (click)="getPart(imageUrls.paging.next)">הבא</button>
+            <button *ngIf="!allowed || imageUrls.paging.next == null" ion-button class="images-navbar-item" color="darkGray">הבא</button>
+            <button *ngIf="allowed && imageUrls.paging.previous != null" ion-button class="images-navbar-item" color="blue" (click)="getPart(imageUrls.paging.previous)">הקודם</button>
+            <button *ngIf="!allowed || imageUrls.paging.previous == null" ion-button class="images-navbar-item" color="darkGray">הקודם</button>
     </div>
 </ion-header>
 
 
-<ion-content (ionScrollEnd)="onScrollEnd($event)" (ionScrollStart)="onScrollStart($event)" >
+<ion-content>
     <ion-grid>
-        <ion-row>
+        <ion-row *ngIf="allowed">
             <ion-col col-6 col-md-4 col-xl-3 *ngFor="let image of photos; let i = index;">
                 <div class="image-container" [style.background-image]="'url(' + image.url + ')'" (click)="callImage(i)"></div>
             </ion-col>

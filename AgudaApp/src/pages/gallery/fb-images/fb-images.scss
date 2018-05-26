@@ -7,9 +7,7 @@ page-fb-images {
     .images-navbar-item {
         display: inline-block;
         width: 20%;
-        background-color: #FFFFFF;
-        color: #000000;
-        border: 3px solid #FF0000;
+        color: #ffffff;
         font-family: georgia;
         font-weight: bold;
         font-size: 2.5vh;
@@ -20,6 +18,7 @@ page-fb-images {
     }
 
     .images-navbar {
+        background-color: #f8f8f8;
         display: inline-block;
         text-align: center;
         width: 100%;

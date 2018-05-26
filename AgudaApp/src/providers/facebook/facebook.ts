@@ -5,7 +5,7 @@ import { Albums, Photo, Photos } from '../../models/interfaces';
 @Injectable()
 export class FacebookProvider {
 
-  access = "EAACEdEose0cBAK7UFnW4PbPZB4I8NXVKTnLGKqD7YAbjsvFLYZAtnxlO5K0Fpk8ZBIxaD8zS25jkxTxgVQfq91qoScNI82HU7f2Ga6QN94nCyqZBPkXJiEasbTDcUTlZBqevK2P86jnmQSM68ubYFlCiPdUO2XjaS9ylZA2lYDNTJBhX1CGo10zQrZCwBRdpYZBdWh6qixHq0wZDZD";
+  access = "EAACEdEose0cBAGlYOHY8ZBrS27XZCoLAqF5Cayov64XKogLCx52Kdju5fQnJJtXjDwsDJeNZAP7TgSGwjVRUTf4weiYitXSJBXcVlUMRqTZAk7QiO28xVnG4EkUt60BJpWFnYWxgZAgBw1ONtSVoKbfQZAIff8o5GIZCIZBSOTQj7c1qYxfrMpRTm9ZB88X9lIdsZD";
 
   constructor(public http: HttpClient) {
   }
@@ -32,22 +32,11 @@ export class FacebookProvider {
     })
   }
 
-  getphotos(id: string): Promise<Photos> {
+  getPhotosFromAlbumId(id: string): Promise<Photos> {
     return new Promise<Photos>((resolve, reject) =>{
-      this.http.get('https://graph.facebook.com/' + id + '/photos?fields=images&access_token=' + this.access)
+      this.http.get('https://graph.facebook.com/' + id + '/photos?limit=24&fields=images&access_token=' + this.access)
         .subscribe( async photos => {
           let p = photos as Photos;
-          /*while(p.paging.next != null) {
-            await this.getNextPhotos(p.paging.next)
-              .then( res =>{
-                p = res;
-                for (let i = 0; i < p.data.length; i++) {
-                   photo.push(p.data[i]);
-                }
-              }).catch(err => {
-                console.log(err);
-              })
-          } */
           resolve(p);
           }, err => {
             reject(err)
@@ -55,7 +44,7 @@ export class FacebookProvider {
     })
   }
 
-  getNextPhotos(next: string): Promise<Photos> {
+  getPhotos(next: string): Promise<Photos> {
     return new Promise<Photos>((resolve, reject) => {
       this.http.get(next)
         .subscribe(photos => { 
