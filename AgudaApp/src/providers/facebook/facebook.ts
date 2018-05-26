@@ -5,7 +5,7 @@ import { Albums, Photo, Photos } from '../../models/interfaces';
 @Injectable()
 export class FacebookProvider {
 
-  access = "EAACEdEose0cBAHxyZBHDYB6ZCoVer7WzzJVNWGPgBQc7rIqPeHo5A8SA9OUqMoZBUGjpH6YYj0W4XESXKjqPXaU3ZChwu5MeQPZARoPb8Dt1Orh4fZADXm3INJZBm56aZCt6FmQ0F1LPG6uRHPcZCQEI4EZBMusb4ilrPQi2uHeT7BZBUCbdkc7sIHifPcc7frvnRrAvLzdNVdJFAZDZD";
+  access = "EAACEdEose0cBAK7UFnW4PbPZB4I8NXVKTnLGKqD7YAbjsvFLYZAtnxlO5K0Fpk8ZBIxaD8zS25jkxTxgVQfq91qoScNI82HU7f2Ga6QN94nCyqZBPkXJiEasbTDcUTlZBqevK2P86jnmQSM68ubYFlCiPdUO2XjaS9ylZA2lYDNTJBhX1CGo10zQrZCwBRdpYZBdWh6qixHq0wZDZD";
 
   constructor(public http: HttpClient) {
   }

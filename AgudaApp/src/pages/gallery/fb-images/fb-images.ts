@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, ModalController, LoadingController, Content } from 'ionic-angular';
 import { GalleryModal } from 'ionic-gallery-modal';
 import { Photo, Photos } from '../../../models/interfaces';
 import { FacebookProvider } from '../../../providers/facebook/facebook';
@@ -8,7 +8,11 @@ import { FacebookProvider } from '../../../providers/facebook/facebook';
   selector: 'page-fb-images',
   templateUrl: 'fb-images.html',
 })
+
 export class FbImagesPage {
+
+  @ViewChild(Content) 
+    content: Content;
 
   allowed: boolean = false; 
   imageUrls: Photos
@@ -35,6 +39,19 @@ export class FbImagesPage {
                 })   
   }
 
+  onScrollEnd(event) {
+    /*this.content.ionScrollEnd.subscribe((data)=>{
+      this.nextPart()
+    });*/
+    console.log("end");
+    console.log(event);
+  }
+
+  onScrollStart(event) {
+    console.log("end");
+    console.log(event);
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad FbImagesPage');
   }
@@ -53,6 +70,7 @@ export class FbImagesPage {
       this.imageUrls = res;
       this.photos = [];
       this.getPhotosUrl(this.imageUrls.data, this.photos);
+      this.content.scrollToTop();
     }).catch(err => {
       console.log("no next");
     })   
@@ -63,6 +81,7 @@ export class FbImagesPage {
       this.imageUrls = res;
       this.photos = [];
       this.getPhotosUrl(this.imageUrls.data, this.photos);
+      this.content.scrollToTop();
     }).catch(err => {
       console.log("no pre");
     })   
