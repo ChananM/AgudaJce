@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, LoadingController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, LoadingController, ToastController, Platform } from 'ionic-angular';
 import { CalendarEventProvider } from '../../../providers/calendar-event/calendar-event';
 import { CalendarEvent } from '../../../models/calendarEvent.model';
 import { AuthProvider } from '../../../providers/auth/auth';
@@ -33,6 +33,7 @@ export class NewEventPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public viewCtrl: ViewController,
+              private platform: Platform,
               private loadingCtrl: LoadingController,
               public eventProvider: CalendarEventProvider,
               private toastCtrl: ToastController,
@@ -56,6 +57,9 @@ export class NewEventPage {
   }
 
   ionViewDidLoad(){
+    if(this.platform.is('core')){
+      document.getElementsByClassName("modal-wrapper")[0].setAttribute("style", "width: 800px !important; right: calc(50% - (800px/2));");
+    }
     if(this.inputEvent == null){
       let e = document.getElementsByClassName('ql-direction')[0] as HTMLElement;
       e.click();
