@@ -1,6 +1,6 @@
 import { HomeStoryProvider } from './../../../providers/home-story/home-story';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, ViewController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, ViewController, LoadingController, Platform } from 'ionic-angular';
 import { HomeStory } from '../../../models/homeStory.model';
 import { AuthProvider } from '../../../providers/auth/auth';
 
@@ -30,6 +30,7 @@ export class NewHomeStoryPage {
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public viewCtrl: ViewController,
+              private platform: Platform,
               private loadingCtrl: LoadingController,
               public storyProvider: HomeStoryProvider,
               private toastCtrl: ToastController,
@@ -56,6 +57,9 @@ export class NewHomeStoryPage {
   }
 
   ionViewDidLoad() {
+    if(this.platform.is('core')){
+      document.getElementsByClassName("modal-wrapper")[0].setAttribute("style", "width: 800px !important; right: calc(50% - (800px/2));");
+    }
     if(this.inputStory == null){
       let e = document.getElementsByClassName('ql-direction')[0] as HTMLElement;
       e.click();
