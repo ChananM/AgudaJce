@@ -27,15 +27,15 @@ export class FbImagesPage {
                 let album = navParams.get('album');
                 let loader = this.loadingCtrl.create();
                 loader.present();
-                this.fbProv.getPhotosFromAlbumId(album.id).then(res =>{
+                this.fbProv.getPhotosByAlbumId(album.id).then(res =>{
                   this.imageUrls = res;
                   this.getPhotosUrl(this.imageUrls.data, this.photos);
                   this.allowed = true;
                   loader.dismiss()
                   console.log(this.photos); 
-                  
                 }).catch(err => {
                   console.log(err);
+                  loader.dismiss()
                 })   
   }
 
@@ -58,11 +58,12 @@ export class FbImagesPage {
     this.fbProv.getPhotos(goTo).then(res => {
       this.imageUrls = res;
       this.photos = this.getPhotosUrl(this.imageUrls.data, []);
+      loader.dismiss();
       this.content.scrollToTop();
     }).catch(err => {
       console.log(err);
+      loader.dismiss()
     })
-    loader.dismiss()
   }
 
   getPhotosUrl(photos: Photo[], urls: any[]): any[] {

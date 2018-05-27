@@ -1,23 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Albums, Photo, Photos } from '../../models/interfaces';
+import { DatabaseProvider } from '../database/database';
 
 @Injectable()
 export class FacebookProvider {
 
-  access = "EAACEdEose0cBAMS4s51A9NNiJNV7ZAqvUkZCkbESZCqQwNMnzR4N1aseaRNg9GYDbQUg10qCKOqckdZC0meK5bU4TLsFOJ6Y3b8qIIGUQoCZCUXYH8EYvvWlFBzkPwZBOD3d2HZBiEgJZCQCM4ZB8PVr7rA6ZAvk6lzkNhenncouET3zKZC9EIw29TDDEkOt39rHz4jSAiCvCG2FQZDZD";
+  token: string;
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, public db: DatabaseProvider) {
   }
 
-  getAllAlbums(): Promise<Albums> {
+  async getAllAlbums(): Promise<Albums> {
     let counter = 0;
+    if (this.token === undefined){
+      this.token = await this.db.getFBAccessToken();
+    }
     return new Promise<Albums>((resolve, reject) => {
-      this.http.get('https://graph.facebook.com/aguda.jce/albums?limit=200&fields=name,count,cover_photo,created_time&access_token=' + this.access)
+      this.http.get('https://graph.facebook.com/aguda.jce/albums?limit=200&fields=name,count,cover_photo,created_time&access_token=' + this.token)
         .subscribe(albums => {
           let a = albums as Albums;
           for (let i = 0; i < a.data.length; i++) {
-            this.http.get('https://graph.facebook.com/' + a.data[i].cover_photo.id + '?fields=images&access_token=' + this.access)
+            this.http.get('https://graph.facebook.com/' + a.data[i].cover_photo.id + '?fields=images&access_token=' + this.token)
               .subscribe(cover => {
                 a.data[i].cover_photo = cover as Photo;
                 counter++;
@@ -32,9 +36,9 @@ export class FacebookProvider {
     })
   }
 
-  getPhotosFromAlbumId(id: string): Promise<Photos> {
+  getPhotosByAlbumId(id: string): Promise<Photos> {
     return new Promise<Photos>((resolve, reject) =>{
-      this.http.get('https://graph.facebook.com/' + id + '/photos?limit=24&fields=images&access_token=' + this.access)
+      this.http.get('https://graph.facebook.com/' + id + '/photos?limit=24&fields=images&access_token=' + this.token)
         .subscribe( async photos => {
           let p = photos as Photos;
           resolve(p);
@@ -44,10 +48,9 @@ export class FacebookProvider {
     })
   }
 
-  getPhotos(next: string): Promise<Photos> {
+  getPhotos(query: string): Promise<Photos> {
     return new Promise<Photos>((resolve, reject) => {
-      this.http.get(next)
-        .subscribe(photos => { 
+      this.http.get(query).subscribe(photos => { 
           let p = photos as Photos
           resolve(p);
           }, err => {

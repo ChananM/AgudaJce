@@ -1,5 +1,6 @@
 import { CalendarEvent } from './../../models/calendarEvent.model';
 import { HomeStory } from './../../models/homeStory.model';
+import { Token } from '../../models/interfaces';
 import { Observable } from 'rxjs/Rx';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
@@ -40,6 +41,16 @@ export class DatabaseProvider {
       })
     });
 
+  }
+
+  getFBAccessToken(): Promise<string>{
+    return new Promise<string>((resolve, reject) => {
+      this.afs.collection<Token>('FBT').valueChanges().subscribe(res => {
+        resolve(res[0].token);
+      }, err => {
+        reject(err)
+      })
+    })
   }
 
   getHomeStories(){
