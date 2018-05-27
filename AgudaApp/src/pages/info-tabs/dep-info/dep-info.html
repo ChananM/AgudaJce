@@ -15,18 +15,19 @@
 
 <ion-content padding >
   <h1>עמוד מידע פנימי - מידע על מחלקות</h1>
-
-  <ion-list  >
-      <ion-item  *ngFor="let item of items; let i = index" >
-
-          <ion-item >
-            {{ item }} 
-      
+  <h6>
+      יו"ר אגודת הסטודנטים – איתי גבאי yor.jce@gmail.com
+      <br>
+      סיו"ר אגודת הסטודנטים – לידור זקן syor.jce@gmail.com
+      <br>
+      מנהלת משרד אגודת הסטודנטים – דולי אזולאי office.jce@gmail.com 
+      <br>     
+  </h6>
+    <ion-row *ngFor="let title of titles;">
+          <ion-card class="dep" (click)= "moveToDept(title)">
+            {{ title }} 
             <br>
-          </ion-item>
-        
-      </ion-item>
-
+          </ion-card>
+    </ion-row>
       
-  </ion-list>
 </ion-content>

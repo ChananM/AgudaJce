@@ -7,12 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Departments</ion-title>
+      <ion-buttons>
+          <button ion-button icon-only (click)="viewCtrl.dismiss()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+      </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding *ngIf="allowed">
+    <h1 >{{wantedDep.title}}</h1>
+    <h6 *ngFor="let i of wantedDep.body;">{{i}}</h6>
 </ion-content>

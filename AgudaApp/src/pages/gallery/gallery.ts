@@ -1,4 +1,4 @@
-import { Albums, Photo } from './../../models/interfaces';
+import { Albums } from './../../models/interfaces';
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform, LoadingController } from 'ionic-angular';
 import { FbImagesPage } from './fb-images/fb-images';

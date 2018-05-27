@@ -1,5 +1,6 @@
+import { DepartmentsPage } from './departments/departments';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the DepInfoPage page.
@@ -16,11 +17,13 @@ import { NavController, NavParams } from 'ionic-angular';
 
 export class DepInfoPage {
 
+titles;
 
-items;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public modalCtrl: ModalController,
+              public navParams: NavParams) {
     this.initializeItems();
+    
   }
 
   ionViewDidLoad() {
@@ -28,25 +31,33 @@ items;
   }
 
 
+
+
+  moveToDept(title: string)
+  {
+    let modal = this.modalCtrl.create(DepartmentsPage, {title: title});
+    modal.present();
+      
+  }
+
   initializeItems()
   {
-    this.items=
+    this.titles=
     [
-
-      "מחלקת תרבות",
+      
       "מחלקת ספורט",
       "מחלקת דוברות",
-      "מחלקת תרבות חוץ"
+      "מחלקת תרבות חוץ",
+      "מחקלת אקדמיה",
+      "מחלקת רווחה",
+      "מחלקת החברה הערבית",
+      "מחלקת תרבות פנים"
     ]
 
-      
 
+  }
 
-
-
-    }
-
-
+  
 
 
   }
