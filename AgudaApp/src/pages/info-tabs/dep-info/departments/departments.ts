@@ -32,10 +32,10 @@ export class DepartmentsPage {
                 console.log(this.items[i].title);
                 if(this.items[i].title == title) {
                   this.wantedDep = this.items[i];
+                  this.allowed = true;
                   break;
                 }
               }              
-              this.allowed = true;
   }
 
   ionViewDidLoad() {
@@ -112,7 +112,7 @@ export class DepartmentsPage {
     dep5.body.push("תרגום פוסטים ומיילים מעברית לערבית");
     dep5.body.push("מתוכנן:");
     dep5.body.push(".היעדרויות בחגים: חופש מהלימודים לכל המכללה בחגים הלא יהודיים");
-    dep5.body.push("אפטאר גמאעי: ארוחת שבירת הצום ברמדאן שמתוכנן שתתקיים בתאריך 4/6 בשעה 19:30 במכללה.");
+    dep5.body.push("אפטאר גמאעי: ארוחת שבירת הצום ברמדאן שמתוכנן לתתקיים במכללה.");
     dep5.body.push("שם הרמ''ח : עלי חרבאווי");
     dep5.body.push("מייל: hevraArvit.jce@gmail.com");
     this.items.push(dep5);
