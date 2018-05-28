@@ -104,6 +104,10 @@ export class DatabaseProvider {
     return this.storage.ref(decodeURI(path)).delete();
   }
 
+  uploadNotification(msg: string){
+    return this.afs.collection<any>('Notifications').doc('notidicationID').update({ message: msg });
+  }
+
   getCurrentTimestamp(): string{ //format: yyyyMMddHHmmSS
     let date = new Date();
     return "" + date.getFullYear() + (date.getMonth()+1 < 10 ? "0" : "") + (date.getMonth()+1)
