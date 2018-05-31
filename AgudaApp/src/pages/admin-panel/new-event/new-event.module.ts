@@ -7,6 +7,7 @@ let config: QuillConfigInterface = {
   modules: {
     toolbar: [
       ['bold', 'italic', 'underline'],                  // toggled buttons
+      ['link'],
       [{ 'list': 'ordered' }, { 'list': 'bullet' }],
       [{ 'direction': 'rtl' }],                         // text direction
       [{ 'align': [] }],                                // text alignment
