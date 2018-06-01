@@ -46,6 +46,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 - [Iteration 1 - MVP](../../wiki/Iter1-MVP)
 - [Iteration 2 - Alpha](../../wiki/Iter2-Alpha-Version)
 - [Iteration 3 - Beta](../../wiki/Iter3-Beta-Version)
+- [Iteration 4 - Release](../../wiki/Iter4-Release)
 
 ## Structure and build
 
