@@ -16,11 +16,24 @@
  specific language governing permissions and limitations
  under the License.
  */
+
 //
-// Prefix header for all source files of the 'AgudaApp' target in the 'AgudaApp' project
+//  AppDelegate.m
+//  אגודת הסטודנטים
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-#endif
+#import "AppDelegate.h"
+#import "MainViewController.h"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
+{
+    self.viewController = [[MainViewController alloc] init];
+    return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+
+@end

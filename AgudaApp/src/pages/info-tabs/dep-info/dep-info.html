@@ -13,20 +13,26 @@
 </ion-header> -->
 
 
-<ion-content padding >
-  <h6>
-      יו"ר אגודת הסטודנטים – איתי גבאי yor.jce@gmail.com
-      <br>
-      סיו"ר אגודת הסטודנטים – לידור זקן syor.jce@gmail.com
-      <br>
-      מנהלת משרד אגודת הסטודנטים – דולי אזולאי office.jce@gmail.com 
-      <br>     
-  </h6>
+<ion-content padding>
+    <h6>
+        <p>
+            יו"ר אגודת הסטודנטים – איתי גבאי
+            <a href="mailto:yor.jce@gmail.com">yor.jce@gmail.com</a>
+        </p>
+        <p>
+            סיו"ר אגודת הסטודנטים – לידור זקן
+            <a href="mailto:syor.jce@gmail.com">syor.jce@gmail.com</a>
+        </p>
+        <p>
+            מנהלת משרד אגודת הסטודנטים – דולי אזולאי
+            <a href="mailto:office.jce@gmail.com">office.jce@gmail.com</a>
+        </p>
+    </h6>
     <ion-row *ngFor="let title of titles;">
-          <ion-card class="dep" (click)= "moveToDept(title)">
-            {{ title }} 
+        <ion-card class="dep" (click)="moveToDept(title)">
+            {{ title }}
             <br>
-          </ion-card>
+        </ion-card>
     </ion-row>
-      
+
 </ion-content>

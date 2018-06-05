@@ -7,17 +7,32 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-fcm": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-firebase": {
-      "PACKAGE_NAME": "jce.aguda.teamcal"
-    },
     "cordova-plugin-calendar": {
       "CALENDAR_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "jce.aguda.teamcal"
     },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
     "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "jce.aguda.teamcal"
+    },
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "jce.aguda.teamcal"
     }
   },

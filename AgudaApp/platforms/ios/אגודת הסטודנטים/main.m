@@ -16,18 +16,20 @@
  specific language governing permissions and limitations
  under the License.
  */
-
 //
-//  AppDelegate.h
-//  AgudaApp
+//  main.m
+//  אגודת הסטודנטים
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
-#import <Cordova/CDVViewController.h>
-#import <Cordova/CDVAppDelegate.h>
+#import <UIKit/UIKit.h>
 
-@interface AppDelegate : CDVAppDelegate {}
-
-@end
+int main(int argc, char* argv[])
+{
+    @autoreleasepool {
+        int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
+        return retVal;
+    }
+}
