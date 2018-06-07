@@ -33,6 +33,9 @@ export class HomePage {
             let p = postsService.posts.find(post => post.headline.valueOf() == np.notification.title.valueOf());
             this.showStory(p);
           }, 500)
+        } else if (np.notification.title.includes('אירוע חדש')){
+          navCtrl.parent.select(1);
+          np.showNotificationAlert(np.notification);
         }
       }
       events.subscribe('notification', (data) => {
