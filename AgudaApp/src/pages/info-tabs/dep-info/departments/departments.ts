@@ -144,7 +144,8 @@ export class DepartmentsPage {
     dep7.body.push("הפסקה 'מקסיקנה' - הפסקה בנוסח מקסיקו : בהפסקה יהיו דוכני מזון של טאקו\נאצ'וס, בירות קורונה, והשור הזועם עם פרסים.");
     dep7.body.push("אירוע סוף שנה: באירוע זה בעזרת השם יהיה אמן חושים ובירות.");
     dep7.body.push("שם הרמ''ח : נוי לוי");
-    dep7.body.push("מייל: tarbut1.jce@gmail.com");
+    dep7.body.push("מייל:");
+   
     this.items.push(dep7);
   }
 
