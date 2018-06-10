@@ -11,6 +11,7 @@ import { NavController, NavParams, ViewController } from 'ionic-angular';
 export interface department {
   title: string,
   body: string[],
+  mail: string
 }
 
 @Component({
@@ -43,13 +44,13 @@ export class DepartmentsPage {
   }
 
   initializeItems() {
-    let dep1: department = {title: "", body: []};
-    let dep2: department = {title: "", body: []};
-    let dep3: department = {title: "", body: []};
-    let dep4: department = {title: "", body: []};
-    let dep5: department = {title: "", body: []};
-    let dep6: department = {title: "", body: []};
-    let dep7: department = {title: "", body: []};
+    let dep1: department = {title: "", body: [],mail:""};
+    let dep2: department = {title: "", body: [],mail:""};
+    let dep3: department = {title: "", body: [],mail:""};
+    let dep4: department = {title: "", body: [],mail:""};
+    let dep5: department = {title: "", body: [],mail:""};
+    let dep6: department = {title: "", body: [],mail:""};
+    let dep7: department = {title: "", body: [],mail:""};
     
     dep1.title = "מחלקת דוברות";
     dep1.body.push("על המחלקה: מחלקת דוברות אחראית על עדכון כלל הסטודנטים בפעילויות שנעשות בשוטף על ידי האגודה בכל המחלקות .");
@@ -60,7 +61,7 @@ export class DepartmentsPage {
     dep1.body.push("הפצת מיילים");
     dep1.body.push("תליית פוסטרים ומודעות ברחבי המכללה");
     dep1.body.push("שם הרמ''ח : חן פרידמן");
-    dep1.body.push(" מייל: dover.jce@gmail.com");
+    dep1.mail= "dover.jce@gmail.com";
     this.items.push(dep1);
     dep2.title = "מחלקת ספורט";
     dep2.body.push("על המחלקה : מחלקת ספורט מספקת שלל פעילויות אשר יעלו לסדר היום את חשיבות הספורט לאורך חיים בריא וטוב. אנו חושבים שבאמצעות הספורט הסטודנטים יוכלו לפרוק לחצים, ישמחו וייהנו מזה ובכך יגיעו לתוצאות טובות יותר אם זה במבחנים וכמובן בחיים .");
@@ -76,7 +77,7 @@ export class DepartmentsPage {
     dep2.body.push("שיעור ספורט במכללה לנשים (לפי בחירת הקהל וההיענות)");
     dep2.body.push("טורניר כדורגל  כדורסל וכדור עף פנימי של עזריאלי  בין מחלקות ");
     dep2.body.push("שם הרמ''ח : בני מזרחי");
-    dep2.body.push("מייל: sport.jce@gmail.com");
+    dep2.mail= "sport.jce@gmail.com";
     this.items.push(dep2);
     dep3.title = "מחלקת אקדמיה";
     dep3.body.push("על המחלקה : מחלקת האקדמיה דואגת לכל הקשור בפן האקדמי, טיפול בבעיות מול הסגל האקדמי ופיקוח כי חוקי התקנון מתקיימים.");
@@ -91,7 +92,7 @@ export class DepartmentsPage {
     dep3.body.push("מאגר המורים הפרטיים - המחשבה של פרויקט זה הינה לתווך בין הסטודנטים המצטיינים המעוניינים להעביר שיעור פרטי לבין סטודנטים המתקשים בחומר וכל זאת בסבסוד 50% משעת לימוד.");
     dep3.body.push("פרויקט המרתונים - כמו בכל שנה לפני כל סמסטר, אגודת הסטודנטים דואגת לכל הכיתות במכללה למרתון לימודי - 10 שעות אקדמאיות של תרגול מואץ בחומר ע״י המתרגלים הטובים ביותר וכל זאת במחיר מסובסד ע״י האגודה.");
     dep3.body.push("שם הרמ''ח : דנה פסח ");
-    dep3.body.push("מייל:academy.jce@gmail.com");
+    dep3.mail= "academy.jce@gmail.com";
     this.items.push(dep3);
     dep4.title = "מחלקת רווחה";
     dep4.body.push("על המחלקה: מחלקת רווחה פועלת לרווחת הסטודנטים תוך שמירה על תנאים סוציאליים במכללה ומחוצה לה.");
@@ -102,7 +103,7 @@ export class DepartmentsPage {
     dep4.body.push("יום רווחה מכללתי");
     dep4.body.push("שדרוג פינת קפה אמון – רכישת 3 מכונות חדשות (קפה , תה , אספרסו/הפוך)");
     dep4.body.push("שם הרמ''ח : ספיר מרדכי ");
-    dep4.body.push("מייל:revaha.jce@gmail.com");
+    dep4.mail= "revaha.jce@gmail.com";
     this.items.push(dep4);
     dep5.title = "מחלקת החברה הערבית";
     dep5.body.push("על המחלקה: מחלקה חדשה שהתחילה את פעילותה השנה.");
@@ -114,7 +115,7 @@ export class DepartmentsPage {
     dep5.body.push(".היעדרויות בחגים: חופש מהלימודים לכל המכללה בחגים הלא יהודיים");
     dep5.body.push("אפטאר גמאעי: ארוחת שבירת הצום ברמדאן שמתוכנן לתתקיים במכללה.");
     dep5.body.push("שם הרמ''ח : עלי חרבאווי");
-    dep5.body.push("מייל: hevraArvit.jce@gmail.com");
+    dep5.mail= "hevraArvit.jce@gmail.com";
     this.items.push(dep5);
     dep6.title = "מחלקת תרבות חוץ";
     dep6.body.push("על המחלקה: מטרת המחלקה היא שדרוג ההווי ותרבות החוץ מכללתית של הסטודנטים במכללה.");
@@ -126,7 +127,7 @@ export class DepartmentsPage {
     dep6.body.push("מסיבת סוף שנה");
     dep6.body.push("להוציא הסעה לאולפן ליגת האלופות");
     dep6.body.push("שם הרמ''ח : אליאור יעקב ");
-    dep6.body.push("מייל: tarbut2.jce@gmail.com");
+    dep6.mail= "tarbut2.jce@gmail.com";
     this.items.push(dep6);
     dep7.title = "מחלקת תרבות פנים";
     dep7.body.push("על המחלקה:  מחלקת תרבות פנים דואגת להווי החברתי במכללה , גיבוש הסטודנטים , ולשעה בשבוע לצאת מלחץ הסמסטר !");
@@ -144,7 +145,7 @@ export class DepartmentsPage {
     dep7.body.push("הפסקה 'מקסיקנה' - הפסקה בנוסח מקסיקו : בהפסקה יהיו דוכני מזון של טאקו\נאצ'וס, בירות קורונה, והשור הזועם עם פרסים.");
     dep7.body.push("אירוע סוף שנה: באירוע זה בעזרת השם יהיה אמן חושים ובירות.");
     dep7.body.push("שם הרמ''ח : נוי לוי");
-    dep7.body.push("מייל:");
+    dep6.mail="tarbut1.jce@gmail.com";
    
     this.items.push(dep7);
   }

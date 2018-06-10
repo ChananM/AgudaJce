@@ -20,4 +20,5 @@
 <ion-content padding *ngIf="allowed">
     <h1 >{{wantedDep.title}}</h1>
     <h6 *ngFor="let i of wantedDep.body;">{{i}}</h6>
+    <a href="mailto:{{wantedDep.mail}}">{{wantedDep.mail}}</a>
 </ion-content>
